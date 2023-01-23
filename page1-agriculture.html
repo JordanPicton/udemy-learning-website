@@ -72,7 +72,9 @@ Needs to be followed by one "head" element and one "body" element.-->
          Hello I am a link.-->
       <p>
          <!--The hyperlink below is to demonstrate that you can have it in the middle of a paragraph and it won't disrupt the flow of text. This is a showcase of an inline element.-->
-         <b>Agriculture</b> or <b>farming</b> is the practice of cultivating <a href="https://en.wikipedia.org/wiki/Plant">plants</a> and livestock.[1] Agriculture was the key
+         <b>Agriculture</b> or <b>farming</b> is the practice of cultivating <a href="https://en.wikipedia.org/wiki/Plant">plants</a> and livestock.<sup><a href="https://en.wikipedia.org/wiki/Agriculture#cite_note-Office1999-1">[1]</a></sup> Agriculture was the key 
+         <!--Above the sup (superscript) element isn't used as much, it's mainly for wiki's or science papers/manuals etc. It pushes the content half a line up to make it stick up a little. Really useful for temperature or math equations.
+         You can also nest other elements inside this, for example an anchor tag. Which is also shown above. On wikipedia they have it link to a different area of the page rather than a different part of the internet or site itself.-->
          development in
          the rise of sedentary human civilization, whereby farming of domesticated species created food surpluses that enabled
          people to live in cities. The history of agriculture began thousands of years ago. After gathering wild grains
@@ -111,8 +113,10 @@ Needs to be followed by one "head" element and one "body" element.-->
          Etymology and scope
       </h2>
       <p>
+         <!--The sub (subscript) element does the opposite of what sup does. Instead of pushing it half a line above the normal text, it pushes it down.
+         Again this is mainly used in things like Mathematic/Science and Chemistry papers. This can also make the content look a little smaller than normal.-->
          The word agriculture is a late Middle English adaptation of Latin agricultūra, from ager 'field' and cultūra
-         'cultivation' or 'growing'.[2] While agriculture usually refers to human activities, certain species of ant,[3][4]
+         'cultivation' or 'growing'.<sub>[2]</sub> While agriculture usually refers to human activities, certain species of ant,[3][4]
          termite and beetle have been cultivating crops for up to 60 million years.[5] Agriculture is defined with varying
          scopes, in its broadest sense using natural resources to "produce commodities which maintain life, including food,
          fiber, forest products, horticultural crops, and their related services".[6] Thus defined, it includes arable
@@ -120,6 +124,10 @@ Needs to be followed by one "head" element and one "body" element.-->
          horticulture, animal husbandry and forestry, but horticulture and forestry are in practice often excluded.[6] It may
          also be broadly decomposed into plant agriculture, which concerns the cultivation of useful plants,[7] and animal
          agriculture, the production of agricultural animals.[8]
+
+         <!--Here is an example of superscript and subscript working together.-->
+         <br>
+         <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>2</sub> = 1
       </p>
       
       <h2>
@@ -232,12 +240,15 @@ Needs to be followed by one "head" element and one "body" element.-->
          sky. When I was a child I was told once by<br>
          my father you become earth when you die.<br>
          If so, I hope my children carve my chest<br>
-         with blade. I hope I'll yield a fruitful harvest.
+         with blade. I hope I'll yield a fruitful harvest.<br>
+         <b>Credit:</b> <a href="https://hellopoetry.com/poem/4069724/digging-potatoes/">Digging Potatoes - Norman Crane</a>
       </p>
       <!--The above poem will look identical to how it looks in here due to the line breaks. You can complete the same thing by having it all on the same line with the line breaks (in the code). So something like this:
          "I hold the tool. I am the blade. I drive<br> myself into the fertile ground. I dig<br> potatoes out. They were buried alive,<br> but in darkness they thrive. Now the old pig<br> will feast. When he grows fat I will slay him<br> to feed me and kin. I don't like killing<br> but when necessary it's not a sin.<br> I shall live another year, God willing.<br> I have long been on the land. I am old<br> but my sun is not yet setting in the<br> sky. When I was a child I was told once by<br> my father you become earth when you die.<br> If so, I hope my children carve my chest<br> with blade. I hope I'll yield a fruitful harvest."
       In the quotes above, it would complete the same effect as the active code. However, it's not that readable and if it didn't have the br elements and was written like the active code it would look like the line above. All of the poem on one line.
       The content is still grouped together it just has a line break at the end or wherever it's put into the content of an element.-->
+
+      
       
       <!--This is another way to display and image on the webpage, this one is sourced externally via another site. The one used below is from Wikipedia.-->
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Farm_in_Hainan_01.jpg/1280px-Farm_in_Hainan_01.jpg">
