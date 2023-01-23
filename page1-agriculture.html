@@ -24,6 +24,8 @@ Needs to be followed by one "head" element and one "body" element.-->
       <h1>
          Agriculture
       </h1>
+      <!--hr is the horizontal rule element and it's not something that is used very often. It is also another element that doesn't have a closing tag. Makes a line that goes across the screen horizontally. (You can get this same effect without having to use this.)-->
+      <hr>
 
       <!--The "img" element is one element that doesn't have a closing tag. And it's the second element I'll be working with that has an attribute.
       Most attributes follow the same if not then similar pattern. With the example below the image is hosted locally, within the same machine as the website.
@@ -154,6 +156,35 @@ Needs to be followed by one "head" element and one "body" element.-->
          gradually came to be domesticated.[24][25][26]
       </p>
 
+      <!--Divs are Content Division elements, it's a generic container to group content together. When using a div element it is worth mentioning it's a block element.
+      Meaning that it will force other elements above or below it since it will take the entire space. This DOES NOT mean the items inside the div element (the inline elements) become block elements.
+      Using a div element by itself in HTML isn't really worth it due to it not really doing much by itself. The better features come in when we learn CSS. When styling with CSS (meaning the div and not a specific
+      element within the div) the entire div will be styled. This doesn't mean you can't style specific elements within the div itself to look different however.
+      For an example of this being a block element I'll add a third link underneath the div to show this off.
+      "Takes up it's own block of content."-->
+      <div>
+         <a href="https://www.factorio.com">Link to my favourite game.</a>
+         <a href="https://github.com/JordanPicton">Link to my github.</a>
+      </div>
+      <a href="https://youtu.be/KnpLpWolUW8">Link to one of my favoruite songs.</a> <!--This link should not be on the same line as the other two inside the div element. (Which it's not. :))-->
+
+      <h2>Civilizations</h2>
+
+      <!--span elements are similar to divs, the difference being they're used for inline elements, meaing they don't force other content above or below them.
+      They're useful for wanting to single something out to style with CSS or do something with. For example:
+      "In Eurasia, the <span>Sumerians</span> started to live in villages from about 8,000 BC"
+      There are different attributes that are allowed within the span element that can be used by CSS, for instance having a bunch of words or important words be coloured a differened colour from the normal text.
+      "Does not take up it's own block of content."-->
+      <p>In Eurasia, the <span>Sumerians</span> started to live in villages from about 8,000 BC, relying on the Tigris and Euphrates rivers
+      and a canal system for irrigation. Ploughs appear in pictographs around 3,000 BC; seed-ploughs around 2,300 BC. Farmers
+      grew wheat, barley, vegetables such as lentils and onions, and fruits including dates, grapes, and figs.[29] Ancient
+      Egyptian agriculture relied on the Nile River and its seasonal flooding. Farming started in the predynastic period at
+      the end of the Paleolithic, after 10,000 BC. Staple food crops were grains such as wheat and barley, alongside
+      industrial crops such as flax and papyrus.[30][31] In India, wheat, barley and jujube were domesticated by 9,000 BC,
+      soon followed by sheep and goats.[32] Cattle, sheep and goats were domesticated in Mehrgarh culture by 8,000–6,000
+      BC.[33][34][35] Cotton was cultivated by the 5th–4th millennium BC.[36] Archeological evidence indicates an animal-drawn
+      plough from 2,500 BC in the Indus Valley civilisation.[37]</p>
+      
       <h2>Crops</h2>
       <!--The "ul" element is a unordered list. And it can only have "li" (list item), "script" (haven't learnt this yet) and "template" (also have not learnt this yet either.)-->
       <ul>
@@ -184,6 +215,29 @@ Needs to be followed by one "head" element and one "body" element.-->
          <li>ordered</li>
          <li>list.</li>
       </ol>
+
+      <h2>Poem</h2>
+      <p>
+         <!--The br element is the line break element and it's not commonly used. What it does is it's kind of like the /n rule in some programming langauges where it goes to the next line or makes a blank like.-->
+         I hold the tool. I am the blade. I drive<br>
+         myself into the fertile ground. I dig<br>
+         potatoes out. They were buried alive,<br>
+         but in darkness they thrive. Now the old pig<br>
+         will feast. When he grows fat I will slay him<br>
+         to feed me and kin. I don't like killing<br>
+         but when necessary it's not a sin.<br>
+         I shall live another year, God willing.<br>
+         I have long been on the land. I am old<br>
+         but my sun is not yet setting in the<br>
+         sky. When I was a child I was told once by<br>
+         my father you become earth when you die.<br>
+         If so, I hope my children carve my chest<br>
+         with blade. I hope I'll yield a fruitful harvest.
+      </p>
+      <!--The above poem will look identical to how it looks in here due to the line breaks. You can complete the same thing by having it all on the same line with the line breaks (in the code). So something like this:
+         "I hold the tool. I am the blade. I drive<br> myself into the fertile ground. I dig<br> potatoes out. They were buried alive,<br> but in darkness they thrive. Now the old pig<br> will feast. When he grows fat I will slay him<br> to feed me and kin. I don't like killing<br> but when necessary it's not a sin.<br> I shall live another year, God willing.<br> I have long been on the land. I am old<br> but my sun is not yet setting in the<br> sky. When I was a child I was told once by<br> my father you become earth when you die.<br> If so, I hope my children carve my chest<br> with blade. I hope I'll yield a fruitful harvest."
+      In the quotes above, it would complete the same effect as the active code. However, it's not that readable and if it didn't have the br elements and was written like the active code it would look like the line above. All of the poem on one line.
+      The content is still grouped together it just has a line break at the end or wherever it's put into the content of an element.-->
       
       <!--This is another way to display and image on the webpage, this one is sourced externally via another site. The one used below is from Wikipedia.-->
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Farm_in_Hainan_01.jpg/1280px-Farm_in_Hainan_01.jpg">
