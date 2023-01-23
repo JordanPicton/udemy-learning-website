@@ -1,0 +1,20 @@
+A cool trick with VSC is when creating html documents/pages, instead of writing out all the needed elements every time.
+There's a shortcut I can use which is literally, on a fresh page/document press "!" and then press "tab". Below is what it generates for me.
+
+Generated HTML file:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+</body>
+</html>
+
+
+Another cool trick with VSC is that you can easily comment a section out using CTRL + /
+This can also uncomment a section.

@@ -1,0 +1,191 @@
+<!--Short Answer = Think of this as a flag to the browser saying this is using HTML5.
+Longer Answer = Tells browsers it's using HTML 5 standard. It doesn't do much most of the time, it just flags to browsers that this website is using the HTML 5 standard.
+You can change it to be a lower version, but this won't disable anything via the browser side. It just tells it what to expect.-->
+<!DOCTYPE html>
+
+<!--Everything on this page is supposed to be a decendant of the "html" element.
+Needs to be followed by one "head" element and one "body" element.-->
+<html>
+   <!--The head element basically contains things that aren't needed to be shown on the page. (Information about the webpage.)-->
+   <head>
+      <!--The "title" element changes the name/displayed text in the tab view for that site/webpage. Doesn't show up in the page itself but it does for the browsers tab naming.-->
+      <title>
+         Udemy Course Learning Site
+      </title>
+   </head>
+
+   <!--The "body" element only allows for one of these per page. Along with this is where most of the content should/would be located.-->
+   <body>
+      <!--There should only ever really be one "h1" element on any given page.
+      There should also be the previous "h" element type for the one I'm trying to use.
+      For example if I want to use a "h3" element then I would need both a "h2" and a "h1" element.
+      This is just how the rules work for HTML.
+      Also putting any other text on the same line as a "h1" element will force it out of the same space and move it to it's own line.-->
+      <h1>
+         Agriculture
+      </h1>
+
+      <!--The "img" element is one element that doesn't have a closing tag. And it's the second element I'll be working with that has an attribute.
+      Most attributes follow the same if not then similar pattern. With the example below the image is hosted locally, within the same machine as the website.
+      Also interestingly, he says that adding "width="X"" is bad practice and it's better to do it with CSS.-->
+      <!--The "alt" attribute is a topic we haven't talked about yet, which is accessability and we will get into that later.
+      However for now, this attribute is not required but makes websites more accessible and easier for people for example who use screen readers. The website knows there's some
+      information for this image being held within the alt attribute so if someone with a screen reader comes along they would be able to hear what it is that's on the page rather than it being blank.
+      Just to note there are some rules on when to use the alt attribute and when to not, this will be talked about when covering accessability.-->
+      <img src="brown-Guernsey-cow.jpg" alt="A picture of a brown Guernsey cow in a field.">
+      <!--Below is another way to do this, again this is locally meaning it's on the same machine.
+      <img src="pictures/brown-Guernsey-cow.jpg">
+      What this does it it goes inside a directory first and then looks for the file with the name "brown-Guernsey-cow.jpg"
+      You can also go up one level/back one directory by using "..". For example:
+      <img src="../pictures/brown-Guernsey-cow.jpg">
+      This would go back one level/up one level and then go inside the pictures directory and then look for the file named "brown-Guernsey-cow.jpg"-->
+      
+      <!--This is an anchor link element, it can send the user to somewhere else on the internet, to a different page on the same site, or even somewhere else on the same page.
+      This is also the first instance I'm met with an "Attribute" in this course being the "href" attribute. Attributes come inside one of the element tags, most commonly or always the first(opening) one.
+      "href" stands for hypertext reference and it will be inside every anchor element.
+      The below example will not work due to the browser reading this as if the user wants to connect to "Users/jordan/Coding/google.com" (Hosted on this machine.) instead of actually google.
+      Example 1: <a href="google.com">This is a link.</a>
+      In the live example below, you can see that it's got "www." (Hosted on the World Wide Web) at the beginning of the address, this says that this is to be found on the World Wide Web and not this/any other machine this website is hosted on.
+      Not only that but we also need the http or https protocols in front of the url to allow us there, at this moment in time we haven't learnt to why yet.-->
+      <a href="https://www.google.com">This is a link to Google.</a> <!--Live Example showing how to link another website/part of the WWW-->
+      <a href="page2-about.html">This is a link to the About Page.</a> <!--Live Example showing how to link to another page that is hosted on the same machine.-->
+      
+      <!--"p" elements along with header elements are called block elements, meaning they will push/shove anything else on the same line/space as itself. To be on it's own "block", think of it has a block of houses, you can put people inside them
+      but you can't put a house inside another house.
+      For example if I was to put an anchor element/hyperlink before the paragraph below it would not be on the same line/space it would be put above the paragraph and then the paragraph would move to
+      it's own area. This isn't the same for anchor elements or even image elements, these are called inline elements, meaning they can share the same space as each other.
+      This behaviour can be changed with CSS.
+      
+      Examples of this:
+         <a href="This be a link.">Link1</a>
+         <a href="This is another link.">Link2</a>
+      These two links in the example above would be displayed on the same line shown below:
+         This be a link. This is another link.
+      
+      However, if I was to do something like:
+         <h1>I am a title</h1>
+         <a href="link to somewhere">Hello I am a link.</a>
+      These two elements would be different due to the h1 wanting to take a block all by itself. Meaning it would look like:
+         I am a title
+         Hello I am a link.-->
+      <p>
+         <!--The hyperlink below is to demonstrate that you can have it in the middle of a paragraph and it won't disrupt the flow of text. This is a showcase of an inline element.-->
+         <b>Agriculture</b> or <b>farming</b> is the practice of cultivating <a href="https://en.wikipedia.org/wiki/Plant">plants</a> and livestock.[1] Agriculture was the key
+         development in
+         the rise of sedentary human civilization, whereby farming of domesticated species created food surpluses that enabled
+         people to live in cities. The history of agriculture began thousands of years ago. After gathering wild grains
+         beginning
+         at least 105,000 years ago, nascent farmers began to plant them around 11,500 years ago. Sheep, goats, pigs and
+         cattle
+         were domesticated over 10,000 years ago. Plants were independently cultivated in at least 11 regions of the world.
+         Industrial agriculture based on large-scale monoculture in the twentieth century came to dominate agricultural
+         output,
+         though about 2 billion people still depended on subsistence agriculture.
+      </p>
+      <p>
+         The major agricultural products can be broadly grouped into foods, fibers, fuels, and raw materials (such as rubber).
+         Food classes include cereals (grains), vegetables, fruits, cooking oils, meat, milk, eggs, and fungi. Over one-third
+         of
+         the world's workers are employed in agriculture, second only to the service sector, although in recent decades, the
+         global trend of a decreasing number of agricultural workers continues, especially in developing countries, where
+         smallholding is being overtaken by industrial agriculture and mechanization that brings an enormous crop yield
+         increase.
+      </p>
+      <p>
+         Modern agronomy, plant breeding, agrochemicals such as pesticides and fertilizers, and technological developments
+         have
+         sharply increased crop yields, but cause ecological and environmental damage. Selective breeding and modern practices
+         in
+         animal husbandry have similarly increased the output of meat, but have raised concerns about animal welfare and
+         environmental damage. Environmental issues include contributions to global warming, depletion of aquifers,
+         deforestation, antibiotic resistance, and other agricultural pollution. Agriculture is both a cause of and sensitive
+         to
+         environmental degradation, such as biodiversity loss, desertification, soil degradation, and global warming, all of
+         which can cause decreases in crop yield. Genetically modified organisms are widely used, although some are banned in
+         certain countries.
+      </p>
+      
+      <h2>
+         Etymology and scope
+      </h2>
+      <p>
+         The word agriculture is a late Middle English adaptation of Latin agricultūra, from ager 'field' and cultūra
+         'cultivation' or 'growing'.[2] While agriculture usually refers to human activities, certain species of ant,[3][4]
+         termite and beetle have been cultivating crops for up to 60 million years.[5] Agriculture is defined with varying
+         scopes, in its broadest sense using natural resources to "produce commodities which maintain life, including food,
+         fiber, forest products, horticultural crops, and their related services".[6] Thus defined, it includes arable
+         farming,
+         horticulture, animal husbandry and forestry, but horticulture and forestry are in practice often excluded.[6] It may
+         also be broadly decomposed into plant agriculture, which concerns the cultivation of useful plants,[7] and animal
+         agriculture, the production of agricultural animals.[8]
+      </p>
+      
+      <h2>
+         History
+      </h2>
+      <h3>
+         Origins
+      </h3>
+      <p>
+         The development of agriculture enabled the human population to grow many times larger than could be sustained by
+         hunting
+         and gathering.[11] Agriculture began independently in different parts of the globe,[12] and included a diverse range
+         of
+         taxa, in at least 11 separate centers of origin.[9] Wild grains were collected and eaten from at least 105,000 years
+         ago.[13] In the Paleolithic Levant, 23,000 years ago, cereals cultivation of emmer, barley, and oats has been
+         observed
+         near the sea of Galilee.[14][15] Rice was domesticated in China between 11,500 and 6,200 BC with the earliest known
+         cultivation from 5,700 BC,[16] followed by mung, soy and azuki beans. Sheep were domesticated in Mesopotamia between
+         13,000 and 11,000 years ago.[17] Cattle were domesticated from the wild aurochs in the areas of modern Turkey and
+         Pakistan some 10,500 years ago.[18] Pig production emerged in Eurasia, including Europe, East Asia and Southwest
+         Asia,[19] where wild boar were first domesticated about 10,500 years ago.[20] In the Andes of South America, the
+         potato
+         was domesticated between 10,000 and 7,000 years ago, along with beans, coca, llamas, alpacas, and guinea pigs.
+         Sugarcane
+         and some root vegetables were domesticated in New Guinea around 9,000 years ago. Sorghum was domesticated in the
+         Sahel
+         region of Africa by 7,000 years ago. Cotton was domesticated in Peru by 5,600 years ago,[21] and was independently
+         domesticated in Eurasia. In Mesoamerica, wild teosinte was bred into maize by 6,000 years ago.[22] The horse was
+         domesticated in the Eurasian Steppes around 3500 BC.[23] Scholars have offered multiple hypotheses to explain the
+         historical origins of agriculture. Studies of the transition from hunter-gatherer to agricultural societies indicate
+         an
+         initial period of intensification and increasing sedentism; examples are the Natufian culture in the Levant, and the
+         Early Chinese Neolithic in China. Then, wild stands that had previously been harvested started to be planted, and
+         gradually came to be domesticated.[24][25][26]
+      </p>
+
+      <h2>Crops</h2>
+      <!--The "ul" element is a unordered list. And it can only have "li" (list item), "script" (haven't learnt this yet) and "template" (also have not learnt this yet either.)-->
+      <ul>
+         <!--The "li" element is a List item, described above. They need to be within either "ul" or "ol" elements.-->
+         <li>Grains
+            <ul>
+               <li>Wheat</li>
+               <li>Maize</li>
+               <li>Corn</li>
+               <li>Barley</li>
+            </ul>
+         </li>
+         <li>Vegetables
+            <ul>
+               <li>Carrots</li>
+               <li>Potatoes</li>
+               <li>Tomatoes</li>
+               <li>Cucumber</li>
+            </ul>
+         </li>
+      </ul>
+      <!--The "ol" element is similar to an "ul" element, the different being that the "ol" element is an ordered list.-->
+      <ol>
+         <li>Hello</li>
+         <li>I</li>
+         <li>am</li>
+         <li>an</li>
+         <li>ordered</li>
+         <li>list.</li>
+      </ol>
+      
+      <!--This is another way to display and image on the webpage, this one is sourced externally via another site. The one used below is from Wikipedia.-->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Farm_in_Hainan_01.jpg/1280px-Farm_in_Hainan_01.jpg">
+   </body>
+</html>
