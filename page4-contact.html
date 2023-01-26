@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact (Forms)</title>
+   </head>
+
+   <body>
+      <header>
+         <nav>
+            <ul>
+               <li><a href="page1-agriculture.html">Home</a></li>
+            </ul>
+         </nav>
+         <h1>Contact (Forms)</h1>
+      </header>
+
+      <!--"form" is another container however, it has a lot of things going on with it. (Groups together inputs, submits them together to some specified destination.)
+      Also the "action" attribute is very important and specifies where the data should be sent when the form is submitted.-->
+      <form action="/tacos">
+         <!--The input element is the most common element/form control it can be used for 20+ different tpyes of inputs. (Checkbox, date picker, colour picker, password input, text etc.) Also do not have a closing tag.
+         However, it's the attribute "type" is where the magic happens, changing this dramatically alters the behaviour and appearance of the input element.
+         Text type is just a defualt text box.
+         password tpye is similar to a default text box, but it hides the characters for privacy sake.
+         color is rarely used but allows the user to select a colour.
+         number is similar again to text and password, the only difference being you can only type or use numbers here.
+         
+         The attribute placeholder puts data into the input box to show users what these are supposed to be used for. The example below shows that the text is supposed to be for a username or could even be an email etc.
+         Without the placeholder the input box is blank and if the page has multiple of the same type of input, how would the user know which one is for what.
+         As soon as the user inputs anything into the input boxes the placeholder removes itself since it's in the name "placeholder".
+         
+         <input type="text" placeholder="username">
+         <input type="password" placeholder="password">
+         <input type="color">
+         <input type="number" placeholder="enter a number(s)">-->
+         
+         <!--label elements are to be used with inputs, they make it easier with accessability but also just general use. When a label and an input are connected it's easier to select the input, espeically for smaller screens
+         or people who don't have the best eyesight. For example when a label and an input are linked, if the user clicks on the click which is usually text, then it will have an interaction with the input as if the user was
+         clicking on the input instead (Makes the label clickable with the linked input). It also makes it easier for screen readers to know which input is for what piece of text or value, this is only when they're linked though.
+         You could use a span or a paragraph instead of a label but you wouldn't get the additional benefits you get from using a label.
+         The way to link a label and an input is by giving the label a "for" attribute and the input an "id" attribute with the same name. They're supposed to be unique names for each linked label and input element.
+         Make sure that inputs are labelled. The way I've done it below (the live version) is way more common and standard, however there is another way to do this which I'll show underneath the live version.-->
+         <p>
+            <label for="username">Username:</label>
+            <input id="username" type="text" placeholder="input username">
+         </p>
+         <p>
+            <label for="password">Password:</label>
+            <input id="password" type="password" placeholder="input password">
+         </p>
+         <p>
+            <label for="color">Color Picker:</label>
+            <input id="color" type="color">
+         </p>
+         <p>
+            <label for="age">Age:</label>
+            <input id="age" type="number" placeholder="input age">
+         </p>
+         <!--There is another way to accomplish this and here is how to do it:
+         <label>
+            Username:
+            <input type="text" placeholder="Input Username">
+         </label>
+         
+         This is another way to do this and it is valid. It makes it so you don't need to link both the label and the input with the "for" and "id" attributes but this isn't standard for some reason.
+         The live version seems easier to read and gives the opportunity to style the label and input differently but still have them linked.-->
+      </form>
+   </body>
+</html>
