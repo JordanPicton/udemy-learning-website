@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Intro</title>
+      <!--This is the best way to get CSS styling into the html document, using an external CSS file allows us to link the same CSS style to more than one page and gives us more efficiency in my opinion.
+      The way this works is by using the below element "link", it has no closing tag and the way it works is you need to give it a type via the "rel" attribute, in this case it's "stylesheet" meaning that the browser will know it's looking for a CSS file for styling
+      the page, there are other types that can go in here I believe one is for JavaScript but I can't remember the value used. Along with this there's the "href" attribute which we've used before with the "a" element. It can be interal or exteral I think? Maybe
+      you could pull one from lets say Github or something. In this case it's looking inside the same directory as this page and it's looking for the file named "intro.css". All CSS files must be named with the .css extension.
+      Well it did look in the same directory however, I've changed this to look for another directory called "styles" within the current directory and then look for the file of the same name within there.-->
+      <link rel="stylesheet" href="styles/intro.css">
+
+      <!--This is the second example of CSS styling and instead of nesting the styles inside each element individually, this can do the CSS across the whole page. So instead of duplicating styles per element they can be wrote inside this header element of "style".
+      This would be good if there was only one page to a website however, there's a better way in my opinion and a more standard - I believe - way to do this. However, it is possible to do it this way. It would just mean I need to copy this styling to other pages
+      if I'm wanting the same style, but there's the better way.-->
+      <!-- <style>
+         h1 {
+            color: red;
+         }
+      </style> -->
+   </head>
+   <body>
+      <main>
+         <h1><u>CSS Introduction</u></h1>
+         <nav>
+            <ul>
+               <li><a href="page1-agriculture.html">Home</a></li>
+            </ul>
+         </nav>
+      </main>
+      <section>
+         <!--Below is the first example of CSS, this is called "inline styling" it's not standard practice at all since it would be a lot of copy and pasting on bigger sites and it's just not efficient at all.
+
+         <h2 style="color: purple">Inline CSS</h2>
+         <p style="color: rgb(34, 143, 233)">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto labore quam explicabo nulla laboriosam non, consectetur mollitia ducimus ex nisi pariatur, fugit reiciendis magni sed! Quae pariatur doloremque recusandae architecto.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quidem itaque fuga temporibus soluta nesciunt porro, sunt dicta pariatur aut est provident nisi placeat quo ea perferendis officia veniam eligendi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi quisquam sequi obcaecati id. Doloremque fugiat, dolorem eius nihil numquam placeat nobis id praesentium minus doloribus dolores in sit quis. Quam!
+            Laudantium ipsam dignissimos quas excepturi magnam quasi ad ab eligendi quia veniam. Ratione, blanditiis minima vel rem, unde perspiciatis distinctio praesentium ex dolorum reprehenderit quos suscipit sunt! Ea, nisi et.
+            Quia atque, fugit quo illo ex officiis repellendus harum architecto perspiciatis ratione, nostrum delectus corrupti explicabo quos sint dolorum dolor sunt earum unde! Suscipit tempora assumenda dolores repellat animi adipisci.
+            Impedit maxime debitis voluptates nam quisquam cumque voluptas accusantium beatae unde reiciendis, tempora fuga accusamus, tempore enim. Aperiam maxime at ipsum velit quam molestias debitis dolores ex quasi in! Officiis!
+            Excepturi optio sit illo eligendi libero obcaecati, quis accusantium saepe perspiciatis fugiat alias adipisci quas sunt voluptatum id illum deleniti asperiores nobis! Sit, culpa quaerat beatae modi facilis harum temporibus?
+         </p>-->
+
+         <button>I am a Button</button>
+
+         <h2>Paragraph One</h2>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto labore quam explicabo nulla laboriosam non,
+            consectetur mollitia ducimus ex nisi pariatur, fugit reiciendis magni sed! Quae pariatur doloremque recusandae
+            architecto.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quidem itaque fuga temporibus soluta nesciunt porro,
+            sunt dicta pariatur aut est provident nisi placeat quo ea perferendis officia veniam eligendi! Lorem ipsum, dolor sit
+            amet consectetur adipisicing elit. Animi quisquam sequi obcaecati id. Doloremque fugiat, dolorem eius nihil numquam
+            placeat nobis id praesentium minus doloribus dolores in sit quis. Quam!
+            Laudantium ipsam dignissimos quas excepturi magnam quasi ad ab eligendi quia veniam. Ratione, blanditiis minima vel
+            rem, unde perspiciatis distinctio praesentium ex dolorum reprehenderit quos suscipit sunt! Ea, nisi et.
+            Quia atque, fugit quo illo ex officiis repellendus harum architecto perspiciatis ratione, nostrum delectus corrupti
+            explicabo quos sint dolorum dolor sunt earum unde! Suscipit tempora assumenda dolores repellat animi adipisci.
+            Impedit maxime debitis voluptates nam quisquam cumque voluptas accusantium beatae unde reiciendis, tempora fuga
+            accusamus, tempore enim. Aperiam maxime at ipsum velit quam molestias debitis dolores ex quasi in! Officiis!
+            Excepturi optio sit illo eligendi libero obcaecati, quis accusantium saepe perspiciatis fugiat alias adipisci quas
+            sunt voluptatum id illum deleniti asperiores nobis! Sit, culpa quaerat beatae modi facilis harum temporibus?
+         </p>
+         <h2>Paragraph Two</h2>
+         <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus magnam quos sequi facere dolor expedita, excepturi doloribus exercitationem nobis repudiandae voluptas laboriosam officia unde sint necessitatibus, architecto, quas ullam?
+            Cupiditate ipsa neque dicta odio ad quas nulla provident, illum placeat officiis rerum consequatur iste alias error commodi optio ut aspernatur. Vel impedit nulla, illo libero unde animi accusantium amet?
+            Inventore asperiores quis nisi, excepturi ad blanditiis autem minima nam illo possimus architecto earum ipsam laborum pariatur voluptatem consequatur beatae rerum. Iste expedita ratione tenetur labore dolorem magnam eaque deleniti.
+            Tempora ad aspernatur accusantium inventore doloribus illum quia officia beatae eligendi, corrupti id laborum omnis eveniet similique qui minus quo quas culpa ipsum. Corporis adipisci hic ad architecto nemo vel.
+            Dolorem porro dicta perspiciatis, dolores mollitia qui eos, aperiam ipsa officiis quas autem dignissimos odit, molestias inventore perferendis corporis ea tenetur laboriosam minima. Doloremque iusto fugit, officiis perspiciatis voluptatibus commodi.
+            Quam enim ut possimus voluptatibus voluptates sequi nulla optio, recusandae omnis aspernatur amet quas minima, delectus, earum vel. Modi aliquid explicabo quidem enim. Architecto, quasi ad. Et labore deleniti soluta!
+            Voluptates commodi saepe cupiditate. Doloremque dolorum maiores commodi eos, necessitatibus suscipit autem nihil exercitationem sed consectetur facilis architecto impedit? Incidunt explicabo nam temporibus vel. Est, eligendi! Voluptatum repellendus culpa sint?
+            Fugit perferendis eveniet quam dignissimos aut ipsam laboriosam cupiditate perspiciatis aperiam doloribus facilis magnam odit dolorum voluptatibus optio velit fugiat sed, nam repudiandae iusto sequi. Asperiores architecto doloribus nesciunt dignissimos!
+         </p>
+      </section>
+   </body>
+</html>

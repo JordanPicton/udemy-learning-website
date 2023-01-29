@@ -1,0 +1,32 @@
+/*This is how to do comments via CSS, not only that but every page/HTML document that has this specific CSS stylesheet linked to them will get the styling we give here.
+For example below I'm setting all "h1" elements to have the colour indigo, so every h1 element will have this styling if the CSS file is linked to that HTML document.
+Something to help understand how CSS works is shown below in this comment:
+selector {
+   property: value;
+}
+Below the example is selecting the h1 elements and then giving them the "color" which is basically "text colour", so it's changing all the h1 elements to have the text colour be changed to indigo (a purple).
+All modern browsers support 140 named colours, like the one used below (indigo) however, using named colours is the most limited way to get colours into a property. The other ways to do this are Hex, RGB, HSL, HSLA and maybe RGBA.
+
+Some examples of RGB are as follows: rgb(255, 0, 0) this one would be the redest red that you could get from the RGB system since the number goes up to 255. There's technically 256 values for each colour (red, green and blue.) and the reasoning
+for this is that it starts from 0 and not 1. rgb(0, 0, 255) again this is similar to the last example, the difference being that the max value is in the blue position and not the red. rgb(173, 20, 219) this one is a mixture of all the colours, some having
+less values than the other etc. With this example it gives a pinky purple kind of colour. And finally rgb(0 ,0, 0) this would give the colour black since there's no colour value given here, meaning that rgb(255, 255, 255) would give us white, which it does. 
+
+
+*/
+h1 {
+   color: indigo;
+}
+
+/* The "background-color" is what changes, well the background of course, but this is to just show that color is for the text and there's other properties that can change different parts to different colours etc.
+Sometimes there will be the use of the "background" element instead of the "background-color" element and that's not supposed to be used in this way due to it being something else, it does work if used but it's not supposed to be
+used for this purpose, it does a lot more than changing the background colour. (Being; image, gradient, etc.) */
+button {
+   color:teal;
+   background-color: aqua;
+}
+
+/* Below is used as an example to show that it works on all elements of "p"'s and not just the first or last one, it's all of them. */
+p {
+   color: #aa33ff;
+   background-color: grey;
+}
