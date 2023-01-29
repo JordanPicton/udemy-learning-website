@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Marathon Form</title>
+</head>
+<body>
+   <!--This was a little assignment to do after learning about forms. To see if what I learned stuck and honestly most of it has however, since I've been making this project it's become a real good reference point for me so I'll be using this through out honestly.
+   The thing I need to remember is that for the input's "id" attribute it must match the corresponding "for" attribute in the label to connect them and with radio inputs I need to make sure that the "name" attribute is that one that connects those to other radio inputs
+   I want in the same group. Also learnt that it's not standard to have id attributes with numbers in them. The "value" attribute for radio buttons are important since these are the actual values that will be sent over to the server once the user has submitted the
+   form. If there is no "value" attribute then the server will be send the input of "name=on" where as we would want something along the lines of "name=racefun".-->
+      <header>
+         <nav>
+            <ul>
+               <li><a href="page1-agriculture.html">Home</a></li>
+            </ul>
+         </nav>
+         <h1>Marathon Form</h1>
+      </header>
+      <main>
+         <form action="/race">
+            <p>
+               <label for="first">First Name</label>
+               <input type="text" name="first" id="first" placeholder="John" required>
+               <label for="sur">Surname</label>
+               <input type="text" name="sur" id="sur" placeholder="Smith" required>
+            </p>
+            Select a race:
+            <p>
+               <input type="radio" name="races" id="racefun" value="racefun">
+               <label for="racefun">Fun Race 5k</label>
+               <br>
+               <input type="radio" name="races" id="racehalf" value="racehalf">
+               <label for="racehalf">Half Marathon</label>
+               <br>
+               <input type="radio" name="races" id="racefull" value="racefull">
+               <label for="racefull">Full Marathon</label>
+            </p>
+            <p>
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email" placeholder="johnsmith2000@hotmail.com" required>
+               <label for="password">Password</label>
+               <input type="password" name="password" id="password" minlength="8" maxlength="24" required>
+            </p>
+            <p>
+               <label for="agegroup">Select Age Group</label>
+               <select name="agegroup" id="agegroup" required>
+                  <option value="0-18">18 And Under</option>
+                  <option value="19-25">19-25</option>
+                  <option value="26-40">26-40</option>
+                  <option value="41-69">41-69</option>
+                  <option value="70+">70+</option>
+               </select>
+            </p>
+            <button type="submit">Submit</button>
+         </form>
+      </main>
+</body>
+</html>
