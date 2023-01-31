@@ -1,16 +1,35 @@
 /* The text align property is used to set the horizontal alignment of  text within an element, this doesn't mean aligning the element itself on the page but the text within the alignment. And since h1 elements are their own block, meaning they take up all the space
 within an area then the text should be in the center of the screen since the element takes up a block. In this case since I'm using a h1 element and there should ever only be one h1 element on a page, the styling below would only be changeing one section of the page
 due to the one h1 element. If this was used on something like h2 elements or paragraphs etc. Then all of the h2 or paragraph elements would have this styling applied. By default the text alignment is set to left. text-aling does not move the enire h1 element(s) around
-or any other element it's used inside of. It just moves the text within the element itself.*/
+or any other element it's used inside of. It just moves the text within the element itself.
+
+Below will align the text in all paragraphs to the right of the paragraph element, and since paragraphs are another block element this means that they use all the space horizontally across the page, it means the text will be on the furthest right side of the 
+page it can get. 
+   text-align: right; */
 h1 {
   text-align: center;
   /* The "font-wight" property gives the text it's boldness, there's different ways to do this, you can set it via key words for example: normal, bold, lighter, bolder etc. There is another way to do this though, with numbers from 100 to 900, depending on the font
-  used, it might not have all these options available to it, for example one font might only be able to go up 600 and if you specify it to use 900 then the font will only go as high as it can which would be the 600 and it would stay there. */
+  used, it might not have all these options available to it, for example one font might only be able to go up 600 and if you specify it to use 900 then the font will only go as high as it can which would be the 600 and it would stay there. Most commonly used values
+  are 400 and 700, or normal and bold. Most h1 elements by default are bolded (700). */
   font-weight: normal;
+  /* With the "text-decoration" property, it may sound simple at first but there's a lot you can do with this property. I'll give a few examples later in this comment. For now I need to mention that this property sets the appearance of decorative lines on text.
+  There are other properties similar to this but they're limited to the things they're specific for, this is like all of them grouped together, the other limited properties are; "text-decoration-line", "text-decoration-color", "text-decoration-style"
+  and "text-decoration-thickness", they're pretty self explanatory.
+  
+  With the live example below, the decoration is set to "underline" meaning it will give the text in the element and underline. If I was to use "overline" instead of underline it would set a line over the top of the text, kind of common sense realy, and then there's
+  line-through which is basically stikethrough text. Since this property is basically a bunch of text decorations put together, this means we can specific not only the text decoration itself but also the colour, style etc. Look at the live example for instance we have
+  changed the colour to be orange. I can also change the thickness of the line by adding a percentage, for example 15% looks nice and bold compared to the default which sits at or around %5 (or you  can us pixels "px"). In the Live example I've also changed the style to be wavy instead of a
+  solid straight line (which is default), there's a bunch of other styles I can use and honestly I'm not going to list them, MDN is your biggest friend when it comes to this stuff in my opinion.
+  A cool use of "text-decoration" is to remove the underline from hyperlinks or "a" elements */
+  text-decoration: orange wavy underline;
+  /* Okay so the "font-size" property,  */
+  font-size: 50px;
 }
 
 p {
-  /* Below will align the text in all paragraphs to the right of the paragraph element, and since paragraphs are another block element this means that they use all the space horizontally across the page, it means the text will be on the furthest right side of the 
-   page it can get. 
-   text-align: right; */
+  /* The "line-height" property is used to change the spacing between lines of text within an element. There's different units we can use to change this however, we haven't gotten into the different units yet. So for now we can just use a number, for example "1" being
+  default and nomral spacing between the lines, and 2 being double the spacing. This controls the height of the line and not the text itself, just the line the text is on. */
+  line-height: 2;
+  /* The "letter-spacing" property is similar to line height, instead of it being the spacing of the line it's the spacing between the letters or characters of text. Again we can use a bunch of different units for this but for now we'll just what we are told for now. */
+  letter-spacing: 1px;
 }
