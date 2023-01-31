@@ -1,0 +1,16 @@
+/* The text align property is used to set the horizontal alignment of  text within an element, this doesn't mean aligning the element itself on the page but the text within the alignment. And since h1 elements are their own block, meaning they take up all the space
+within an area then the text should be in the center of the screen since the element takes up a block. In this case since I'm using a h1 element and there should ever only be one h1 element on a page, the styling below would only be changeing one section of the page
+due to the one h1 element. If this was used on something like h2 elements or paragraphs etc. Then all of the h2 or paragraph elements would have this styling applied. By default the text alignment is set to left. text-aling does not move the enire h1 element(s) around
+or any other element it's used inside of. It just moves the text within the element itself.*/
+h1 {
+  text-align: center;
+  /* The "font-wight" property gives the text it's boldness, there's different ways to do this, you can set it via key words for example: normal, bold, lighter, bolder etc. There is another way to do this though, with numbers from 100 to 900, depending on the font
+  used, it might not have all these options available to it, for example one font might only be able to go up 600 and if you specify it to use 900 then the font will only go as high as it can which would be the 600 and it would stay there. */
+  font-weight: normal;
+}
+
+p {
+  /* Below will align the text in all paragraphs to the right of the paragraph element, and since paragraphs are another block element this means that they use all the space horizontally across the page, it means the text will be on the furthest right side of the 
+   page it can get. 
+   text-align: right; */
+}

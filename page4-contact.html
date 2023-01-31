@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Contact (Forms)</title>
-   </head>
 
-   <body>
-      <header>
-         <nav>
-            <ul>
-               <li><a href="page1-agriculture.html">Home</a></li>
-            </ul>
-         </nav>
-         <h1>Contact (Forms)</h1>
-      </header>
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Contact (Forms)</title>
+</head>
 
-      <!--"form" is another container however, it has a lot of things going on with it. (Groups together inputs, submits them together to some specified destination.)
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li><a href="page1-agriculture.html">Home</a></li>
+         </ul>
+      </nav>
+      <h1>Contact (Forms)</h1>
+   </header>
+
+   <!--"form" is another container however, it has a lot of things going on with it. (Groups together inputs, submits them together to some specified destination.)
       Also the "action" attribute is very important and specifies where the data should be sent when the form is submitted.-->
-      <form action="/tacos">
-         <!--The input element is the most common element/form control it can be used for 20+ different tpyes of inputs. (Checkbox, date picker, colour picker, password input, text etc.) Also do not have a closing tag.
+   <form action="/tacos">
+      <!--The input element is the most common element/form control it can be used for 20+ different tpyes of inputs. (Checkbox, date picker, colour picker, password input, text etc.) Also do not have a closing tag.
          However, it's the attribute "type" is where the magic happens, changing this dramatically alters the behaviour and appearance of the input element.
          Text type is just a defualt text box.
          password tpye is similar to a default text box, but it hides the characters for privacy sake.
@@ -35,16 +36,16 @@
          <input type="password" placeholder="password">
          <input type="color">
          <input type="number" placeholder="enter a number(s)">-->
-         
-         <!--label elements are to be used with inputs, they make it easier with accessability but also just general use. When a label and an input are connected it's easier to select the input, espeically for smaller screens
+
+      <!--label elements are to be used with inputs, they make it easier with accessability but also just general use. When a label and an input are connected it's easier to select the input, espeically for smaller screens
          or people who don't have the best eyesight. For example when a label and an input are linked, if the user clicks on the click which is usually text, then it will have an interaction with the input as if the user was
          clicking on the input instead (Makes the label clickable with the linked input). It also makes it easier for screen readers to know which input is for what piece of text or value, this is only when they're linked though.
          You could use a span or a paragraph instead of a label but you wouldn't get the additional benefits you get from using a label.
          The way to link a label and an input is by giving the label a "for" attribute and the input an "id" attribute with the same name. They're supposed to be unique names for each linked label and input element.
          Make sure that inputs are labelled. The way I've done it below (the live version) is way more common and standard, however there is another way to do this which I'll show underneath the live version.-->
-         <p>
-            <label for="username">Username:</label>
-            <!--The "name" attribute, when not using one and I submit the form it takes me to /tacos because that's what the forms action is. However, when adding the name attribute with the username input like the example below.
+      <p>
+         <label for="username">Username:</label>
+         <!--The "name" attribute, when not using one and I submit the form it takes me to /tacos because that's what the forms action is. However, when adding the name attribute with the username input like the example below.
             It takes me to "/tacos?username=<username input>" the input is what will be used to send the input to the server. username = something
             So it's a good idea to relate the name to the input that it will be using to send the request to the server as if I was to name the name attribute below to password (even though it's in the username input)
             it would look something like this "/tacos?password=<username input>" this is a little bit confusing right now because I'm not doing anything with the form data. But the name attribute will be used when the data is sent.
@@ -54,22 +55,22 @@
             (This is for this example only though, I'm sure other uses and use cases for this are more advanced and a lot more in depth.) Name is important and should be used on every single input used, and will be sent over to a server eventually.
             The reason for this data showing up in the URL is because the form made below is a "get request" and there's different requests that can be used for example HTTP requests, post requests,
             where the data won't be shown in the url and sent in a less intrusive (visual) way.-->
-            <input id="username" type="text" placeholder="input username" name="username">
-         </p>
-         <p>
-            <label for="password">Password:</label>
-            <input id="password" type="password" placeholder="input password" name="password">
-         </p>
-         <p>
-            <label for="color">Color Picker:</label>
-            <input id="color" type="color" name="color">
-         </p>
-         <p>
-            <!--(These were leanred later and go into more depth where the range input is.) The input number can also have a set min and max value. The step attribute learned from the "range" input also works here.-->
-            <label for="age">Age:</label>
-            <input id="age" type="number" placeholder="input age" name="age" min="18" max="120">
-         </p>
-         <!--There is another way to accomplish this and here is how to do it:
+         <input id="username" type="text" placeholder="input username" name="username" />
+      </p>
+      <p>
+         <label for="password">Password:</label>
+         <input id="password" type="password" placeholder="input password" name="password" />
+      </p>
+      <p>
+         <label for="color">Color Picker:</label>
+         <input id="color" type="color" name="color" />
+      </p>
+      <p>
+         <!--(These were leanred later and go into more depth where the range input is.) The input number can also have a set min and max value. The step attribute learned from the "range" input also works here.-->
+         <label for="age">Age:</label>
+         <input id="age" type="number" placeholder="input age" name="age" min="18" max="120" />
+      </p>
+      <!--There is another way to accomplish this and here is how to do it:
          <label>
             Username:
             <input type="text" placeholder="Input Username">
@@ -78,7 +79,7 @@
          This is another way to do this and it is valid. It makes it so you don't need to link both the label and the input with the "for" and "id" attributes but this isn't standard for some reason.
          The live version seems easier to read and gives the opportunity to style the label and input differently but still have them linked.-->
 
-         <!--"button" elements are most commonly used inside forms for things such as "sumbit", "sign up" and a bunch of other useful things. However they don't have to be located inside a form, they can be used as links with the facade of a button using CSS.
+      <!--"button" elements are most commonly used inside forms for things such as "sumbit", "sign up" and a bunch of other useful things. However they don't have to be located inside a form, they can be used as links with the facade of a button using CSS.
          When there's a button in a form and there's nothing to say do something else it will go ahead and submit the form, when outside of a form they will do nothing unless it has a function via JavaScript.
          There's an attribute "type" as shown below and when given the "button" value, it makes the button act like, well a button it lets the user click it and it doesn't do anything. (Meaning it will no longer submit the form).
          The default type value for buttons is "submit" and using this as the value will do the same thing as if it didn't have any type value (submits the form). So to use a buttom inside a form, with a different outcome of actually submitting the form then
@@ -86,131 +87,135 @@
          A good example of this is a sign up form, "Sign up with Google", "Some other account" or "Email" could all be buttons and you wouldn't want to submit a form when the user is selecting the way they want to sign up.
          Using a button in a form that you don't want to actually submit the form isn't that common but can be done and is usually given a function via JavaScript.
          <button type="button">Submit (Button)</button>-->
-         <button>Submit (Button)</button>
-         <!--Another way to make a submit button is the example shown below:
+      <button>Submit (Button)</button>
+      <!--Another way to make a submit button is the example shown below:
          It's not the best way to do it, and I can see why, what would the point in a button element be if we could just use an input?
          As you can see below, the type is submit which is the same value for button or the default value for button. But also since there's no closing tag, it means we don't get to change it's name and it's given pre-defined text when created.
          There is a way to change the text it's given but it's done via another attribute which is "value" (shown below).-->
-         <input type="submit" value="Submit (Input)">
-      </form>
-      <hr>
-      <button>Not Inside Form</button>
+      <input type="submit" value="Submit (Input)" />
+   </form>
+   <hr />
+   <button>Not Inside Form</button>
 
-      <h2>Hijacking Searches</h2>
-      <!--Using the knowledge about, the below form will search reddit via the input given. However, the example below won't work because reddit servers are setup to look for the name attribute of "q" not "query"
+   <h2>Hijacking Searches</h2>
+   <!--Using the knowledge about, the below form will search reddit via the input given. However, the example below won't work because reddit servers are setup to look for the name attribute of "q" not "query"
       so it will have to match what the reddit servers are looking for.-->
-      <h3>Reddit Search</h3>
-      <form action="https://www.reddit.com/search">
-         <input type="text" name="q"> <!--name="query"-->
-         <button>Search Reddit</button>
-      </form>
+   <h3>Reddit Search</h3>
+   <form action="https://www.reddit.com/search">
+      <input type="text" name="q" />
+      <!--name="query"-->
+      <button>Search Reddit</button>
+   </form>
 
-      <h3>Google Search</h3>
-      <form action="https://www.google.com/search">
-         <input type="text" name="q">
-         <button>Search Google</button>
-      </form>
+   <h3>Google Search</h3>
+   <form action="https://www.google.com/search">
+      <input type="text" name="q" />
+      <button>Search Google</button>
+   </form>
 
-      <!--I tried doing the YouTube one by myself but it was different compared to the previous two I didn't know how to do it. The thing that caught me off guard is that YouTube uses results in the URL instead of search and they use,
+   <!--I tried doing the YouTube one by myself but it was different compared to the previous two I didn't know how to do it. The thing that caught me off guard is that YouTube uses results in the URL instead of search and they use,
       search_query instead of q. But other than that it's straight forward and I should have been able to work that out myself. The forms I'm doing here are a little silly and not something that is actually used but it's just to show how different parts of the form
       and data are thrown together to make these things work.
       Another thing to note is that when there is no button to submit the form, a user can press Enter on their keyboard to submit the form. Hitting Enter works both with and without the button present.-->
-      <h3>YouTube Search</h3>
-      <form action="https://www.youtube.com/results">
-         <input type="text" name="search_query">
-         <button>Search YouTube</button>
-      </form>
-      <hr>
+   <h3>YouTube Search</h3>
+   <form action="https://www.youtube.com/results">
+      <input type="text" name="search_query" />
+      <button>Search YouTube</button>
+   </form>
+   <hr />
 
-      <h2>More Inputs</h2>
-      <form action="tacos">
-         <!--checkboxes are simple they're just a checkbox, either off or on, yes or no. There is a way to get a checkbox input to already be checked, could be something useful for stuff like cookies when a user is asked about saving their cookies on a site.
+   <h2>More Inputs</h2>
+   <form action="tacos">
+      <!--checkboxes are simple they're just a checkbox, either off or on, yes or no. There is a way to get a checkbox input to already be checked, could be something useful for stuff like cookies when a user is asked about saving their cookies on a site.
          The way to do this is to put "checked" inside the input elements tags at the end before the closing tag. Labels are also best friends for checkboxes, since a checkbox by itself doesn't say anything it's just a checkbox, and they're really needed for
          screen-readers/accessability. In the URL when the checkbox input is checked it shows the "cats" checkbox to be on, so when it's not checked it doesn't send anything since that piece of data isn't used/needed. Checkboxes within a form allow for the 
          user to select more than one or none at all.-->
-         <label for="cats">Do you like cats?</label>
-         <input type="checkbox" name="cats" id="cats">
-         <p>
-            How was your experience with us today?
-            <!--Below are radio buttons that are similar to the checkboxes that can be used and where shown above. However, with these inputs you can group them and it would make it so the user can only choose one option, similar to having a choice selection.
+      <label for="cats">Do you like cats?</label>
+      <input type="checkbox" name="cats" id="cats" />
+      <p>
+         How was your experience with us today?
+         <!--Below are radio buttons that are similar to the checkboxes that can be used and where shown above. However, with these inputs you can group them and it would make it so the user can only choose one option, similar to having a choice selection.
             To group them, this would be done by giving the radio inputs the same exact name (the browser see's that they point to the same thing). When this is submitted, the data that is sent through is "experience=on" and not actually the different individual
             piece of specific data from that group, the reason for this is because the input needs to have a specific attribute valled "value". When this is on, the data is sent over correctly, showing whick one in the group the user has selected. The value of the
             attribute "value" doesn't have the be the same as the id or the label, it just needs to be something that the server is looking for when the user clicks submit. value attribute and name attribute is very important for these.-->
-            <input type="radio" name="experience" id="great" value="great">
-            <label for="great">Great</label>
-            <input type="radio" name="experience" id="mediocre" value="mediocre">
-            <label for="mediocre">Mediocre</label>
-            <input type="radio" name="experience" id="awful" value="awful">
-            <label for="awful">Awful</label>
-         </p>
-         <p>
-            <!--Select inputs are two inputs kind of put together, being select and option. The value attribute is similar to the radio button value attribute, meaning the value of the value attribute is the piece of data that will be sent to the server.
+         <input type="radio" name="experience" id="great" value="great" />
+         <label for="great">Great</label>
+         <input type="radio" name="experience" id="mediocre" value="mediocre" />
+         <label for="mediocre">Mediocre</label>
+         <input type="radio" name="experience" id="awful" value="awful" />
+         <label for="awful">Awful</label>
+      </p>
+      <p>
+         <!--Select inputs are two inputs kind of put together, being select and option. The value attribute is similar to the radio button value attribute, meaning the value of the value attribute is the piece of data that will be sent to the server.
             Having the select only, will show the drop down. However, it wouldn't have any "options". When submitting the value of country is set to the selected country from the user. There is a way to have an option pre-selected if you don't want to move the
             options around, similar to the checkboxes, you can put "selected" inside the desired pre-selected option element tags towards the end. Use options inside a select.-->
-            <label for="country">Please Select a Country:</label>
-            <select name="country" id="country">
-               <!--Something that people do is make something like this: <option value="">--Please Pick An Option--</option> This doesn't have to be done but it does happen.-->
-               <option value="uk">UK</option>
-               <option value="czech">Czech</option>
-               <option value="canada">Canada</option>
-               <option value="japan">Japan</option>
-            </select>
-         </p>
-         <p>
-            <!--range inputs are interesting and seem pretty useful for things like quantity (when there's small limits maybe?) The output the name and value that user has selected, an example of this would be: quantity=4.
+         <label for="country">Please Select a Country:</label>
+         <select name="country" id="country">
+            <!--Something that people do is make something like this: <option value="">--Please Pick An Option--</option> This doesn't have to be done but it does happen.-->
+            <option value="uk">UK</option>
+            <option value="czech">Czech</option>
+            <option value="canada">Canada</option>
+            <option value="japan">Japan</option>
+         </select>
+      </p>
+      <p>
+         <!--range inputs are interesting and seem pretty useful for things like quantity (when there's small limits maybe?) The output the name and value that user has selected, an example of this would be: quantity=4.
             If there is a specific use case for something that needs a bigger range for example 1 to 100 and a company sells products in bulk there's an attribute that be used in the input element called "step" if this was set to 5 then instead
             of incrementing in steps of 1 the user would be going up by 5, so from 1 to 6 and then so on so forth. Another attribute for this is "value" and this is sets the default value to be set when a user loads the page.-->
-            <label for="quantity">Select Quantity:</label>
-            <input type="range" id="quantity" name="quantity" min="1" max="10" value="5">
-         </p>
+         <label for="quantity">Select Quantity:</label>
+         <input type="range" id="quantity" name="quantity" min="1" max="10" value="5" />
+      </p>
 
-         <p>
-            <label for="text_experience">Tell us how your experience was:</label>
-            <br>
-            <!--textarea elements are separate from input elements, it allows for multiline text input. Any text placed between the opening and closing element tags for text area will be placed into the text area, this does not work like a placeholder though.
+      <p>
+         <label for="text_experience">Tell us how your experience was:</label>
+         <br />
+         <!--textarea elements are separate from input elements, it allows for multiline text input. Any text placed between the opening and closing element tags for text area will be placed into the text area, this does not work like a placeholder though.
             I can also set the rows and collumns of the text area, I'm assuming this is to set the default size when a user loads the page (it is). But you can actually put a placeholder attribute in here. textareas do not have the type attribute,
             like the select element.-->
-            <textarea name="text_experience" id="text_experience" cols="80" rows="20" placeholder="How did we do?"></textarea>
-         </p>
-         <button>Submit</button>
-      </form>
-      <hr>
+         <textarea name="text_experience" id="text_experience" cols="80" rows="20"
+            placeholder="How did we do?"></textarea>
+      </p>
+      <button>Submit</button>
+   </form>
+   <hr />
 
-      <h2>Form Validations</h2>
-      <form action="/validate">
-         <label for="firstname">Enter First Name </label>
-         <!--Below is showing off the example of Form Validation using the "required" attribute, this is used mainly in forms to make sure people are inputting required data into specific fields, for example when you sign up to a new site they often ask for the users
+   <h2>Form Validations</h2>
+   <form action="/validate">
+      <label for="firstname">Enter First Name </label>
+      <!--Below is showing off the example of Form Validation using the "required" attribute, this is used mainly in forms to make sure people are inputting required data into specific fields, for example when you sign up to a new site they often ask for the users
          email address, password, names, and any other info that the specifc site needs. This can get more complex with the help from JavaScript, along with the password requirement for example, it could be between X and Y characters long along with needing
          specific characters before the site takes the submitted data etc.
          With the example below, when leaving the box empty without the "required" attribute, it would allow the form to be submitted however, when using the "required" attribute the user will need to give the input some data before allowing them to submit the form.
          Also different browsers show different error messages depending on which one is used, along with most browsers should have this built in because it's the standard but this doesn't mean that every browser has this, their's no guarantee.-->
-         <input type="text" name="firstname" id="firstname" placeholder="John" required>
-         <p>
-            <label for="username">Username </label>
-            <!--The example below shows the use of another form validation method, the useage of both the "minlength" and "maxlength" attributes. This makes it so the user has to have, a username in this case that is 4 or above and up to 16 characters or less for
+      <input type="text" name="firstname" id="firstname" placeholder="John" required />
+      <p>
+         <label for="username">Username </label>
+         <!--The example below shows the use of another form validation method, the useage of both the "minlength" and "maxlength" attributes. This makes it so the user has to have, a username in this case that is 4 or above and up to 16 characters or less for
             the username to be valid input. It warns me if the username is less than the "minlength" attribute but will not let me type anymore characters than the "maxlength" attribute (So it doesn't warn you about the max length it just doesn't allow more
             characters into that field if it's already max). You can make it so it doesn't have to have the required attribute depending on the use case but in this example a Username would be required. There's also the min and max for numerical values,
             these could be used for something like a e-commerce site, one that comes to mind would be computer parts right now because they're hard to get a hold of. Sites can limit maybe the amount of items people can get, for example 2 per customer.
             But the min would have to be 1 because if the site didn't have this and people were allowed to by 0 then they would have an overloaded system with empty sales. I've already used min and max above too. If I was to enter an value that the examples
             I have above then the browser would warn me that it's not in the min/max allowed range.-->
-            <input type="text" name="username" id="username" placeholder="Username" minlength="4" maxlength="16" required>
-         </p>
+         <input type="text" name="username" id="username" placeholder="Username" minlength="4" maxlength="16"
+            required />
+      </p>
 
-         <p>
-            <!--There is something else that can be used and it seems very complex, they're called "pattern" attributes and they can be used to make a bunch of rules for an input, for example the password one where it needs to have a special character and lets say
+      <p>
+         <!--There is something else that can be used and it seems very complex, they're called "pattern" attributes and they can be used to make a bunch of rules for an input, for example the password one where it needs to have a special character and lets say
             at least 3 numbers and maybe a capatilised character in there. The pattern attributes use Regular Expressions which are going to be discussed later since they're a little more indepth than we need to know for right now, but they look a bit scary honestly.
             Other than that there are some types of inputs that already have pattern matching already built in, and the one we're going to use is the email type. It's looking for something that is an email and if the broswer doesn't see that the user has inputted one
             correctly with the "@" and ".com" or whatever other ones people can use for email then it won't let the form be submitted. It didn't let me submit the form with only using the input of "jordan@" but it did with "jordan@hotmail.com". Other browsers might
             allow the first input I used, I am using Firefox Developer Edition to try all of this so it could differ for each browser.-->
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="johnsmith2000@hotmail.com" required>
-            <!--Another one of these types is the "url" type where it's looking for something like "http://www.site.com" or "https://www.site.com". Using the input "www.eee" did not work along with "www.eee.ccc" however, as soon as I used "http://www.eee.ccc" the form
+         <label for="email">Email</label>
+         <input type="email" name="email" id="email" placeholder="johnsmith2000@hotmail.com" required />
+         <!--Another one of these types is the "url" type where it's looking for something like "http://www.site.com" or "https://www.site.com". Using the input "www.eee" did not work along with "www.eee.ccc" however, as soon as I used "http://www.eee.ccc" the form
             was allowed to be submitted. Yeah so for URL's it's looking for "urlscheme://restofurl" meaning, urlscheme = http or https and then :// followed by the rest of the URL. I tested it because I was curious and I thought it would work and it did, I tested the
             input "http://www" and it allowed me to submit the form. Doesn't check if it's a real URL, it's just following some set rules it has already. There's also the type of Telephone "tel" and there's a few others.-->
-            <label for="url">Input A URL</label>
-            <input type="url" name="url" id="url" placeholder="Favourite Song URL (Use YouTube)">
-         </p>
-         <button tpye="submit">Submit</button>
-      </form>
-   </body>
+         <label for="url">Input A URL</label>
+         <input type="url" name="url" id="url" placeholder="Favourite Song URL (Use YouTube)" />
+      </p>
+      <button tpye="submit">Submit</button>
+   </form>
+</body>
+
 </html>

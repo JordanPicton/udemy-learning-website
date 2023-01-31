@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Favourite Games</title>
-   </head>
-   <body>
-      <header>
-         <nav>
-            <ul>
-               <li><a href="page1-agriculture.html">Home</a></li>
-            </ul>
-         </nav>
-         <h1>My Favourite Games Table</h1>
-      </header>
-      <!--The "table" element represents tabular data, a two-dimensional table with columns and rows with cells that contain data.-->
-      <table> 
-        <!--The "td" (Table data Cell) element represents a single cell of data. Doing the table like this and only using the "td" elements, all the data would be on the same row.
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Favourite Games</title>
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li><a href="page1-agriculture.html">Home</a></li>
+         </ul>
+      </nav>
+      <h1>My Favourite Games Table</h1>
+   </header>
+   <!--The "table" element represents tabular data, a two-dimensional table with columns and rows with cells that contain data.-->
+   <table>
+      <!--The "td" (Table data Cell) element represents a single cell of data. Doing the table like this and only using the "td" elements, all the data would be on the same row.
          <td>Factorio</td> 
          <td>888.3</td>
          <td>20/30</td>
@@ -26,9 +28,8 @@
          <td>2/13</td>
 
          I switched the above table out so that I don't end up with a page with a bunch of tables. And to leave it in here for the explanation above.-->
-         
-         
-         <!--The "tr" element is a table row which allows me to place my "td" elements inside and split my data up a little more to make it more readable.
+
+      <!--The "tr" element is a table row which allows me to place my "td" elements inside and split my data up a little more to make it more readable.
          The below table now has two rows with 3 cells of content each. And they're nicely spaced out between each other along with being formatted nicely.
          (No horrible space difference if one has more characters than the other)
          The only problem with the table below is if a row of data doesn't have the same amount of td (cell) elements then it will go out of line and look weird with the other
@@ -46,93 +47,94 @@
             <td>2/13</td>
          </tr>-->
 
-         <!--The "thead" element and a few other elements, being "tbody" and "tfoot", are used mainly to split up the table, I'm assuming to make it more reable again and for accessability purposes.-->
-         <thead>
-            <tr>
-               <!--The "th" element is the table header which by default has bold text when using just HTML. This can be changed along with many other aspects with CSS.-->
-               <th>Game:</th>
-               <th>Last Played:</th>
-               <th>Hours Played:</th>
-               <th>Achievements:</th>
-            </tr>
-         </thead>
-         <!--Again the "tbody" element is mainly used for accessability purposes and for readability from people reading the code. They're really handy for bigger and more complex tables, since the bigger and more
+      <!--The "thead" element and a few other elements, being "tbody" and "tfoot", are used mainly to split up the table, I'm assuming to make it more reable again and for accessability purposes.-->
+      <thead>
+         <tr>
+            <!--The "th" element is the table header which by default has bold text when using just HTML. This can be changed along with many other aspects with CSS.-->
+            <th>Game:</th>
+            <th>Last Played:</th>
+            <th>Hours Played:</th>
+            <th>Achievements:</th>
+         </tr>
+      </thead>
+      <!--Again the "tbody" element is mainly used for accessability purposes and for readability from people reading the code. They're really handy for bigger and more complex tables, since the bigger and more
          complex ones are not very accessible in the first place.-->
-         <tbody>
-            <tr>
-               <td>Factorio</td>
-               <td>25/01/2023</td>
-               <td>888.3</td>
-               <td>20/30</td>
-            </tr>
-            <tr>
-               <td>DayZ</td>
-               <td>17/12/2022</td>
-               <td>662.8</td>
-               <td>2/13</td>
-            </tr>
-            <tr>
-               <td>GTFO</td>
-               <td>27/06/2022</td>
-               <td>14.7</td>
-               <td>N/A</td>
-            </tr>
-         </tbody>
-         <!--"tfoot" elements are rarely used, they're mainly used for things that don't really have anything to do with the main body of data in the table and are generally used for things like averages or totals at the ends
+      <tbody>
+         <tr>
+            <td>Factorio</td>
+            <td>25/01/2023</td>
+            <td>888.3</td>
+            <td>20/30</td>
+         </tr>
+         <tr>
+            <td>DayZ</td>
+            <td>17/12/2022</td>
+            <td>662.8</td>
+            <td>2/13</td>
+         </tr>
+         <tr>
+            <td>GTFO</td>
+            <td>27/06/2022</td>
+            <td>14.7</td>
+            <td>N/A</td>
+         </tr>
+      </tbody>
+      <!--"tfoot" elements are rarely used, they're mainly used for things that don't really have anything to do with the main body of data in the table and are generally used for things like averages or totals at the ends
          of the tables.-->
-         <tfoot>
-            <tr>
-               <td></td>
-               <td>Total Hours:</td>
-               <td>1565.8</td>
-               <td></td>
-            </tr>
-         </tfoot>
-      </table>
+      <tfoot>
+         <tr>
+            <td></td>
+            <td>Total Hours:</td>
+            <td>1565.8</td>
+            <td></td>
+         </tr>
+      </tfoot>
+   </table>
 
-      <h2>Game Table V2</h2>
-            <table>
-               <thead>
-                  <tr>
-                     <!--rowspan attribute makes it so that the theader or td will take up two rows, this is useful for the example below when you want to have sub-headers for the data. And not make the table look too out of place or overluded with too much.-->
-                     <th rowspan="2">Game:</th>
-                     <th rowspan="2">Last Played:</th>
-                     <!--colspan attribute is very similar to rowspan, but instead of doing rows it does columns. It makes it so it takes up more columns than the others. It just makes the data look more organised etc.-->
-                     <th colspan="2">Time Played:</th>
-                  </tr>
-                  <tr>
-                     <th>Hours</th>
-                     <th>Minutes</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td>Factorio</td>
-                     <td>25/01/2023</td>
-                     <td>888</td>
-                     <td>18</td>
-                  </tr>
-                  <tr>
-                     <td>DayZ</td>
-                     <td>17/12/2022</td>
-                     <td>662</td>
-                     <td>48</td>
-                  </tr>
-                  <tr>
-                     <td>GTFO</td>
-                     <td>27/06/2022</td>
-                     <td>14</td>
-                     <td>42</td>
-                  </tr>
-               </tbody>
-               <tfoot>
-                  <tr>
-                     <td></td>
-                     <td>Total Hours:</td>
-                     <td>1565</td>
-                     <td>48</td>
-                  </tr>
-               </tfoot>
-            </table>
-   </body>
+   <h2>Game Table V2</h2>
+   <table>
+      <thead>
+         <tr>
+            <!--rowspan attribute makes it so that the theader or td will take up two rows, this is useful for the example below when you want to have sub-headers for the data. And not make the table look too out of place or overluded with too much.-->
+            <th rowspan="2">Game:</th>
+            <th rowspan="2">Last Played:</th>
+            <!--colspan attribute is very similar to rowspan, but instead of doing rows it does columns. It makes it so it takes up more columns than the others. It just makes the data look more organised etc.-->
+            <th colspan="2">Time Played:</th>
+         </tr>
+         <tr>
+            <th>Hours</th>
+            <th>Minutes</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>Factorio</td>
+            <td>25/01/2023</td>
+            <td>888</td>
+            <td>18</td>
+         </tr>
+         <tr>
+            <td>DayZ</td>
+            <td>17/12/2022</td>
+            <td>662</td>
+            <td>48</td>
+         </tr>
+         <tr>
+            <td>GTFO</td>
+            <td>27/06/2022</td>
+            <td>14</td>
+            <td>42</td>
+         </tr>
+      </tbody>
+      <tfoot>
+         <tr>
+            <td></td>
+            <td>Total Hours:</td>
+            <td>1565</td>
+            <td>48</td>
+         </tr>
+      </tfoot>
+   </table>
+</body>
+
 </html>

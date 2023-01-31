@@ -1,4 +1,8 @@
-/*This is how to do comments via CSS, not only that but every page/HTML document that has this specific CSS stylesheet linked to them will get the styling we give here.
+/*This is how to do comments via CSS. 
+Something to note about CSS is that properties should end in a semi-colon, ";" you won't get any error messages about this but it's wrong. VS Code will hint that it's missing one but it doesn't scream it at you.
+This also helps with things like JavaScript. So when you do miss a semi-colon within a selector, that piece of styling and all the other properties after that within the same selector will not be applied to the HTML document.
+It shows that it's the end of a property declaration and we're moving onto the next one. Kind of like how tags work in HTML.
+Not only that but every page/HTML document that has this specific CSS stylesheet linked to them will get the styling we give here.
 For example below I'm setting all "h1" elements to have the colour indigo, so every h1 element will have this styling if the CSS file is linked to that HTML document.
 Something to help understand how CSS works is shown below in this comment:
 selector {
@@ -11,7 +15,16 @@ Some examples of RGB are as follows: rgb(255, 0, 0) this one would be the redest
 for this is that it starts from 0 and not 1. rgb(0, 0, 255) again this is similar to the last example, the difference being that the max value is in the blue position and not the red. rgb(173, 20, 219) this one is a mixture of all the colours, some having
 less values than the other etc. With this example it gives a pinky purple kind of colour. And finally rgb(0 ,0, 0) this would give the colour black since there's no colour value given here, meaning that rgb(255, 255, 255) would give us white, which it does. 
 
+Some examples of HEX are follows: #f00  and #ff0000 are  the same as each other, it follows a similar layout to rgb the reason I say this is because the first two characters in HEX correspond to the colour red, to make this simpler look at the example below:
+      Red    Green    Blue
+RGB   0      255      0
+Hex   00     ff       0
 
+As seen above this is what I meant by similar, they would both give the purest green. Not to mention that HEX uses other characters than just 0 to 9, this is because HEX goes up to 16 characters. Starting from 0 and ending at f, the order of characters looks like
+this; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f. I learned about this in college and had a good understand of this so I won't be going much further.
+The last thing I want to mention is that if I have a colour that has the different coloured sections being the same characters for example: #ff22ee. As you can see, the red section has the same characters, as does the green and blue. To make things simpler,
+instead of writing that out like this I can shorten it by doing this: #f2e. Since all the sections had the same character the browsers understands that the missing characters are just the same for each section. Using the short hand version with only one character
+per colour section significantly reduces the amount of options I can use so it's best to use full HEX and use the short hand when I know I don't need to have thos extra characters.
 */
 h1 {
    color: indigo;
@@ -30,3 +43,4 @@ p {
    color: #aa33ff;
    background-color: grey;
 }
+
