@@ -22,7 +22,11 @@ h1 {
   solid straight line (which is default), there's a bunch of other styles I can use and honestly I'm not going to list them, MDN is your biggest friend when it comes to this stuff in my opinion.
   A cool use of "text-decoration" is to remove the underline from hyperlinks or "a" elements */
   text-decoration: orange wavy underline;
-  /* Okay so the "font-size" property,  */
+  /* Okay so the "font-size" property, it well changes the font size. But the more complicated thing about this is that there's a whole bunch of different units/measurements to do this with, some relative and some absolute. The most common one being "px" which is pixels
+  however, it's not the actual size of a pixel on the display and the size can differ from monitor to monitor. They're not recommended for responsive websites, there are better units to be used. But for now we'll use them until we understand the other ones. Here's a
+  glimpse at some others:
+    Relative; em, rem, vh, vw, %, and more.
+    Absolute; px, pt, cm, in, mm.  */
   font-size: 50px;
 }
 
@@ -32,4 +36,13 @@ p {
   line-height: 2;
   /* The "letter-spacing" property is similar to line height, instead of it being the spacing of the line it's the spacing between the letters or characters of text. Again we can use a bunch of different units for this but for now we'll just what we are told for now. */
   letter-spacing: 1px;
+  /* "font-family" property is able to change the font of the text, there are "browser safe" fonts which are bullt into the browser already. But this doesn't meant that everyone of these fonts are going to be on every machines browser. We can use custom fonts later on
+  but we haven't gotten to that part yet. The most basic and simplest way of doing this is to just specify one font as shown below:
+    font-family: Century Gothic;
+  but the better approach to this would be to use a font stack, shown in the live exmaple below, the first position is the main font that will be used if the browser supports and has it. If not then it will look to the next font and try using that, and you can have a
+  bunch of fonts in the stack to make it so that if you're being specific then almost every browser will have the formatting you want. You can use a specific font for example "Century Gothic" or a font family "sans-serif" font families have a few or a bunch of fonts
+  within them. Using the live example below, I'm using Geneva as my main font, but it's currently only available to 2.08% of Windows machines, so using Century Gothic as my second font I can see that it's using Century Gothic as when I only had Geneva, my font did
+  not change. Arial would be used in the case of the browser not having both Geneva or Century Gothic, these are the generic names of each font. And with the last little bit (sans-serif) if my browser didn't have either Geneva, Century Gothic or Arial then it would
+  use the sans-serif font family which is a collection of fonts and it would use the first one from there that works/the browser has. Generic names = One font. Family Name = Collection of fonts. It's always best to supply a fall back font or family of fonts. */
+  font-family: Geneva, Century Gothic, Arial, sans-serif;
 }
