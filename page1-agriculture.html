@@ -6,45 +6,49 @@ You can change it to be a lower version, but this won't disable anything via the
 <!--Everything on this page is supposed to be a decendant of the "html" element.
 Needs to be followed by one "head" element and one "body" element.-->
 <html>
-  <!--The head element basically contains things that aren't needed to be shown on the page. (Information about the webpage.)-->
+<!--The head element basically contains things that aren't needed to be shown on the page. (Information about the webpage.)-->
 
-  <head>
-    <!--The "title" element changes the name/displayed text in the tab view for that site/webpage. Doesn't show up in the page itself but it does for the browsers tab naming.-->
-    <title>Udemy Course Learning Site</title>
-  </head>
+<head>
+   <!--The "title" element changes the name/displayed text in the tab view for that site/webpage. Doesn't show up in the page itself but it does for the browsers tab naming.-->
+   <title>Udemy Course Learning Site</title>
+</head>
 
-  <!--The "body" element only allows for one of these per page. Along with this is where most of the content should/would be located.-->
+<!--The "body" element only allows for one of these per page. Along with this is where most of the content should/would be located.-->
 
-  <body>
-    <!--The "main" element is similar to a div, however instead of being generic it's kind of specific. In the sense of the content that should be within this container,
+<body>
+   <!--The "main" element is similar to a div, however instead of being generic it's kind of specific. In the sense of the content that should be within this container,
       should be things that ARE NOT repeated on other pages of the site. For example Navigation Bars, Logos, Sidebars and Footers etc. It comes more handy for readability and accessability.-->
-    <main>
+   <main>
       <!--The "header" element is another specific container type/semantic element where introductory content and usually navigation content is located.
          nav doesn't have to be in here it's up to me depending on how I want to build my sites in the future.-->
       <header>
-        <!--The "nav" element is another container similar to main and div, where it's specific again for mainly the placement and useage of the navigation section of the page.
+         <!--The "nav" element is another container similar to main and div, where it's specific again for mainly the placement and useage of the navigation section of the page.
             I'm assuming these can be used in and out of the main element due to Colt saying they can be used to navigate the same page, different pages or external sources of the website and the web.
             Not only that but in the videa, using Wikipedia as an example, you can see that there' nav both in and out of where I would personally put the main content.
             As you can see the below live nav element is pretty easy to understand and can easily be seen as a navigation part of the page/site.
             Can be used in any area where there's navigational links, meaning the navigation at the top of the page, sidebar, breadcrumb, etc.
             Screen readers will look for these and call them out. You can also put headers inside other elements, for example an article element with a header and footer element nested inside.-->
-        <nav>
-          <ul>
-            <li><a href="page1-agriculture.html">Home</a></li>
-            <li><a href="page2-about.html">About</a></li>
-            <li><a href="page3-favouritegames.html">Favourite Games</a></li>
-            <li><a href="page4-contact.html">Contact</a></li>
-            <li><a href="page5-marathonform.html">Marathon Form</a></li>
-            <li><a href="page6-CSSintro.html">CSS Introduction</a></li>
-            <li><a href="page7-textproperties.html">CSS Text Properties</a></li>
-          </ul>
-        </nav>
-        <!--There should only ever really be one "h1" element on any given page.
+         <nav>
+            <ul>
+               <li><a href="page1-agriculture.html">Home</a></li>
+               <li><a href="page2-about.html">About</a></li>
+               <li><a href="page3-favouritegames.html">Favourite Games</a></li>
+               <li><a href="page4-contact.html">Contact</a></li>
+               <li><a href="page5-marathonform.html">Marathon Form</a></li>
+               <li><a href="page6-CSSintro.html">CSS Introduction</a></li>
+               <li><a href="page7-textproperties.html">CSS Text Properties</a></li>
+               <li><a href="page8-selectors.html">CSS Universal and Element Selectors</a></li>
+               <ul>
+                  <li><a href="web-project-alongside/index.html">Side Project</a></li>
+               </ul>
+            </ul>
+         </nav>
+         <!--There should only ever really be one "h1" element on any given page.
             There should also be the previous "h" element type for the one I'm trying to use.
             For example if I want to use a "h3" element then I would need both a "h2" and a "h1" element.
             This is just how the rules work for HTML.
             Also putting any other text on the same line as a "h1" element will force it out of the same space and move it to it's own line.-->
-        <h1>Agriculture</h1>
+         <h1>Agriculture</h1>
       </header>
       <!--hr is the horizontal rule element and it's not something that is used very often. It is also another element that doesn't have a closing tag. Makes a line that goes across the screen horizontally. (You can get this same effect without having to use this.)-->
       <hr />
@@ -56,10 +60,7 @@ Needs to be followed by one "head" element and one "body" element.-->
          However for now, this attribute is not required but makes websites more accessible and easier for people for example who use screen readers. The website knows there's some
          information for this image being held within the alt attribute so if someone with a screen reader comes along they would be able to hear what it is that's on the page rather than it being blank.
          Just to note there are some rules on when to use the alt attribute and when to not, this will be talked about when covering accessability.-->
-      <img
-        src="brown-Guernsey-cow.jpg"
-        alt="A picture of a brown Guernsey cow in a field."
-      />
+      <img src="brown-Guernsey-cow.jpg" alt="A picture of a brown Guernsey cow in a field." />
       <!--Below is another way to do this, again this is locally meaning it's on the same machine.
          <img src="pictures/brown-Guernsey-cow.jpg">
          What this does it it goes inside a directory first and then looks for the file with the name "brown-Guernsey-cow.jpg"
@@ -98,54 +99,49 @@ Needs to be followed by one "head" element and one "body" element.-->
             I am a title
             Hello I am a link.-->
       <p>
-        <!--The hyperlink below is to demonstrate that you can have it in the middle of a paragraph and it won't disrupt the flow of text. This is a showcase of an inline element.-->
-        <b>Agriculture</b> or <b>farming</b> is the practice of cultivating
-        <a href="https://en.wikipedia.org/wiki/Plant">plants</a> and
-        livestock.<sup
-          ><a
-            href="https://en.wikipedia.org/wiki/Agriculture#cite_note-Office1999-1"
-            >[1]</a
-          ></sup
-        >
-        Agriculture was the key
-        <!--Above the sup (superscript) element isn't used as much, it's mainly for wiki's or science papers/manuals etc. It pushes the content half a line up to make it stick up a little. Really useful for temperature or math equations.
+         <!--The hyperlink below is to demonstrate that you can have it in the middle of a paragraph and it won't disrupt the flow of text. This is a showcase of an inline element.-->
+         <b>Agriculture</b> or <b>farming</b> is the practice of cultivating
+         <a href="https://en.wikipedia.org/wiki/Plant">plants</a> and
+         livestock.<sup><a href="https://en.wikipedia.org/wiki/Agriculture#cite_note-Office1999-1">[1]</a></sup>
+         Agriculture was the key
+         <!--Above the sup (superscript) element isn't used as much, it's mainly for wiki's or science papers/manuals etc. It pushes the content half a line up to make it stick up a little. Really useful for temperature or math equations.
             You can also nest other elements inside this, for example an anchor tag. Which is also shown above. On wikipedia they have it link to a different area of the page rather than a different part of the internet or site itself.-->
-        development in the rise of sedentary human civilization, whereby farming
-        of domesticated species created food surpluses that enabled people to
-        live in cities. The history of agriculture began thousands of years ago.
-        After gathering wild grains beginning at least 105,000 years ago,
-        nascent farmers began to plant them around 11,500 years ago. Sheep,
-        goats, pigs and cattle were domesticated over 10,000 years ago. Plants
-        were independently cultivated in at least 11 regions of the world.
-        Industrial agriculture based on large-scale monoculture in the twentieth
-        century came to dominate agricultural output, though about 2 billion
-        people still depended on subsistence agriculture.
+         development in the rise of sedentary human civilization, whereby farming
+         of domesticated species created food surpluses that enabled people to
+         live in cities. The history of agriculture began thousands of years ago.
+         After gathering wild grains beginning at least 105,000 years ago,
+         nascent farmers began to plant them around 11,500 years ago. Sheep,
+         goats, pigs and cattle were domesticated over 10,000 years ago. Plants
+         were independently cultivated in at least 11 regions of the world.
+         Industrial agriculture based on large-scale monoculture in the twentieth
+         century came to dominate agricultural output, though about 2 billion
+         people still depended on subsistence agriculture.
       </p>
       <p>
-        The major agricultural products can be broadly grouped into foods,
-        fibers, fuels, and raw materials (such as rubber). Food classes include
-        cereals (grains), vegetables, fruits, cooking oils, meat, milk, eggs,
-        and fungi. Over one-third of the world's workers are employed in
-        agriculture, second only to the service sector, although in recent
-        decades, the global trend of a decreasing number of agricultural workers
-        continues, especially in developing countries, where smallholding is
-        being overtaken by industrial agriculture and mechanization that brings
-        an enormous crop yield increase.
+         The major agricultural products can be broadly grouped into foods,
+         fibers, fuels, and raw materials (such as rubber). Food classes include
+         cereals (grains), vegetables, fruits, cooking oils, meat, milk, eggs,
+         and fungi. Over one-third of the world's workers are employed in
+         agriculture, second only to the service sector, although in recent
+         decades, the global trend of a decreasing number of agricultural workers
+         continues, especially in developing countries, where smallholding is
+         being overtaken by industrial agriculture and mechanization that brings
+         an enormous crop yield increase.
       </p>
       <p>
-        Modern agronomy, plant breeding, agrochemicals such as pesticides and
-        fertilizers, and technological developments have sharply increased crop
-        yields, but cause ecological and environmental damage. Selective
-        breeding and modern practices in animal husbandry have similarly
-        increased the output of meat, but have raised concerns about animal
-        welfare and environmental damage. Environmental issues include
-        contributions to global warming, depletion of aquifers, deforestation,
-        antibiotic resistance, and other agricultural pollution. Agriculture is
-        both a cause of and sensitive to environmental degradation, such as
-        biodiversity loss, desertification, soil degradation, and global
-        warming, all of which can cause decreases in crop yield. Genetically
-        modified organisms are widely used, although some are banned in certain
-        countries.
+         Modern agronomy, plant breeding, agrochemicals such as pesticides and
+         fertilizers, and technological developments have sharply increased crop
+         yields, but cause ecological and environmental damage. Selective
+         breeding and modern practices in animal husbandry have similarly
+         increased the output of meat, but have raised concerns about animal
+         welfare and environmental damage. Environmental issues include
+         contributions to global warming, depletion of aquifers, deforestation,
+         antibiotic resistance, and other agricultural pollution. Agriculture is
+         both a cause of and sensitive to environmental degradation, such as
+         biodiversity loss, desertification, soil degradation, and global
+         warming, all of which can cause decreases in crop yield. Genetically
+         modified organisms are widely used, although some are banned in certain
+         countries.
       </p>
 
       <!--Similar to the other semantic elements (nav, main, aside) section is used when there's no other specific cotainer that can be used. They're mainly used to break up a section of the website
@@ -153,62 +149,62 @@ Needs to be followed by one "head" element and one "body" element.-->
          these and apparently they're still better to use over div elements. You could technically use a section instead of a nav for navigation. But using nav for navigation makes more sense.
          It's just a nice way to divide up the markup. "Every section of content."-->
       <section>
-        <h2>Etymology and scope</h2>
-        <p>
-          <!--The sub (subscript) element does the opposite of what sup does. Instead of pushing it half a line above the normal text, it pushes it down.
+         <h2>Etymology and scope</h2>
+         <p>
+            <!--The sub (subscript) element does the opposite of what sup does. Instead of pushing it half a line above the normal text, it pushes it down.
                Again this is mainly used in things like Mathematic/Science and Chemistry papers. This can also make the content look a little smaller than normal.-->
-          The word agriculture is a late Middle English adaptation of Latin
-          agricultūra, from ager 'field' and cultūra 'cultivation' or
-          'growing'.<sub>[2]</sub> While agriculture usually refers to human
-          activities, certain species of ant,[3][4] termite and beetle have been
-          cultivating crops for up to 60 million years.[5] Agriculture is
-          defined with varying scopes, in its broadest sense using natural
-          resources to "produce commodities which maintain life, including food,
-          fiber, forest products, horticultural crops, and their related
-          services".[6] Thus defined, it includes arable farming, horticulture,
-          animal husbandry and forestry, but horticulture and forestry are in
-          practice often excluded.[6] It may also be broadly decomposed into
-          plant agriculture, which concerns the cultivation of useful plants,[7]
-          and animal agriculture, the production of agricultural animals.[8]
+            The word agriculture is a late Middle English adaptation of Latin
+            agricultūra, from ager 'field' and cultūra 'cultivation' or
+            'growing'.<sub>[2]</sub> While agriculture usually refers to human
+            activities, certain species of ant,[3][4] termite and beetle have been
+            cultivating crops for up to 60 million years.[5] Agriculture is
+            defined with varying scopes, in its broadest sense using natural
+            resources to "produce commodities which maintain life, including food,
+            fiber, forest products, horticultural crops, and their related
+            services".[6] Thus defined, it includes arable farming, horticulture,
+            animal husbandry and forestry, but horticulture and forestry are in
+            practice often excluded.[6] It may also be broadly decomposed into
+            plant agriculture, which concerns the cultivation of useful plants,[7]
+            and animal agriculture, the production of agricultural animals.[8]
 
-          <!--Here is an example of superscript and subscript working together.-->
-          <br />
-          <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>2</sub> = 1
-        </p>
+            <!--Here is an example of superscript and subscript working together.-->
+            <br />
+            <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>2</sub> = 1
+         </p>
       </section>
 
       <h2>History</h2>
       <h3>Origins</h3>
       <p>
-        The development of agriculture enabled the human population to grow many
-        times larger than could be sustained by hunting and gathering.[11]
-        Agriculture began independently in different parts of the globe,[12] and
-        included a diverse range of taxa, in at least 11 separate centers of
-        origin.[9] Wild grains were collected and eaten from at least 105,000
-        years ago.[13] In the Paleolithic Levant, 23,000 years ago, cereals
-        cultivation of emmer, barley, and oats has been observed near the sea of
-        Galilee.[14][15] Rice was domesticated in China between 11,500 and 6,200
-        BC with the earliest known cultivation from 5,700 BC,[16] followed by
-        mung, soy and azuki beans. Sheep were domesticated in Mesopotamia
-        between 13,000 and 11,000 years ago.[17] Cattle were domesticated from
-        the wild aurochs in the areas of modern Turkey and Pakistan some 10,500
-        years ago.[18] Pig production emerged in Eurasia, including Europe, East
-        Asia and Southwest Asia,[19] where wild boar were first domesticated
-        about 10,500 years ago.[20] In the Andes of South America, the potato
-        was domesticated between 10,000 and 7,000 years ago, along with beans,
-        coca, llamas, alpacas, and guinea pigs. Sugarcane and some root
-        vegetables were domesticated in New Guinea around 9,000 years ago.
-        Sorghum was domesticated in the Sahel region of Africa by 7,000 years
-        ago. Cotton was domesticated in Peru by 5,600 years ago,[21] and was
-        independently domesticated in Eurasia. In Mesoamerica, wild teosinte was
-        bred into maize by 6,000 years ago.[22] The horse was domesticated in
-        the Eurasian Steppes around 3500 BC.[23] Scholars have offered multiple
-        hypotheses to explain the historical origins of agriculture. Studies of
-        the transition from hunter-gatherer to agricultural societies indicate
-        an initial period of intensification and increasing sedentism; examples
-        are the Natufian culture in the Levant, and the Early Chinese Neolithic
-        in China. Then, wild stands that had previously been harvested started
-        to be planted, and gradually came to be domesticated.[24][25][26]
+         The development of agriculture enabled the human population to grow many
+         times larger than could be sustained by hunting and gathering.[11]
+         Agriculture began independently in different parts of the globe,[12] and
+         included a diverse range of taxa, in at least 11 separate centers of
+         origin.[9] Wild grains were collected and eaten from at least 105,000
+         years ago.[13] In the Paleolithic Levant, 23,000 years ago, cereals
+         cultivation of emmer, barley, and oats has been observed near the sea of
+         Galilee.[14][15] Rice was domesticated in China between 11,500 and 6,200
+         BC with the earliest known cultivation from 5,700 BC,[16] followed by
+         mung, soy and azuki beans. Sheep were domesticated in Mesopotamia
+         between 13,000 and 11,000 years ago.[17] Cattle were domesticated from
+         the wild aurochs in the areas of modern Turkey and Pakistan some 10,500
+         years ago.[18] Pig production emerged in Eurasia, including Europe, East
+         Asia and Southwest Asia,[19] where wild boar were first domesticated
+         about 10,500 years ago.[20] In the Andes of South America, the potato
+         was domesticated between 10,000 and 7,000 years ago, along with beans,
+         coca, llamas, alpacas, and guinea pigs. Sugarcane and some root
+         vegetables were domesticated in New Guinea around 9,000 years ago.
+         Sorghum was domesticated in the Sahel region of Africa by 7,000 years
+         ago. Cotton was domesticated in Peru by 5,600 years ago,[21] and was
+         independently domesticated in Eurasia. In Mesoamerica, wild teosinte was
+         bred into maize by 6,000 years ago.[22] The horse was domesticated in
+         the Eurasian Steppes around 3500 BC.[23] Scholars have offered multiple
+         hypotheses to explain the historical origins of agriculture. Studies of
+         the transition from hunter-gatherer to agricultural societies indicate
+         an initial period of intensification and increasing sedentism; examples
+         are the Natufian culture in the Levant, and the Early Chinese Neolithic
+         in China. Then, wild stands that had previously been harvested started
+         to be planted, and gradually came to be domesticated.[24][25][26]
       </p>
 
       <!--Similar to the nav element and section element the article is the element where we should put things that we want to reuse on the site but it is it's own container. For example if a
@@ -228,12 +224,10 @@ Needs to be followed by one "head" element and one "body" element.-->
          For an example of this being a block element I'll add a third link underneath the div to show this off.
          "Takes up it's own block of content."-->
       <div>
-        <a href="https://www.factorio.com">Link to my favourite game.</a>
-        <a href="https://github.com/JordanPicton">Link to my github.</a>
+         <a href="https://www.factorio.com">Link to my favourite game.</a>
+         <a href="https://github.com/JordanPicton">Link to my github.</a>
       </div>
-      <a href="https://youtu.be/KnpLpWolUW8"
-        >Link to one of my favoruite songs.</a
-      >
+      <a href="https://youtu.be/KnpLpWolUW8">Link to one of my favoruite songs.</a>
       <!--This link should not be on the same line as the other two inside the div element. (Which it's not. :))-->
 
       <h2>Civilizations</h2>
@@ -247,77 +241,75 @@ Needs to be followed by one "head" element and one "body" element.-->
          really 100% sure that it is the navigation bar compared to the other divs on the page. In this case the newer one would be the nav element. I am still learning what these are, can do and mean though but apparently they're good for accessability
          as well as making it easier to know what element does what. So they make the code more readable for yourself and or other developers but also giving the benefit of accessability.-->
       <p>
-        In Eurasia, the <span>Sumerians</span> started to live in villages from
-        about 8,000 BC, relying on the Tigris and Euphrates rivers and a canal
-        system for irrigation. Ploughs appear in pictographs around 3,000 BC;
-        seed-ploughs around 2,300 BC. Farmers grew wheat, barley, vegetables
-        such as lentils and onions, and fruits including dates, grapes, and
-        figs.[29] Ancient Egyptian agriculture relied on the Nile River and its
-        seasonal flooding. Farming started in the predynastic period at the end
-        of the Paleolithic, after 10,000 BC. Staple food crops were grains such
-        as wheat and barley, alongside industrial crops such as flax and
-        papyrus.[30][31] In India, wheat, barley and jujube were domesticated by
-        9,000 BC, soon followed by sheep and goats.[32] Cattle, sheep and goats
-        were domesticated in Mehrgarh culture by 8,000–6,000 BC.[33][34][35]
-        Cotton was cultivated by the 5th–4th millennium BC.[36] Archeological
-        evidence indicates an animal-drawn plough from 2,500 BC in the Indus
-        Valley civilisation.[37]
+         In Eurasia, the <span>Sumerians</span> started to live in villages from
+         about 8,000 BC, relying on the Tigris and Euphrates rivers and a canal
+         system for irrigation. Ploughs appear in pictographs around 3,000 BC;
+         seed-ploughs around 2,300 BC. Farmers grew wheat, barley, vegetables
+         such as lentils and onions, and fruits including dates, grapes, and
+         figs.[29] Ancient Egyptian agriculture relied on the Nile River and its
+         seasonal flooding. Farming started in the predynastic period at the end
+         of the Paleolithic, after 10,000 BC. Staple food crops were grains such
+         as wheat and barley, alongside industrial crops such as flax and
+         papyrus.[30][31] In India, wheat, barley and jujube were domesticated by
+         9,000 BC, soon followed by sheep and goats.[32] Cattle, sheep and goats
+         were domesticated in Mehrgarh culture by 8,000–6,000 BC.[33][34][35]
+         Cotton was cultivated by the 5th–4th millennium BC.[36] Archeological
+         evidence indicates an animal-drawn plough from 2,500 BC in the Indus
+         Valley civilisation.[37]
       </p>
 
       <h2>Crops</h2>
       <!--The "ul" element is a unordered list. And it can only have "li" (list item), "script" (haven't learnt this yet) and "template" (also have not learnt this yet either.)-->
       <ul>
-        <!--The "li" element is a List item, described above. They need to be within either "ul" or "ol" elements.-->
-        <li>
-          Grains
-          <ul>
-            <li>Wheat</li>
-            <li>Maize</li>
-            <li>Corn</li>
-            <li>Barley</li>
-          </ul>
-        </li>
-        <li>
-          Vegetables
-          <ul>
-            <li>Carrots</li>
-            <li>Potatoes</li>
-            <li>Tomatoes</li>
-            <li>Cucumber</li>
-          </ul>
-        </li>
+         <!--The "li" element is a List item, described above. They need to be within either "ul" or "ol" elements.-->
+         <li>
+            Grains
+            <ul>
+               <li>Wheat</li>
+               <li>Maize</li>
+               <li>Corn</li>
+               <li>Barley</li>
+            </ul>
+         </li>
+         <li>
+            Vegetables
+            <ul>
+               <li>Carrots</li>
+               <li>Potatoes</li>
+               <li>Tomatoes</li>
+               <li>Cucumber</li>
+            </ul>
+         </li>
       </ul>
       <!--The "ol" element is similar to an "ul" element, the different being that the "ol" element is an ordered list.-->
       <ol>
-        <li>Hello</li>
-        <li>I</li>
-        <li>am</li>
-        <li>an</li>
-        <li>ordered</li>
-        <li>list.</li>
+         <li>Hello</li>
+         <li>I</li>
+         <li>am</li>
+         <li>an</li>
+         <li>ordered</li>
+         <li>list.</li>
       </ol>
 
       <h2>Poem</h2>
       <p>
-        <!--The br element is the line break element and it's not commonly used. What it does is it's kind of like the /n rule in some programming langauges where it goes to the next line or makes a blank like.-->
-        I hold the tool. I am the blade. I drive<br />
-        myself into the fertile ground. I dig<br />
-        potatoes out. They were buried alive,<br />
-        but in darkness they thrive. Now the old pig<br />
-        will feast. When he grows fat I will slay him<br />
-        to feed me and kin. I don't like killing<br />
-        but when necessary it's not a sin.<br />
-        I shall live another year, God willing.<br />
-        I have long been on the land. I am old<br />
-        but my sun is not yet setting in the<br />
-        sky. When I was a child I was told once by<br />
-        my father you become earth when you die.<br />
-        If so, I hope my children carve my chest<br />
-        with blade. I hope I'll yield a fruitful harvest.<br />
-        <b>Credit:</b>
-        <a href="https://hellopoetry.com/poem/4069724/digging-potatoes/"
-          >Digging Potatoes - Norman Crane</a
-        >
+         <!--The br element is the line break element and it's not commonly used. What it does is it's kind of like the /n rule in some programming langauges where it goes to the next line or makes a blank like.-->
+         I hold the tool. I am the blade. I drive<br />
+         myself into the fertile ground. I dig<br />
+         potatoes out. They were buried alive,<br />
+         but in darkness they thrive. Now the old pig<br />
+         will feast. When he grows fat I will slay him<br />
+         to feed me and kin. I don't like killing<br />
+         but when necessary it's not a sin.<br />
+         I shall live another year, God willing.<br />
+         I have long been on the land. I am old<br />
+         but my sun is not yet setting in the<br />
+         sky. When I was a child I was told once by<br />
+         my father you become earth when you die.<br />
+         If so, I hope my children carve my chest<br />
+         with blade. I hope I'll yield a fruitful harvest.<br />
+         <b>Credit:</b>
+         <a href="https://hellopoetry.com/poem/4069724/digging-potatoes/">Digging Potatoes - Norman Crane</a>
       </p>
       <!--The above poem will look identical to how it looks in here due to the line breaks. You can complete the same thing by having it all on the same line with the line breaks (in the code). So something like this:
          "I hold the tool. I am the blade. I drive<br> myself into the fertile ground. I dig<br> potatoes out. They were buried alive,<br> but in darkness they thrive. Now the old pig<br> will feast. When he grows fat I will slay him<br> to feed me and kin. I don't like killing<br> but when necessary it's not a sin.<br> I shall live another year, God willing.<br> I have long been on the land. I am old<br> but my sun is not yet setting in the<br> sky. When I was a child I was told once by<br> my father you become earth when you die.<br> If so, I hope my children carve my chest<br> with blade. I hope I'll yield a fruitful harvest."
@@ -336,35 +328,34 @@ Needs to be followed by one "head" element and one "body" element.-->
 
       <!--This is another way to display and image on the webpage, this one is sourced externally via another site. The one used below is from Wikipedia.-->
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Farm_in_Hainan_01.jpg/1280px-Farm_in_Hainan_01.jpg"
-      />
+         src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Farm_in_Hainan_01.jpg/1280px-Farm_in_Hainan_01.jpg" />
       <p>
-        <!--The time element is another semantic element but this one is an inline container and represents, time, date time or date.
+         <!--The time element is another semantic element but this one is an inline container and represents, time, date time or date.
             It's mainly used to be called out in a machine reable format, so I'm assuming accessability.-->
-        My birthday is on the <time datetime="1999-03-26">March 26</time>.
+         My birthday is on the <time datetime="1999-03-26">March 26</time>.
       </p>
       <!--This is a self contained piece of content that has an optional caption, which is used via the figcaption element inside the figure element. These are usually an illustration, diagram and want to call attention to along with the
          majority of the time having a caption along side this.-->
       <figure>
-        <img
-          src="https://avatars.githubusercontent.com/u/121932608?v=4"
-          alt="My Github profile picture."
-        />
-        <figcaption>My Github Profile Picture.</figcaption>
+         <a href=https://github.com/JordanPicton><img src="https://avatars.githubusercontent.com/u/121932608?v=4"
+               alt="My Github profile picture." /></a>
+         <figcaption>My Github Profile Picture.</figcaption>
       </figure>
 
       <!-- Similar to header, the footer element is another specific container where people can usually find things like links (about, policies, privacy, contact and socials), copyright info and anything else that is generally not needed but is a nice
-         touch or required at least somewhere on the page. It's the last of the last things people will look for on a site. And they're usually in the footer for ease of access.-->
+      touch or required at least somewhere on the page. It's the last of the last things people will look for on a site. And they're usually in the footer for ease of access. Footer is similar to header in the regard that it does not have to be placed
+      within the main element but does have to be placed within the body opening and closing tags. -->
       <footer>
-        <p>Hello I am a footer. :)</p>
-        <ul>
-          <li><a href="page2-about.html">About</a></li>
-          <li><a href="https://github.com/JordanPicton">My Github</a></li>
-          <li><a href="page3-favouritegames.html">Favourite Games</a></li>
-        </ul>
+         <p>Hello I am a footer. :)</p>
+         <ul>
+            <li><a href="page2-about.html">About</a></li>
+            <li><a href="https://github.com/JordanPicton">My Github</a></li>
+            <li><a href="page3-favouritegames.html">Favourite Games</a></li>
+         </ul>
       </footer>
-    </main>
-    <!-- There are a bunch more semantic elements that can be used and I've not touched on yet, for example these two were listed in the video but didn't go into too much detail: abbr and data. These are all mainly used
+   </main>
+   <!-- There are a bunch more semantic elements that can be used and I've not touched on yet, for example these two were listed in the video but didn't go into too much detail: abbr and data. These are all mainly used
       to make it easier to navigate the code of a site along with making the code easier to read but also make it easier for people who need the accessability options for sites. Apparently these are also really useful for SEO's.-->
-  </body>
+</body>
+
 </html>

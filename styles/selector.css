@@ -1,0 +1,68 @@
+/* The main way I've been styling with CSS has been with the element selector. For example if I wanted to style all h2 elements then I would do something like below:
+h2 {
+   text-align: center;
+}
+
+As you can see I've selected the h2 elements. There are a lot more stuff I can do with selectors and there's different ones, the main one I've been using has been the element selector up until now.
+There are a bunch of selectors and they are as follows; Element Selector, Class Selector, ID Selector, Descendant Selector, Adjacent Selector, Direct Descendant Selector, Attribute Selector, Pseudo Elements and Pseudo Classes.
+
+Basic CSS rule:
+selector {
+   property: value;
+}
+
+
+Selector List, this is actually really cool. So lets say you're wanting all your h2 and all your h3 elements to have the same styling, well there's an easy way to do this, above shows you the way to do it to only one element. Well Selector lists can do it to multiple.
+Think of it as multiple element selectors but in one place. The only thing is that when you edit this selector list it styles all the elements you have within the list. You can have more than 2 elements within a selector list. The way to do this is shown below;
+h2, h3, h4 {
+   color: red;
+   text-align: center;
+}
+This would give all h2, h3 and h4 elements the text colour of red and they will all be aligned to the center of each respective element. Commas are used to combine selectors into a selector list.
+*/
+
+/* Universal Selector, rarely used will edit everything on the page. Using the example below, all the text colour in every element would be white. Selects everything in the document, it seems like you can use it to make all the text the colour of white like shown
+below, this isn't the only thing it's doing in this case though. On larger documents this can be pretty in-efficient (there are better ways to do things that use this selector), it would also be applying this to every possible element on the page, even things that
+you can't make black like the img element, it's an image you can't just make it black like this. You could probably make an image black and white using some fancy CSS but this isn't the way to do it. This can also include things like all the divs, containers
+that don't contain text, it would still be trying to apply this property to those.
+* {
+   color: white;
+}
+
+After testing this out myself, it seems to also change the colour of some other properties for example the hr element can have colour applied to it and this has also changed to white. If the background property wasn't used it and lets say it was used on the
+element only, then this would only change the background of the body and not the elements within the body. For example a button inside the body would not have the same background it would stay default. I just tested to make sure I was correct and I was.
+* {
+  color: white;
+  background-color: black;
+}*/
+
+body {
+  background-color: #10002b;
+  color: white;
+}
+
+button {
+  font-size: 15px;
+  background-color: #c77dff;
+}
+
+/* Element Selector, these select everything of a given type/element. All of X element type and then apply those properties to that. There's an example below and there'll be a live example too.
+Make all <h1> elements purple.
+h1 {
+   color: purple;
+} 
+Live example of an element selector: */
+
+h1,
+h2 {
+  color: purple;
+}
+
+/* Referring back to when I did the forms in HTML, with inputs we would put in id's this was so we could link the input with a label. Well this also helps with CSS too since you can select an element based on it's id. id attributes can be used on any element to
+provide a hook for CSS, this is to single out a single element from a group of elements. Generally ids should not have spaces, short as possible but still making them standout and readable. As you can see below, there is a "#" symbol infront of the id name,
+this is telling the CSS file that this is an id and not an element. (We're looking for an element with this specific id.) The example below gives the button the same dark colour as the body and gives the text a lighter colour than the other buttons. This works
+and will only work on the element with the id="signupb". Only one thing on each page should have different ids, meaning there should not be two of the same ids within the same page. They're supposed to be used as unique identifiers. */
+#signupb {
+  background-color: #240046;
+  color: #7b2cbf;
+}
