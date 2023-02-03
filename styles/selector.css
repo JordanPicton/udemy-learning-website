@@ -58,11 +58,22 @@ h2 {
   color: purple;
 }
 
-/* Referring back to when I did the forms in HTML, with inputs we would put in id's this was so we could link the input with a label. Well this also helps with CSS too since you can select an element based on it's id. id attributes can be used on any element to
+/* Referring back to when I did the forms in HTML, with inputs we would put in "id"'s this was so we could link the input with a label. Well this also helps with CSS too since you can select an element based on it's id. id attributes can be used on any element to
 provide a hook for CSS, this is to single out a single element from a group of elements. Generally ids should not have spaces, short as possible but still making them standout and readable. As you can see below, there is a "#" symbol infront of the id name,
 this is telling the CSS file that this is an id and not an element. (We're looking for an element with this specific id.) The example below gives the button the same dark colour as the body and gives the text a lighter colour than the other buttons. This works
-and will only work on the element with the id="signupb". Only one thing on each page should have different ids, meaning there should not be two of the same ids within the same page. They're supposed to be used as unique identifiers. */
+and will only work on the element with the id="signupb". Only one thing on each page should have different ids, meaning there should not be two or more of the same ids within the same page. They're supposed to be used as unique identifiers.
+
+#idname {
+  property1: value;
+  property2: value;
+  etc. etc.
+}
+It's tempting to use id attributes a lot and then using them for CSS purposes but there are other selectors that can be used, you want to try keeping them to a minimum, but don't avoid using them just try not spamming them but still use them. */
 #signupb {
   background-color: #240046;
   color: #7b2cbf;
 }
+
+/* Class selectors, which are as commonly used along with element selectors, are selectors that are a similar approach to the id selectors. You can add a class attribute to an element, and just like id selectors we can hook into that class using CSS. The
+difference with these is that they can be added to multiple elements hence the name of the selector and the attribute used "Class" it's creating a class of unique and specific elements. Classes = Groups. Most of the time these are used since websites usually
+follow a theme or a similar style so these "should" be used more commonly which makes sense honestly. */
