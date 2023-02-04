@@ -118,7 +118,7 @@ span a {
 
 /* Where the example below look for any "a" element within the footer element and changes it's colour to orange. Even though the "a" elements are nested within a nav, ul and li elements they still get this styling since they're still within the footer element, 
 even though they're 4 levels down they're still descendants of the footer. So instead of giving all the elements classes, if there's a pattern I want to style then it's good to make a section element around the thing I want to style and then just use descendant 
-selectors where I can. These are better than ids at most either way. */
+selectors where I can. These are better than ids at most either way. (Any "a" element nested anywhere in a footer.) */
 footer a {
   color: orange;
 }
@@ -131,3 +131,27 @@ a {
 /* ----------------------------------------------------------------------------------------------------- */
 /* These next few selectors aren't as common as the ones just learnt but they're still worth mentioning. */
 /* ----------------------------------------------------------------------------------------------------- */
+
+/* Adjacement combinator, these are selectors that are right after another. For example if I wanted to have a "p" element but I only wanted the "p" element after another element, for example right after a "h1" element, then I can use the adjacent selector. They have to
+immediately follow the "h1" element however, otherwise this wouldn't work. So it would have to look like the following:
+<h1>Hello</h1>
+<p>This is a test</p>
+In this case it would select the "p" element direcetly after the "h1" element. It can't be like the below option because it would not work.
+<h1>Hello</h1>
+<h2>I am more text</h2>
+<p>This is a test</p>
+This would not work due to the "p" element not being the next element immediately after the "h1" element which we would be looking for.
+Also these are elements that come after the other, not to be confused with being nested inside each other. (This was good to be pointed out honestly). On the same level, adjacent.
+
+A live example of this is shown below. It should only change the login button, which it did. It should give the button a lime border colour. (It did.) 
+I'm honestly not sure what a use case for this would be. */
+input + button {
+  border-color: lime;
+}
+
+/* The Direct Child/Descendant combinator works in a similar way to above, this time it has to be the immediate child of the first element listed. A live example is shown below to how this works. But instead of using the "+" symbol we use the ">" greater than symbol.
+The only "a" element that should get changed in this case would be the "a" links direcetly under the footer, they're nested inside the footer only. Not anoy other elements just the footer, so the footer is the main and only parent of the "a" element. 
+(Any "a" element that is a direct child of footer.) */
+footer > a {
+  color: hotpink;
+}
