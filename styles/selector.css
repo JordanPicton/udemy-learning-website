@@ -98,10 +98,10 @@ span {
 }
 
 /* Descendant Selectors, they look very similar to multiple element selectors the difference being that they don't use a comma to separate the elements. For example, if I want to look for "a" element within an "li" element then I can use this to look for those
-specific elements. The way I would do this is shown below. The live example below makes all the "a" elements to have a crimson font colour but only if they're nested within a "span" element. To show this off a little more I'll make it so the other "a" elements have a different colour than
-below. I'll make them a horrible looking green in this case. I could also use classes to accomplish this but why would I if I know what elements I'm trying to select? It's good for when there's elements nested inside other elements and I want only those ones changing. Along with it just seems
-a little better to do this over classes and ids again but only if I know I can do it to the elements I want. It's also good for all elements nested that are the same element I want changing, since classes can change more than one element. A good idea for this is if I have repeating content on a
-page, for example a "section" element with content inside. I can give those "section" elements a class and have something like below.
+specific elements. The way I would do this is shown below. The live example below makes all the "a" elements to have a crimson font colour but only if they're nested within a "span" element. To show this off a little more I'll make it so the other "a" elements have a 
+different colour than below. I'll make them a horrible looking green in this case. I could also use classes to accomplish this but why would I if I know what elements I'm trying to select? It's good for when there's elements nested inside other elements and I want 
+only those ones changing. Along with it just seems a little better to do this over classes and ids again but only if I know I can do it to the elements I want. It's also good for all elements nested that are the same element I want changing, since classes can change 
+more than one element. A good idea for this is if I have repeating content on a page, for example a "section" element with content inside. I can give those "section" elements a class and have something like below.
 
 .news span a {
   color: white;
@@ -116,8 +116,9 @@ span a {
   color: crimson;
 }
 
-/* Where the example below look for any "a" element within the footer element and changes it's colour to orange. Even though the "a" elements are nested within a nav, ul and li elements they still get this styling since they're still within the footer element, even though they're 4 levels down
-they're still descendants of the footer. */
+/* Where the example below look for any "a" element within the footer element and changes it's colour to orange. Even though the "a" elements are nested within a nav, ul and li elements they still get this styling since they're still within the footer element, 
+even though they're 4 levels down they're still descendants of the footer. So instead of giving all the elements classes, if there's a pattern I want to style then it's good to make a section element around the thing I want to style and then just use descendant 
+selectors where I can. These are better than ids at most either way. */
 footer a {
   color: orange;
 }
@@ -126,3 +127,7 @@ footer a {
 a {
   color: chartreuse;
 }
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* These next few selectors aren't as common as the ones just learnt but they're still worth mentioning. */
+/* ----------------------------------------------------------------------------------------------------- */
