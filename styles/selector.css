@@ -74,6 +74,55 @@ It's tempting to use id attributes a lot and then using them for CSS purposes bu
   color: #7b2cbf;
 }
 
-/* Class selectors, which are as commonly used along with element selectors, are selectors that are a similar approach to the id selectors. You can add a class attribute to an element, and just like id selectors we can hook into that class using CSS. The
+/* Class selectors, which are as commonly used along side the element selectors, are selectors that are a similar approach to the id selectors. You can add a class attribute to an element, and just like id selectors we can hook into that class using CSS. The
 difference with these is that they can be added to multiple elements hence the name of the selector and the attribute used "Class" it's creating a class of unique and specific elements. Classes = Groups. Most of the time these are used since websites usually
-follow a theme or a similar style so these "should" be used more commonly which makes sense honestly. */
+follow a theme or a similar style so these "should" be used more commonly which makes sense honestly. Repeated patterns are usually grouped together for class selectors to style them. It's kind of selecting a bunch of things at once and making them the same 
+entity and then making them look similar. 
+
+Within the HTML document, I've given a bunch of span elements class ids that have the same value. There are other span elements which do not have class attributes however. The code below gives ALL span elements the text colour of "#956db8" but I will change it so
+that the span elements with the class attribute and the same value for the class attribute to not have this change and to havbe a background colour instead. A class does not have to consist of only one element, it can be a bunch of unique elements grouped together.
+.classname {
+  property1: value;
+  property2: value;
+  etc. etc.
+}
+*/
+span {
+  color: #956db8;
+}
+
+.label {
+  color: #6e172d;
+  background-color: #4cc9f0;
+  font-size: 70%;
+}
+
+/* Descendant Selectors, they look very similar to multiple element selectors the difference being that they don't use a comma to separate the elements. For example, if I want to look for "a" element within an "li" element then I can use this to look for those
+specific elements. The way I would do this is shown below. The live example below makes all the "a" elements to have a crimson font colour but only if they're nested within a "span" element. To show this off a little more I'll make it so the other "a" elements have a different colour than
+below. I'll make them a horrible looking green in this case. I could also use classes to accomplish this but why would I if I know what elements I'm trying to select? It's good for when there's elements nested inside other elements and I want only those ones changing. Along with it just seems
+a little better to do this over classes and ids again but only if I know I can do it to the elements I want. It's also good for all elements nested that are the same element I want changing, since classes can change more than one element. A good idea for this is if I have repeating content on a
+page, for example a "section" element with content inside. I can give those "section" elements a class and have something like below.
+
+.news span a {
+  color: white;
+}
+This would be a really good use case, and the reason I say this is because if I did something like
+section span a {
+  color: white;
+}
+then every "a" element within a "span" element nested inside a "section" would be styled this way. Whereas if I put it inside a class and then use descendant I have more control.
+*/
+span a {
+  color: crimson;
+}
+
+/* Where the example below look for any "a" element within the footer element and changes it's colour to orange. Even though the "a" elements are nested within a nav, ul and li elements they still get this styling since they're still within the footer element, even though they're 4 levels down
+they're still descendants of the footer. */
+footer a {
+  color: orange;
+}
+
+/* This is for the example above and it works, showcasing that above has a different style than the entire collective of "a" elements. */
+a {
+  color: chartreuse;
+}
