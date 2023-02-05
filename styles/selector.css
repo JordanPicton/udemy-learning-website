@@ -56,6 +56,7 @@ Live example of an element selector: */
 h1,
 h2 {
   color: purple;
+  text-decoration: underline;
 }
 
 /* Referring back to when I did the forms in HTML, with inputs we would put in "id"'s this was so we could link the input with a label. Well this also helps with CSS too since you can select an element based on it's id. id attributes can be used on any element to
@@ -155,3 +156,68 @@ The only "a" element that should get changed in this case would be the "a" links
 footer > a {
   color: hotpink;
 }
+
+/* !!!!!!!!!!!!!! IMPORTANT !!!!!!!!!!!!!! */
+/* Something to note about the Attribute selectors below, they work with any Attrubute within an elements tags, they don't only work with the ones shown, these are just examples to show how they can work. */
+
+/* The Attribute selector, this will select all the elements of element X with the attribute of Y. For example;
+(elementX)[(attributeY)] {
+
+}
+input[type="text"] {
+  width: 300px;
+  color: yellow;
+}
+In the live example below it will only select "input" elements with the type of password. It will not style other input types, for example it would leave type of text alone. It needs to follow the rule of square brackets [], attribute type, equals =, and then the value
+in this case it was password.
+element[attribute="value"] */
+input[type="password"] {
+  background-color: black;
+  color: white;
+}
+
+/* Below is just a test to demonstrate it a little more.
+Attribute Selector
+section[class="post"] {
+  background-color: aquamarine;
+}
+
+This is the same as doing;
+Class Selector
+.post {
+  background-color: aliceblue;
+}
+
+A better way to do this however, is as follows;
+section.post {
+  background-color: aliceblue;
+}
+This would select only section elements with the post class. Kind of useful in the sense of; if you have multiple elements within the "post" class for example and you just want to edit something a little more with the section elements and not the other elements 
+of post. There are a few more quirks with the attribute selector however.
+For example the one used above, it's looking for an exact version of what we typed. "section[class="post"]" It has to look exactly like "class="post"". But lets say we have multiple classes with the word post inside and we want to edit them all. Then we can have a fuzzy
+way of doing this. This link explains it a little better. https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors. But I'm going to explain their examples for myself.
+
+<a> elements with a title attribute. This would be looking for all "a" elements with a title attribute, disregarding the value of the title attribute.
+a[title] {
+  color: purple;
+}
+
+<a> elements with an href matching "https://example.org". This is looking for the exact match of an "a" element that has the value of "https://example.org".
+a[href="https://example.org"]
+{
+  color: green;
+}
+
+<a> elements with an href containing "Example". This is looking for "a" elements that have the string "Example" inside of the attribute value, doesn't have to be exact, the word Example could be anywhere within the attribute value.
+So for example it could look something like: <a href="www.HelloThereIAmAnExample">Hi</a>
+a[href*="Example"] {
+  font-size: 2em;
+}
+
+A live example of this is shown below. This only changes one "a" element to have the text colour magenta. They have to be case sensitive but there are ways to make it more complex and not require case sensitivity.
+These are most commonly used for input elements either way. */
+a[href*="google"] {
+  color: magenta;
+}
+
+/*  */

@@ -22,12 +22,13 @@
    <nav>
       <label for="search">Search: </label>
       <input type="text" name="search" id="search" placeholder="search">
+      <input type="password" name="password" id="password" placeholder="password">
       <button>Login In</button>
       <button id="signupb">Sign Up</button>
    </nav>
    <main>
       <h2>Mods</h2>
-      <section>
+      <section class="post">
          <!-- Giving the spans below a "class" attribute and then giving them the same value, groups them together so I can style them the same within CSS. -->
          <h3>Quark <span class="label">Decorative</span></h3>
          <span>Posted by <a href="#">Vazkii</a></span>
@@ -35,14 +36,14 @@
          <button>Vote -</button>
       </section>
       <hr>
-      <section>
+      <section class="post">
          <h3>Botania <span class="label">Magic</span></h3>
          <span>Posted by <a href="#">Vazkii</a></span>
          <button>Vote +</button>
          <button>Vote -</button>
       </section>
       <hr>
-      <section>
+      <section class="post">
          <h3>Thermal Series <span class="label">Technology</span></h3>
          <span>Posted by <a href="#">Team CofH</a></span>
          <button>Vote +</button>
@@ -56,6 +57,7 @@
          <li><a href="#">Games</a></li>
          <li><a href="#">About</a></li>
          <li><a href="#">Contact</a></li>
+         <li><a href="www.google.com">Google</a></li>
       </ul>
       <a href="#">Policy</a>
    </footer>
