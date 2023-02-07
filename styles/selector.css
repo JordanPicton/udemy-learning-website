@@ -225,7 +225,8 @@ a[href*="google"] {
 add a pseudo rule to the selector we're using. For example we can use these to check for checkboxes that have been checked, elements that are being hovered over or things like every X amount of something then do something, every 5th button change it's border to be
 rounded for example. They're modifiers, something we add on. 
 Below is a live example of this which I have used before but never knew it was called this, in all fairness I used to just copy and paste and never actually understood what it was I was doing. So what the below example is doing is, basically when the user is hovering
-over an "a" element the color of the text will turn yellow along with giving it an underline. */
+over an "a" element the color of the text will turn yellow along with giving it an underline.
+States of an element we can style. */
 a:hover {
   color: yellow;
   text-decoration: underline;
@@ -278,4 +279,27 @@ Uisng the live example below we can see it's 2n meaning every other post class g
   background-color: #150038;
 }
 
-/* Pseudo Elements are slightly similar to what we learned just above but this time instead of doing the whole elements with the selector these allow us to style a particular part of the selected elements. */
+/* Pseudo Elements are slightly similar to what we learned just above but this time instead of doing the whole elements with the selector these allow us to style a particular part of the selected elements. They're also similar in the sense that we add these to our
+selectors like modifiers, however this time we use two colons instead of the one but it seems like most browsers allow you to just use the one colon. A way we can use these are as follows, instead of changing the entire text of a paragraph element we can select the
+first letter or the first line of that paragraph and style it differently from the rest of the paragraph. There's not as many modifiers for these Pseudo Elements as there is for Psuedo Classes. There's a decent list on MDN, however almost half of them are for testing
+only and shouldn't be used on production/live websites. A good use for this is actually having the first letter of lets say a paragraph for example having a bigger font size for something like an article perhaps. A live example of this is shown below.
+Things or parts of an element we're selecting. */
+h3::first-letter {
+  color: magenta;
+  font-weight: 700;
+  font-size: 130%;
+}
+/* As you can see above, we're selecting the first letter of a h3 element and styling the it to have the colour of magenta, a higher font weight (makes it more bold) and giving it a 30% font size increase. 
+Another live example below shows that when a user selects/highlights something to copy it, we can change the way it looks for them. */
+h3::selection {
+  background-color: aqua;
+  color: #10038a;
+}
+/* With the example above, we can see that when a user is highlighting a h3 element the background colour is an aqua whilst the colour of the font is a nice deep blue, instead of the normal blue background with white text. This does only work with h3 elements 
+with this example though. To have this style apply to the entire document we would do something like this:
+::selection {
+  background-color: aqua;
+  color: #10038a;
+} */
+
+/* The Cascade, really useful knowledge for CSS. */
