@@ -127,6 +127,7 @@ footer a {
 /* This is for the example above and it works, showcasing that above has a different style than the entire collective of "a" elements. */
 a {
   color: chartreuse;
+  text-decoration: none;
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -220,4 +221,61 @@ a[href*="google"] {
   color: magenta;
 }
 
-/*  */
+/* Pseudo Classes, I have used these before on the most common method, however I didn't realise it was called a Pseudo class. These are mainly modifiers and used by adding keywords to the end of a selector with a colon, there needs to be a colon to indicate we want to
+add a pseudo rule to the selector we're using. For example we can use these to check for checkboxes that have been checked, elements that are being hovered over or things like every X amount of something then do something, every 5th button change it's border to be
+rounded for example. They're modifiers, something we add on. 
+Below is a live example of this which I have used before but never knew it was called this, in all fairness I used to just copy and paste and never actually understood what it was I was doing. So what the below example is doing is, basically when the user is hovering
+over an "a" element the color of the text will turn yellow along with giving it an underline. */
+a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+/* We could do something similar for buttons, look below. The example will make the background colour a darker purple, give the border a groove style (just looks slightly cleaner to me) along with a magenta looking border colour and text colour of white, this
+happens when a user hovers over a button however. Also something to note, on line 150 there is an example of an adjacent combinator, and you'll notice when using this code that the button for this (which is the sign up button) doesn't get the styling from below,
+we will learn more about this later but something else to mention is that on mine the only thing that changes for this button is the border because I dodn't specify one with the adjacent combinator. */
+button:hover {
+  background-color: #7b2cbf;
+  border-style: groove;
+  border-color: #f000cc;
+  color: white;
+}
+
+/* We could also do something like this:
+.post button:hover {
+  background-color: #7b2cbf;
+  border-style: groove;
+  border-color: #f000cc;
+  color: white;
+}
+And then only buttons within the post class will be getting this style. 
+Another live example of this is shown below. The first button active applies to all buttons and then one is a class specific active psuedo class. 
+So for the first example, when the button is pressed this means it is "activated/active" and the following css selectors give them the styling.
+
+First one gives buttons a background colour of dark purple, border style of groove, border colour of a light blue, and finally red text. This is applied to all buttons and is only visible when the button is pressed. 
+Second one gives buttons within a post class, the background colour of a dark green, along with border style of groove, border colour of a light green and finally a text colour of yellow. And again these are only visiable when the button is clicked.*/
+button:active {
+  background-color: #2a0649;
+  border-style: groove;
+  border-color: #3f33e9;
+  color: rgb(255, 0, 0);
+}
+
+.post button:active {
+  background-color: #064d18;
+  border-style: groove;
+  border-color: #55d871;
+  color: rgb(238, 255, 0);
+}
+
+/* And finally for the last example of this for every second post class, we will change the background colour along with the text colour. However before that, seeing the example below in the comment. This will only pick the 3rd post class and stop there.
+If the 3 was a 5 instead then it would only pick the 5th post class. But there is a way to make it pick every 2nd or 3rd post class etc.
+.post:nth-of-type(3) {
+  background-color: #1b004b;
+} 
+Uisng the live example below we can see it's 2n meaning every other post class gets this styling. Think of it as 2next. As in it's looking for the 2nd of this class and then the next 2nd of this class. */
+.post:nth-of-type(2n) {
+  background-color: #150038;
+}
+
+/* Pseudo Elements are slightly similar to what we learned just above but this time instead of doing the whole elements with the selector these allow us to style a particular part of the selected elements. */
