@@ -302,4 +302,13 @@ with this example though. To have this style apply to the entire document we wou
   color: #10038a;
 } */
 
-/* The Cascade, really useful knowledge for CSS. */
+/* The Cascade, really useful knowledge for CSS. Basically the order in which the styles are declared matters in and are linked to matter. Starting from the top going down, top having the least priority. This also works with using multiple style sheets too, if you have
+one style sheet loaded before another and it has a h1 that is red in style sheet 1 and then style sheet 2 changes h1 elements to purple. Stylesheet 2 would have a higher priortiy over this style.
+For example:
+h1 {
+  color: red;
+}
+h1 {
+  color: purple;
+}
+In this example purple would win. What happens is h1 elements get set to the colour red first and then they run into the conflicting style so they recolour the element to the next colour, in this case purple.*/
