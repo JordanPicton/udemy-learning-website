@@ -1,0 +1,35 @@
+/* Since the body element itself doesn't actually have any text directly inside it, the text is nested within other elements within the body element. Then they inherit these properties from the body element. I never actually knew this I just knew "it works". 
+Browser dev tools also show you within the style section of an element where it is getting the inheritted properties. You have to scroll down underneath the default values to see this. */
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* As you can see below we're setting the h1 element as blue and this wouldn't be using the colour from the inheritted parent element. This is because we set it specifically on the H1 element. */
+h1 {
+  color: blue;
+}
+
+/* Here's another example if we set the section element to have the colour pink then the text within the section elements will be pink. However, there isn't actually any text to colour for the section element, I mean this as in there is not actual text directly
+inside the element. It is within p elements within the section element itself. So what this does it the p element within a section inherits the colour from the section element selector and uses that. Any p element that is not within a section will not get this colour
+because it's not inside the section element to inherit the property values. So in this case any p element would inherit from the body and that means instead of pink text it would get white.
+Elements inherit from the closest parent that has them set. For example the p elements within a section could inherit from the body but the closest parent that has properties to inherit from are the section so they use this as preference over the body elements properties.
+ */
+section {
+  color: pink;
+}
+
+/* Another example of this is shown below, the form element is set to apply a colour to text, being the colour lime. However, the label element nested within that form element is the only one that is actually applying this to itself from inheritance from the form
+element. There's more to this though, the two form controls that are within the form don't inherit from the forms properties, certain elements don't inherit by default. There is a way to get them to if you're wanting them to inherit from parent elements. It's not that
+common to make the elements inherit that don't already. */
+form {
+  color: lime;
+}
+
+/* This is how you make an element inherit the properties of a parent, I knew about the inherit value but I didn't know it was used like this and after learning this it honestly makes so much sense. You can do this for any property you want the element to inherit.
+Just remember the way I'm doing it below is element selectors meaning ALL of an element type. If I was to remove the form element selector above, the button and input would inherit from the next closest parent which would be the section element due to them being 
+within a section. Not every single property will be inheritted, some of them will not be inherittable, and you can see this via the MDN documentation. */
+button,
+input {
+  color: inherit;
+}

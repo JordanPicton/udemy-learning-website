@@ -349,4 +349,6 @@ p {
   color: red !important;
 } 
 It comes after the property value. What this does is, it overrides all the other priorities for p elements text colour to be this specific one. Even if you're using an ID selector, this rule has more priority. This rule isn't actually part
-of specificity, it's an exception from it and just wins the priority queue automatically. */
+of specificity, it's an exception from it and just wins the priority queue automatically.
+
+CSS Inheritance, some CSS properties will be inheritted by child elements.  */
