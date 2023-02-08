@@ -335,4 +335,18 @@ There are tools that can be used to help understanding this. Here is one of them
 This only applies when there is a conflict, you can have the same example as above with the element selectors again. And lets say the p element had a colour of "#10038a" this is technically more specific along with all p elements still
 getting the text size of 10px but also the section p elements getting a border colour. This is because they do not conflict with each other. The only thing that conflicts within this example is the color properties. And now we know the scoring
 system of this we now understand why the signup button doesn't get the hover colour applied, it's because ID's are a lot more specific than anything other selector. 
-You can have 50 element selectors within one selection and they still wouldn't be higher than a single class selector. */
+You can have 50 element selectors within one selection and they still wouldn't be higher than a single class selector. 
+
+A cool way to see which style is winning is via the inspection tools within the browser, they allow you to see which style is being used and what it would look like if you were to turn it off, they also allow you to play around with some of 
+the settings you've already applied within the document, but any changes made won't be saved, yes it makes the changes in real time but the browser is not an editing software so it won't save your work. It also allows you to add new styling
+to elements and play with those settings too, to do this you just look for the element you want and underneatht the HTML code you can see the styling of the element you've selected. Not only that but you also get to see the default values
+that the browser itself applies to the element you're working on.
+
+Inline styling is actually the most prioritized styling method however it's not recommended to style this way as it can mess with styling when doing styles via style sheets, style sheets are also just a lot more efficient in my opinion.
+Another thing that is bad practice is the "!important" rule for styling, there are some use cases where this is allowed, for example overuling some external style sheet from a library like boot strap etc. But it's generally advised to not use
+this, it might also be good for testing but I'm not 100% sure. To use the rule you would use it like below:
+p {
+  color: red !important;
+} 
+It comes after the property value. What this does is, it overrides all the other priorities for p elements text colour to be this specific one. Even if you're using an ID selector, this rule has more priority. This rule isn't actually part
+of specificity, it's an exception from it and just wins the priority queue automatically. */
