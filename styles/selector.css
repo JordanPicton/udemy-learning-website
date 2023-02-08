@@ -311,4 +311,28 @@ h1 {
 h1 {
   color: purple;
 }
-In this example purple would win. What happens is h1 elements get set to the colour red first and then they run into the conflicting style so they recolour the element to the next colour, in this case purple.*/
+In this example purple would win. What happens is h1 elements get set to the colour red first and then they run into the conflicting style so they recolour the element to the next colour, in this case purple.
+
+Specificity, this seems a little confusing honestly. But apparently it's what happens when there is different selectors in use instead of the same ones. It's how the browser chooses which rule to apply to what element when there are mutple rule that could be applied
+to said element. Depending on how specific the selector is the one with more detail/speifics wins. I don't really know how to explain this in my own words but I can always come back to this part of the course and see what it means in the future. 
+I suppose the example below could help a little. 
+p {
+  color: yellow;
+  text-size: 10px;
+}
+
+section p {
+  color: teal;
+  border-color: pink;
+}
+In this case the selector that is "section p" is more specific because it's saying a "p" element within a "section" element and not just the "p" element by itself. So in that case the styling for the section p elements would be used over the normal p element style.
+Selector Priority Score Sheet:
+ID 100
+Class 10
+Element 1
+This as the above score sheet to resemble priority, in the sense of ID's are really specific and they count for 100 points each and as for Classes they count for 10 and then Elements count for 1. 
+There are tools that can be used to help understanding this. Here is one of them. https://specificity.keegan.st 
+This only applies when there is a conflict, you can have the same example as above with the element selectors again. And lets say the p element had a colour of "#10038a" this is technically more specific along with all p elements still
+getting the text size of 10px but also the section p elements getting a border colour. This is because they do not conflict with each other. The only thing that conflicts within this example is the color properties. And now we know the scoring
+system of this we now understand why the signup button doesn't get the hover colour applied, it's because ID's are a lot more specific than anything other selector. 
+You can have 50 element selectors within one selection and they still wouldn't be higher than a single class selector. */
