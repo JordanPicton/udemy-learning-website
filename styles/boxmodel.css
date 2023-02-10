@@ -1,0 +1,35 @@
+/* With the box model for CSS it's then idea of that everything in CSS is a box and  those boxes have properties. This is due to when you look at different elements that are styled with CSS, since the CSS code is only styling it and not the actual foundation,
+then when you look at it via the dev tools within the browser you can see that there are sat inside boxes and it doesn't matter if you have rounded edges etc. It will still show a box due to HTML being mostly in boxes and that's what the CSS uses but it just
+makes them look pretty. At least this is my understanding of how this works. 
+Also when using the dev tools on an element you can see there's different colours either all the time, sometimes or most of the time. These are to indicate different properties about that element. I kind of suspected this and I was correct, it's showing the properties of,
+the content itself, margin, padding and border. I didn't really think one would be border but it's good to know.
+
+Width, is one of the properties that controls the width of an element on a page, lets say you only want an img element to be 200px across then I would set the property of img within CSS to 200px and it would only be 200px on that page. The img would still be the
+original height due to not setting that property but it works within a very similar way. By default the property of width sets the width of the content area but there is a way to make it set the width of a border area which we'll learn about later.
+With the example below we are setting the width of the section elements to a width of 500px, there are other measurements we can use but we haven't covered these yet.
+
+Using the dev tools within the browser, I'm using Firefox Developer Edition, when I hover over the section element that I just changed I can see a blue box which represents the content of that element.
+We can do the same with height, if we make height too small then it will squish all the content together and it will overlap.
+
+So something to note, the container I'm using below which is section will grow even though I've restrcited the container to be 100px in height this is because with this being a block container. I've just understood it though and it's going to be annoying to explain
+but here I go. Basically the height only dictates the amount of space it takes on the page and doesn't dictate how much space the content is actually give, so it will overlap content but if the content has more content than what the height allows it will increase in size
+to make sure it is showing off all the content it has within. So it will move an element over another but it won't squish it's own text. I'm still not 100% about this however and I would have to get to use it more to fully understand this.
+
+Something else to note is that originally I was using p element within a section element and it had some default padding which might have been messing with me understanding this a little better. */
+section {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+}
+
+/* When an element doesn't have a width or a height, and is given something like a background colour. You get a representation of why they're called block elements. It's because the element takes up a chunk of the page and you can see this with the example below
+it has a pink background and even though the text stops the background colour contines for the rest of the element and to the end of the block element. It draws the pink backgorund to the edge of the screen. */
+h1 {
+  background-color: pink;
+}
+/* As for the example below here you can see when you give a similar looking element with a width property you can see it is only dragged out to the set width. In this case it's 60px so the background colour will stop at 60px. However, if you look at the element with the
+browser development tools you can still see the element going across the entire page because we're not changing the element itself. We're just styling the content and how the element looks. */
+h2 {
+  background-color: chartreuse;
+  width: 60px;
+}
