@@ -19,7 +19,6 @@ Something else to note is that originally I was using p element within a section
 section {
   width: 200px;
   height: 200px;
-  background-color: aqua;
 }
 
 /* When an element doesn't have a width or a height, and is given something like a background colour. You get a representation of why they're called block elements. It's because the element takes up a chunk of the page and you can see this with the example below
@@ -32,4 +31,62 @@ browser development tools you can still see the element going across the entire 
 h2 {
   background-color: chartreuse;
   width: 60px;
+}
+
+/* The next thing is borders and there's a lot we can do with these, for example we can change the style of a border being a solid line, dotted etc. Along with colour, size and curved or not. There's a border property but then there's a bunch of border related
+properties, like I said in the sentence before we can do all of that and that's why there are a bunch of border related properties. There's even border properties to control a specific section of a border, for example the left side or right side and top and bottom 
+each one of these can be controlled individually or all together. 
+This is pretty exaplanitory within itself, it's the border around the element. They're pretty common and used to bring attention to a specific piece of content or used to show what belongs together.
+
+The main border properties I'll be learning are these three; border-width, border-color and border-style.
+The live examnple below shows that the element with the id name of "one" will have a border width of 5px and the px measurement is usually common here since in this case borders are pretty small anyway.
+Also something to remember is that when setting a border width, you can't see the border itself because it doesn't have a colour. I also tested if it would show a border when using a different background colour for the entire document and it doesn't.
+Even after setting the border color we don't see anything this is because I would need to set the border style as well. I think if I left out the width however, I would see a default thickness of the border which I don't know currently. I tested this and it does, if
+I do not have a width set there is a default one already there.
+
+As seen from the live example the border goes right up next to the content but doesn't cover the content. This also does shift this specific element over by 10 pixels as this is what I have asked for within the border width. Since there's 5 pixels on either side, this
+means that the element has an extra 10 pixels than it would have if it didn't have the border.
+Since we set all section elements to be 200x200 above this means that the section element with the id of one is actually 210x210 because we have added the border to it as shown below. 
+Using the box-sizing property it will make the border be the exact size we set above which was 200px by 200px and this can be seen with the page. The text runs over to the element below. But I've disabled it for now, when using this it sets the element to go from border
+to border rather than having the border placed ontop of the content area. So instead of having 200x200 for the content area we would have 190x190. This way can be easier because you can set the width of the entire element including the border. */
+#one {
+  background-color: red;
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  /* box-sizing: border-box; */
+}
+
+/* With beneath we're messing around with, the style of the border along with the way we can style different pieces of the border.
+For example we're setting the border below to have a dashed style along with changing only the left side of the border to be a dark red colour. 
+We can do something kind of cool or interesting at least. Starting from the top and then going in a clock-wise fashion I can change each style of the border by using something like below:
+border-style: solid; - Makes a solid border around the entire element.
+border-style: solid dashed dotted; - This will make the top border solid, and then the right border dashed, along with the bottom border being dotted and finally since I didn't add a 4th one, which I could have, the left border would also be a solid border.
+We have also increased the left side of the border to be 8px wide were as the rest of the border will still be using 3px. */
+#two {
+  background-color: blueviolet;
+  border-color: orange;
+  border-width: 3px;
+  border-style: dashed;
+  border-left-color: darkred;
+  border-left-width: 8px;
+}
+
+/* Below is the more common way of doing borders, using the border short hand allows us to do things like the width, colour and style in one property. Typically people provide the thickness, style and colour of the border within this short hand.
+It's also common to have other short hand properties but we'll learn about those more later. Short hands basically allow for setting multiple properties within one go and there will be others we see in the future.
+If I wanted to change something on a different side of the border example below which I'll be personally using more of than the other ones honestly. Then all I need to do is similar to what I have done above, using border-left or right, top, or bottom then I can change
+the property of what I want to be different. For example underneath I'll set the right side to be dotted and thicker.
+
+The border radius element below is used to round off the corners of the border. There's a lot to this and there's a good reference which is shown here: 
+https://stackoverflow.com/questions/29966499/border-radius-in-percentage-and-pixels-px-or-em 
+Apparently using the percentage method which makes it more of an oval for a rectangle shape, when it's a square shape and you have the percentage used instead of the pixel measurement. You can make a circle and it's commonly used to have a pciture
+inside this circle and there's way to get the content within this circle.
+You can also make it so that you can round just one or a few corners depending on the use case. It's very similar to the border properties where it has a short hand or you can use the specific properties. */
+#three {
+  background-color: yellow;
+  /* width style colour */
+  border: 4px groove turquoise;
+  border-right-width: 6px;
+  border-right-style: dotted;
+  border-radius: 10%;
 }
