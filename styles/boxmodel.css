@@ -90,3 +90,28 @@ You can also make it so that you can round just one or a few corners depending o
   border-right-style: dotted;
   border-radius: 10%;
 }
+
+/* Padding, okay so what this is, is basically the spacing between the actual content and the box/container that the content is inside of. Think of it in the same sense of an actual physical object for example an item you want to ship, you have the item
+or content you want to ship and then you have the box it's in but if it's fragile you use padding like bubble wrap, and that's what padding is, it's the bubble wrap.
+Just like some other properties there is a short hand and then more specific properties we can use for padding for example if we want to be specific and change the padding of only one side then we would use this "padding-<sidename>" and for the short
+hand, you guessed it, it's just padding (this will set all four sides at once however).
+You can use the dev tools again to see this in action for example with FireFox Development Edition when I hover over an element I can see the element and the blue box is the content of the element but the padding colour is a light purple which
+almost looks like a darker blue.
+With the example below we're adding space between the border and the content, the element doesn't need to be given an actual border within CSS for this, it's just the edge of the container the element has. */
+h1 {
+  padding-left: 100px;
+}
+
+/* And with the example below we've added padding around the entire second paragraph or I should say the ID of "two" element. It's pretty commonly used and helps spacing things out nicely along with making things seem larger then they actually are.
+It just looks better. It's useful since you can make an element take more space without making the content inside it any bigger than you already have it.
+
+Some interesting stuff to note:
+  Applies to all four sides - padding: 10px;  <--- Common
+  vertical then horizontal - padding: 5px 10px;   <--- Uncommon
+  top then horizontal then bottom - padding: 1px 2px 2px;   <--- Rare
+  top then right then bottom then left - padding: 5px 1px 0 2px;   <---Common */
+#two {
+  padding: 30px;
+}
+
+/* Margin, this is the spacing on the OUTSIDE of an elements border so it's the space between the selected element and the other element(s). Just like padding we have the 4 different individual properties being; "margin-<sidename>"  */
