@@ -114,4 +114,30 @@ Some interesting stuff to note:
   padding: 30px;
 }
 
-/* Margin, this is the spacing on the OUTSIDE of an elements border so it's the space between the selected element and the other element(s). Just like padding we have the 4 different individual properties being; "margin-<sidename>"  */
+/* Margin, this is the spacing on the OUTSIDE of an elements border so it's the space between the selected element and the other element(s). Just like padding we have the 4 different individual properties being; "margin-<sidename>" and then the
+short hand of "margin". This is also useful for when you don't want elements of pieces of content touching but you don't want to add a blank element for white space, you can just add a margin.
+In the developer tools of FireFox Developer Edition this shows up as the yellow section of an element when hovering over it with the inspector tools.
+By default a bunch of elements will have margin and some default values assigned, even the body element has a default margin value and a lot of people generally remove it so the content goes across the entire page, and if they need to add it back in later
+then it's easier to just add it where you need it. */
+body {
+  margin: 0;
+}
+
+/* With the example below we give the element with the selector id of one a margin to the left side of it to be 50 pixels. Along with a margin to the bottom being 20 pixels. */
+#one {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+/* Below sets the margin to be 200 pixels around the entire element with the id of two. This is the short hand method where it sets all sides. Very similar to padding in that regard. */
+#two {
+  margin: 200px;
+}
+
+/* Below shows the movement of the span within the H2 element that we want to move. We can move it to the left but if I try moving it up or down it won't work, I'll be learning how to do this next. */
+span {
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+/* Display property,  */
