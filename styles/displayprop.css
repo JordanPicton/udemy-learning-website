@@ -1,0 +1,77 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+/* Display property, with this it allows us to set the display of selected elements within the same space. This refers back to when we learned about block and inline elements. With this it allows us to basically make elements within the same
+space or even allows us to make inline elements into block elements, just depending on what we're wanting to do. For now we're only looking at these three values, inline, block and inline-block. To see more into Display Property values there's extensive
+information found here: https://developer.mozilla.org/en-US/docs/Web/CSS/display 
+Using the example below we know that all h2 elements are block elements, meaning that no other content other than themselves will be displayed within their spacing, the other content will be pushed away.
+Without using the display property we can see that the h2 elements are using all the space they can within the page, they go from the furthest left side all the way to the furthest right side.
+Not only that but they seem to have some padding along with margin with default values. They go across the entire body horiztonally. By default elements like h elements and p elements are block elements but we can change their behaviour with
+the display property.
+So with the display property if we use it on the h2 elements below and set it to the value of inline, then guess what? They act as if they were inline elements and not block elements. So with the display property set the value of inline the h2 elements
+are not sat next to each other in the same space as if they were both actual inline elements. And their backgrounds no longer span the entire page's horiztonal plane.
+h2 {
+  color: black;
+  background-color: palegoldenrod;
+  border: 1px solid white;
+  display: inline;
+} */
+
+/* With the example below we get to see the span element in a similar way to the one above. By default we can see these don't push other elements out the way and they don't use all the space vertically. We can see this as we have set a background colour
+to them and unlike the h elements the span element does not have it's background colour go across the entire page. Also something to note is that they're in line with each other, meaning they're on the same horizontal plane.
+So with both these examples, I've basically reversed the roles of both the h2 and span elements. Or I guess you could say we've swapped their roles.
+span {
+  background-color: darkblue;
+  border: 1px solid white;
+  display: block;
+} */
+
+/* Below I will be showing off inline-block, but before that the reason why we're doing this after the showing of margin and padding has to do with how they work with the display property. As block, inline and inline-block all work differently
+with margin and padding. With inline elements setting properties such as width and height do nothing because the inline element doesn't accept them. However, when adding padding this actually gives the element the padding we wanted and it's visualized
+by the background colour we gave the span, something else to note is that the element doesn't push away other pieces of content like the block elements so if we have a bigger padding area for example the one shown below then the padding will either
+go above or below the other content. Similar to how text wrapping works with images in word. 
+The content just ignores the padding we gave but doesn't get pushed around by it.
+Margin is kind of similar, we still aren't given 50px of space around the entire element. Then only plane that gets respected is the horizontal plane where we do have that 50px of margin and padding. Meaning the rest of the content gets pushed out the
+way. Vertically it's completely ignored. */
+span {
+  background-color: palevioletred;
+  border: 1px solid white;
+  width: 100px;
+  padding: 50px;
+  margin: 50px;
+}
+
+/* With block elements like these h2 elements we can set the width property and it will be respected unlike the inline elements. The same thing happens with the height property it is respected for these elements unlike the inline elements. Not only this
+but it also has the use of both padding and margin elements. */
+h2 {
+  background-color: paleturquoise;
+  border: 1px solid white;
+  width: 300px;
+  height: 200px;
+  padding: 50px;
+  margin: 50px;
+}
+
+/* So inline-block values for display properties do basically what you think, they take the all the good from inline and block elements and have all their properties respected, meaning it will behave like an inline element but also allow the uses of
+Width, Height, Margin and Padding.
+When setting the below divs up to only have the properties; height, width, background-color and border. The div element with the style we've given them are 200x200 but they're still block elements meaning it extends all the way to the end of the page
+where it then moves onto the next pieces of content forcing it below.
+However, if I was to give the divs the display property and set the value to inline it would look broken because as we found out earlier, width and height aren't respected with inline. But if we set it to inline-block we have access to use all the
+different properties for inline and block elements. */
+div {
+  height: 200px;
+  width: 200px;
+  background-color: darkgreen;
+  border: 1px solid white;
+  display: inline-block;
+  margin: 50px;
+}
+
+/* We can also hide an element pretty easily by setting the display to the value of none. The element isn't actually deleted/removed, it just makes it so the element itself takes up no space within the page. This can be useful for things when
+using JavaScript. */
+h3 {
+  display: none;
+}
