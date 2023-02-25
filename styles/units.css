@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+/* CSS Units;
+Absolute Units:
+Pixels(px) - Not exactly a pixel in measurement, but is the most commonly used absolute unit.
+
+Relative Units:
+Percentages(%) - Percentage of something, sometimes the value of the parent element or the element itself. (Example, width: 50% = half the width of the parent. And line-height: 50% = half the font size of the element itself.) */
+section {
+  background-color: blueviolet;
+  width: 800px;
+  height: 800px;
+}
+
+/* With the below div being within a section element as the parent. When setting the width and height, it goes across by 50% of the section element and then the same with the height, so it uses a quarter of the entire section element. This can be 
+visualised by checking the page itself with these settings. This can be good for when you want to do something like this and not find out the exact number of how many of X unit you want to take up. Percentages work on a per property basis, meaning
+depending on each property they will each do 50% of the parent element that the current element is inside of or it would be 50% of the element itself. For example height and width would be the % of the parent element where as something like line-height
+would be the % of the line-height of the element we're setting it in and not the parent. */
+div {
+  background-color: darkmagenta;
+  width: 50%;
+  height: 50%;
+}
+
+/* For example we'll set the all h2's below to show off how this works. (The line height etc.) So setting the font-size to 40px and then the line-height to 200%. Just remember % works differently depending on the specific property. */
+h2 {
+  font-size: 40px;
+  border: 1px solid white;
+  line-height: 200%;
+}
