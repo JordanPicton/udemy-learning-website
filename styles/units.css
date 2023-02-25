@@ -31,3 +31,59 @@ h2 {
   border: 1px solid white;
   line-height: 200%;
 }
+
+/* The next unit of measurement I'll be looking into is called an "em" it's an old term before CSS that has to do with the uppercase letter of M in typography. em's are relative units meaning they're relative to some other value, though there is a
+confusing thing with this is that the other value changes depending on the property.
+For example below, if we set the value of "font-size" to be the value of 1em, it will have the same font-size as it's parent element, similar to inherit kind of. If I was to set it to 2em then it would be double the size of the parent element.
+Using the live examples below we can see that the section with the id of em has the same font size as the text within the main element. Meaning that the em of 1 is working as intended. Any bigger or smaller would show it wasn't working properly.
+And since the article element is within the em section, it gets double the font-size due to the section being the parent element and the article being the child and since the em unit is doubling the parent element it has double the font size. */
+#em {
+  background-color: crimson;
+  font-size: 1em;
+}
+#em article {
+  font-size: 2em;
+}
+
+/* Below shows a little more of the em in action and how they inherit from the parent and multiply from the parent element. The paragraph will have the same font size as it's parent element which would be the section element with the id of em2.
+And as we can see the paragraph and the direct child text of the em2 section element is the same, with the h2 and h3 elements having their font sizes increase with h3 being a 1.5x increase and the h2 having a 2x increase. */
+#em2 h2 {
+  font-size: 2em;
+}
+#em2 h3 {
+  font-size: 1.5em;
+}
+#em2 p {
+  font-size: 1em;
+}
+
+/* Using other properties with ems, like padding and margin - which is commonly used to have ems used with padding and margin - in this case 1em is not equal to the font-size of the parent or the margin of the parent but to 1em of the element of itself.
+So we'll be using the above examples I just made to explain this and so I don't have to write it all back out basically.
+For example the em2 h2 element has a font size of 2ems which is 2x the size of the section element it's located within. And below, if we add something to that element, we techinically wouldn't do it the way I'm doing it, it would be within the same
+selector above, I'm just doing it this way to make it easier to understand. Either way, if we add the margin-left property with the value of 1em the margin will be set to 1x the size of the font-size of the actual em2 h2 element itself and not a parent
+or child. But the actual element we're selecting, this is unlike the font-size we set earlier.
+
+To describe this, basically I just set the em2 h2 element above to 32px which is the absolute measurement I would need to have to be the equivalent of 2em, since the default size for most text inside elements is 16px. What I did was just doubled it myself
+to check that it was true and when I changed it nothing on the page changed so I can confirm that currently the em2 h2 above is 32 pixels for font size. Meaning the margin below is also 32px since it's 1x the font size from above. Or basically speaking
+the margin-left = 1 x em2 h2 content size. And that's how I'm understanding it. It takes the current font size, whatever it's computed to be in this case (32px) will be the margin left. Also not every browsers default font size is set to be 16px.
+In this regard it could be considered as inheritting from the same element. */
+#em2 h2 {
+  margin-left: 1em;
+}
+/* Another example of this is shown below. If I change the font-size to be something bigger like 70px, it won't keep the same shape. The border radius will still be there but it won't give the button the same shape it has currently.
+button {
+  font-size: 30px;
+  padding: 0 30px;
+  border-radius: 15px;
+  background-color: blueviolet;
+} 
+However, with the new example below since the units aren't absolute and are now relative. The only thing I really need to change would be the font-size and then the button would look the same no matter what size I give it, well it wouldn't look the exact
+same it would be bigger or smaller but look like the same shape etc. It's just an easier way to control certain properties so I don't have to change everything by hand. */
+button {
+  font-size: 1em;
+  padding: 0 1em;
+  border-radius: 0.5em;
+  background-color: blueviolet;
+}
+
+/* So now I've looked into ems, there is now rems which I'll be looking into. */
