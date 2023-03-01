@@ -79,11 +79,64 @@ button {
 } 
 However, with the new example below since the units aren't absolute and are now relative. The only thing I really need to change would be the font-size and then the button would look the same no matter what size I give it, well it wouldn't look the exact
 same it would be bigger or smaller but look like the same shape etc. It's just an easier way to control certain properties so I don't have to change everything by hand. */
-button {
+.ems button {
   font-size: 1em;
   padding: 0 1em;
   border-radius: 0.5em;
   background-color: blueviolet;
 }
 
-/* So now I've looked into ems, there is now rems which I'll be looking into. */
+/* So now I've looked into ems, there is now rems which I'll be looking into. But before this there is a common issue with ems that I need to know before hand. So the issue with this is if I was to style the UL element I just added, and I made the 
+font size larger or smaller, in this case I made it slightly larger. So since I haven't given the article element a set font size I'm going to do that below first, I just give it the default value it had either way. I set the ul font size to 1.5ems to 
+begin with and I instatly noticed the problem, since there are ul elements nested inside ul elements they would have the font-size applied again since they're inside two ul elements technically and I don't want them to have the multiple applications of
+the same thing so using rem stops this. But there's probably more to it so I'm going to watch the rest of the video. 
+
+ems can stack and this means in this case it can grow or shrink something very quickly if not casreful when using this on stacked elements. We learned about this when learning about ems, depending on the property, the em value would be relative to that
+of the parent value, so we knew that using 2em for example on a paragraph element that is nested inside the body element would have double the size. But there are some that don't do this.
+
+So what are ems? They're ems but they're called root ems, which means it's the main one. Think of it as in a linux operating system root is always the administrator account meaning it has the highest access. I don't think using rems works in the same way
+but in the sense of being better than ems it is. For example root in linux can do more than a normal user, rems in CSS allows us to have easier control. 
+Rather than taking the font size from the parent element like a normal em, it takes the root html element font size, so the default size the element is given. When using rem over em, if the root size for the body font size is 20px, then 1rem is always
+20px and 2rem would be always 40px. No matter where you are or what you're nested inside of because it skips the parents values, it goes for the default root values of the page itself. I've made the below code to had the class of ems to make this easier
+to understand. */
+.ems h2 {
+  font-size: 3em;
+}
+
+.ems h3 {
+  font-size: 2em;
+}
+
+.ems p {
+  font-size: 1em;
+}
+
+.ems article {
+  font-size: 1em;
+}
+
+.ems ul {
+  font-size: 1.5em;
+}
+
+.rems h2 {
+  font-size: 3rem;
+}
+
+.rems h3 {
+  font-size: 2rem;
+}
+
+.rems p {
+  font-size: 1rem;
+}
+
+.rems article {
+  font-size: 1rem;
+}
+.rems ul {
+  font-size: 1.5rem;
+}
+
+/* Often times people will mix ems and rems together, because sometimes it can be situational in how you want to use them. Maybe sometimes you want to snowball effect were an elements value is times'd over and over. Think of it as, rems are used to
+be relative to the rest of the document and ems to be relative to the element itself. */
