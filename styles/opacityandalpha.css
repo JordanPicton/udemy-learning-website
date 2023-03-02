@@ -1,0 +1,47 @@
+/* So with opacity and alpha, first thing to note is that they're different yes, but I believe they do the same thing, in the sense of them giving a very similar outcome. Firstly I'll be looking into RGBA since this is similar to something I've learnt
+already which is rgb. It is just an extra channel the only difference with this channel being it goes from 0 to 1, not like 0 to 255 like the other 3 colour channels. 0 being completely transparent and 1 being solid. Anything between is like a
+percentage of transparency in a way.
+With the example below, I have a div element nested  within a section element and with the section element I've given it the height and width of 500x500px and a background colour of blue. So then with the div nested inside the section element,
+I made this take up a quarter of the space of the section element by having it use 50% of the height and 50% of the width. And using this I can see that the div is only taking up a quarter of that space but also since the background colour has 50%
+opacity and the main colour is set to white, the section the div covers is a lighter blue than the rest since the white is overlayed ontop and letting some of the blue through.
+Something else to add is that I'm only changing the background colour with this method as I've only applied the 0.5 alpha channel to the background colour of the div with the id of rgba. So nothing else but the background colour will be 
+getting this applied. The other colours will be given their default colour unless I've changed them else where. */
+
+section {
+  width: 500px;
+  height: 500px;
+  background-color: blue;
+}
+
+#rgba {
+  width: 50%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* With the next property being Opactiy, it's different. With opacity, it's not a colour or part of a channel for colour, it is the entirety of the element we set the property to, for example I wouldn't be able to use rgba on a image element but I
+would be able to with a opacity property for an image element. All I have to do is select the element I want and give it the desired opacity.
+For example below, I have an image element nested inside a div element with the id of opacity and I've given it a width of 50% because I'm not sure why but it doesn't seem to be working the way I would expect it to be working. However, the image is
+taking up a smaller part of the overall div element. And I've set the opacity of the img element to be 50% and I can see this is working by checking the page. So it seems that rgba works for elements where I can apply colour, for example font
+border colour etc. And if I wanted more control over an element where I can't do this then I can use opacity.
+
+So Alpha is applied to an elements property, where opacity is applied to the element itself. Alpha will do something like text colour and Opacity will do something like the entire paragraph element, along with any descendants. 
+I just tested this using the example below which is now commented out and found that basically the main div is given the opacity of 50% so then all of it's children are given the same opacity. I have now also removed the code from being 
+commented out so I can remove the opacity value from the "opacity img" selector and just have the parent opacity selector give everything the 50% opacity and just give the img the 50% height.
+Before I did this though, I had both of these selectors have the opacity property which meant when the opacity img selector was giving it's final opacity value, it would actually have the value of 25% opacity since it already had 50% from the parent
+and then it was splitting that by another 50%. */
+#opacity {
+  opacity: 50%;
+}
+
+#opacity img {
+  width: 50%;
+}
+
+/* Opacity actually goes from 0 to 1 but it also seems like you can use percentages like I have found out by accident apparently. Also something to add for above, I added some text in a bunch of nested elements within the div for opacity and it's
+getting the same 50% that the img is getting. Just to clarify that before I forget. So the entire element and all it's children elements will have this opacity applied.
+I can also do with via hex or different colour methods, it doesn't have to be rgba exclusively. The way to do it with hex is shown below. The best way to do this would be using the colour picker built into VS Code.
+But basically there's an extra 2 digits at the end of the hex code for the alpha channel. Which all from 0 to f like the rest of them. */
+body {
+  background-color: #a50000c2;
+}
