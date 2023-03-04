@@ -1,0 +1,89 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+/* So the position property, I'm not entirely sure how this works but it'll be interesting to figure out how this actually works.
+The values I can give to the position property are; static, relative, absolute, fixed and sticky.
+I'm not 100% sure what they mean at this point but it's good to know what options I have for now so them I can fill in the blanks when I know more about them.
+As you probably could have guessed, this property sets how an element is positioned within the document/page. Not only this but we're also introduced to 4 other properties, top, right, bottom and left. Apparently the position property determine how
+these work too.
+
+With the example below, the first position value I'm looking into is static. What I've done so far is setup 3 divs, they're set to be inline block and one of them has an id called middle which is given a different background from the other two. The
+middle div is the one that I'll be messing around with so that's why it's given a different background colour.
+The default value for position is static so this is what is applied to all elements automatically. */
+div {
+  width: 100px;
+  height: 100px;
+  background-color: azure;
+  border: 3px solid rgb(129, 241, 107);
+  margin: 10px;
+  display: inline-block;
+}
+
+#middle {
+  background-color: aqua;
+}
+
+/* I've set the section parent element for the div with the id of middle to have an id of static since this one will be my static test and since I've set the div to have the position value of static, nothing has changed. Also something else to note on
+this is when I try setting one of the new properties that I just learned about, for example top to 100px, it does nothing in this case. I'm assuming because the value of static doesn't allow it to do anything. Since there's not much from what I can
+see about this property value or from what I can see from the course I'm using, I'll fill in a little more about this from other things I've heard something being static. For example in gaming terms or in general terms the word static means that  */
+#static #middle {
+  position: static;
+  top: 100px;
+}
+/* The next one I'll be learning about the relative value for the position property. This will keep the element in relative flow of the document but we can offset it from itself. I can do this by using the four new properties I learned about earlier,
+top, left, bottom and right. So what I've done below is given the middle div element a top of 100px which reminds me a lot of margin honestly, I'm not sure why this would be used over margin but I'm sure I'll find out why. Using the top element like
+I have below, pushes the element down by X amount of whatever measurement value I've used. In this case I've used px so it's being pushed down by 100px. So nothing else changes with the other divs, they're not moved or pushed, but also the only thing
+that changes with the middle one is that it's been moved, relatively from where it would orgininally be. 
+It's technical place in the document is still within the original place it was given, which is between the other two elements, the only thing that's being offset is the content of the element. */
+#relative #middle {
+  position: relative;
+  top: 100px;
+  right: -100px;
+}
+
+/* Just pushes the next section being Absolute down a bit so it's not being covered over by the section above. */
+#absolute h2 {
+  padding-top: 100px;
+}
+
+/* The next value for position is absolute, this means the element is apparently removed from the normal flow of the document and no space is created for the element in the page layout.
+When setting the value to absolute and refreshing the page it looks like there's only two divs, the first one and the middle one, but that's not exact. There are 3 divs still, it's just that the middle one is now sitting ontop of the right/last div.
+So what's happened is the middle div is removed from the document so that it doesn't take up any space within that document, it's like the space it was in collapsed and now these two divs are stacked. And if I give it a top of 50px and have a look at 
+it now, I can see that it does something very unexpected. Unlike the static element where it gets offset from the original location of the element, in this case when given a property of either top, right, bottom or left. It is all the way at the top of
+the document but it is pushed out to where it would originally be further down on the page, basically it's not all the way to the left of the page so it's kept the spacing in that regard. This again changes if I was to give it a left property too, now
+it is 50px away from the left edge of the page. I changed it to be right instead of left and now it's 50px away from the right side of the page. It's almost as if this element is just moved around by these measurements and then just plonked where ever
+I want it, as if I have more control on where this element can go.
+
+So this element would be positioned relative to it's closest positioned ancestor/parent (Has to be something other than static). And if there isn't any then it's placed relative to the intial containing block. Meaning if the element I'm giving the 
+absolute value to is not nested within another element that has a position property then it's going to use something called the initial container block which more information can be found 
+here: https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block - can also think of this as the body. 
+
+If I was to give the section element with the id of absolute a position value of relative, then this would be different remember it has to be different than static since this is the default value and wouldn't change anything is I set it to this. 
+I've done this as shown below and the middle div has definitely moved down towards where the section is, meaning since it's nested within an element that has the position element, it's using this as the main containing block instead of the initial one.
+So it would be offset from the top left corner of the section element but each of the divs hav margin as well which will be within the measurement. So the other elements within the section element have no effect on the element that has absolute, and vice
+versa. 
+Can be very confusing with this one since it depends on the parents position value. */
+#absolute {
+  position: relative;
+}
+
+#absolute #middle {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+/* The last one I'll be looking at is called fixed. When just giving the middle div the position value of fixed it seems to have done the same thing that absolute did, were it has the middle element overlapping the next element. Okay so this is kind of
+cool, when an element is given the position of fixed, where ever it is on screen, for example if it's at the top of the screen and the user scrolls down or across then this element will stay in the same place and follow the user, similar to how
+some websites have the navigation bar follow a user when they scroll down. */
+#fixed #middle {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* There is another value for this which is called sticky and it's similar to fixed with the difference being it's not fully fixed to the page, if the user is scrolling down a page it will act like any other element until it gets to the top of the page
+and when there, then it will act like a fixed element and when you scroll back up it will act like a normal element again. */
