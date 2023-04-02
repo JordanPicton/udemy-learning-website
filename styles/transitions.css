@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+/* Now moving onto transitions which sounds pretty cool honestly. So with the transitions property, it's technically more than one property in the same way that border is more than one property. Transition properties allow me to animate the transition 
+of one property value to another property value. A quick example of this is shown below.
+I've got a div element with a palevoiletred background set to a height and width of 300px each. Giving me a square with the background colour.
+With hover added onto the selector I've made it so when I hover over the div, it turns the background colour red and turns into a circle. This is not the transition as of yet, this is just an immediate switch from one state to the other.
+
+So with the transition property used below, it's set to 1s meaning it will take 1 full second to complete the transition. 
+Using hover as the example is a very common way of using the transition but there are ways to use this.
+I can also set it to be 0.5s if I wanted to, making it complete the transition within half a second. This is also a very simple way of showing how to use this, I can set it so I can specify the property name, duration, timing function and delay. 
+Something else to note is when using just transition and not specifying a property for the transition, the transition time will be applied to all the properties of that element. */
+.round {
+  height: 300px;
+  width: 300px;
+  background-color: palevioletred;
+  transition: 1s;
+}
+
+.round:hover {
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* So below I've made a copy and paste of what I have above since I wanted something the same basically for the demonstration of only having one property having the transition. All I changed for now was the class id and the property that the transition
+targets. With the one below instead of changing both the background colour and border radius of the div, I'm only changing the background colour, meaning the transition of the border radius is instant. Which I can confirm this is what it does. 
+Not only that but I can specify a delay for the transition, meaning it will take X amount of time before the transition even begins. With the example below it's 1 second delay before the transition starts. This would happen in both directions too,
+meaning it would take 1 second delay before changing from palevioletred to red and then the reversal (Will take another second delay before reverting the transition).
+If I want to highlight all properties I can use "all" instead of the property name. */
+.round2 {
+  height: 300px;
+  width: 300px;
+  background-color: palevioletred;
+  transition: background-color 1s 1s;
+}
+
+.round2:hover {
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* With the example below, it shows how I can give two properties different transition settings. For example the background colour takes 2 full seconds to complete it's transition along with having a 2 second delay before starting the transition. For the
+border radius, this has a delay of 1 second and a transition time of 1 second. */
+.round3 {
+  height: 300px;
+  width: 300px;
+  background-color: palevioletred;
+  transition: background-color 2s 2s, border-radius 1s 1s;
+}
+
+.round3:hover {
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* Now moving onto the timing fuction value, I've got a section element with the id of "timing" and inside there are 4 divs with the background colour set to aqua. They have a base margin of 20px on the top and bottom. When I hover over these divs
+the margin to the left increases by another 480px making it to a total of 500px. Normally it's not typical to use the margin-left property to animate in this way, there is a better/more perfomant way of doing this that will be shown in a later video.
+With this example there isn't really anything different with the things I've learned already. */
+.timing div {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  margin: 20px 0;
+  transition: margin-left 3s;
+}
+
+.timing:hover div {
+  margin-left: 500px;
+}
+/* Until I get to here, this is where the timing fuction works properly. With this it looks like there's basically different ways of giving the elements different transition types, kind of how power point transitions work when you were in school.
+You wanted to give each slide a different transition type, so that's what I'll be doing here too. They all take the same time to complete their transitions, they just do it in different ways.
+The first one I've used is called linear, and it seems to be the default transition style. Meaning it has a set speed it goes at and style? Not sure if style is the right word but it seems to smoothly transition between one property/element to the next.
+I also believe linear is the default setting for the transition style. */
+div:nth-of-type(1) {
+  transition-timing-function: linear;
+}
+
+/* Eases into the transition. Starts at regular speed and then slows down. */
+div:nth-of-type(2) {
+  transition-timing-function: ease-in;
+}
+
+/* Eases out of the transition. Starts slow and then gets quicker. */
+div:nth-of-type(3) {
+  transition-timing-function: ease-out;
+}
+
+/* Not entirely sure with this one. Okay apparently it has a slight bouncy effect to it. */
+div:nth-of-type(4) {
+  transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+/* Same for this one sadly. Same for this one just with different settings. */
+div:nth-of-type(5) {
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* With this example, the transition moves a little bit and then moves again, but not in the same fashion as the others. It's like an old loading bar. In the sense of one colour in a straight loading bar would be lit up darker than the rest to show
+an animation in a sense and this moves in a similar way, it takes 6 steps and then ends the transition. */
+div:nth-of-type(6) {
+  transition-timing-function: steps(6, end);
+}
