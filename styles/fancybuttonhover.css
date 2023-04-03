@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+/* We haven't covered flex box along with align items and justify content yet so don't worry about these for now. */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+button {
+  background-color: rgb(12, 12, 12);
+  color: #ff75e8;
+  border: 2px solid;
+  padding: 1em 2em;
+  font-size: 1em;
+  /* Given the transition to all the content of the element, this is advised against in live sites though. */
+  transition: border-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+/* Here I will be giving the button some special looking properties to make it pretty when someone hovers ove the button. */
+button:hover {
+  border-color: rgb(132, 0, 255);
+  color: rgb(191, 123, 255);
+  /* X offset, Y offset, blur radius, spread radius, colour. */
+  box-shadow: 0 0.5em 0.5em -0.4em rgb(191, 123, 255);
+  /* Here I'm making the button move upwards just slightly. */
+  transform: translateY(-0.25em);
+  /* Changes the cursor to show that this is a button and it's interactable. */
+  cursor: pointer;
+}

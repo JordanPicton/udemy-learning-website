@@ -1,0 +1,106 @@
+html {
+  font-family: "Courier New";
+  font-weight: lighter;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+/* Now moving onto transforms, these can be used to rotate things and warp, scale, stretch, translate and move things on the page. They can have more than one effecting a specific element as well. */
+
+h2 {
+  border: 3px solid darkorchid;
+  text-align: center;
+  width: 300px;
+  padding: 0.7em;
+  font-size: 1.8em;
+  background-color: fuchsia;
+  color: darkmagenta;
+  /* Something I've not looked into yet is setting something to auto and I don't really think this is the time where I go into a lot of depth about it. However, if I was to use it like I have below then it would look at the elements container
+  and then set the auto size for the property I'm trying to set for it. In this case it's a H2 element and since it's a block container it spans across the entire page horizontally and when I set the margin to auto it will automatically give it a margin
+  size for this/these element(s) with this case it's centered the elements to the middle of the page. There is 20px on the top and bottom of this though as shown below. */
+  margin: 20px auto;
+}
+
+/* Something to note about Transform is that it applies to the all content of the element, meaning it's not just limited to the selected element, for example if I had a section and then other elements within that section element then all of those
+elements would also get these settings because they're content of the section element. Just something to remember. */
+
+/* The first transform value I'll play with is rotate, and I mean this sounds pretty straight forward, rotate would rotate the element right? But it wouldn't rotate the elements contaier, just the way the element itself looks. There
+are a few different units for this, degrees, radians, gradians and turns. Most of what I'll see is degrees and sometimes radians for specific cases.
+And as below shows that we're selecting the first section using the first of type psuedo class and then the first h2 within that section and rotating it by 180 degrees. Meaning it's upside down and the text is the wrong way.
+(Not the same as flipped)
+
+The transfrom defaultly happens from the middle of the selected element. There is a way to change where the rotation or transform is happening from, so for example if I wanted to off center the tranform to the bottom of the element I would
+be able to do that. I'll have them in this comment so I don't have a giant page of different h2 elements.
+
+It would look like this:
+transform-origin: center; - This would be the default.
+transform-origin: top-left; - Using key words like top left, bottom right etc is the most useful way in using this.
+transform-origin: 50px 50px; - I'm assuming this means 50px from the center and then down by 50px.
+transform-origin: bottom right 60px; - I'm not really sure how this works honestly. */
+section:first-of-type h2:nth-of-type(1) {
+  /* transform-origin: bottom right; */
+  transform: rotate(180deg);
+}
+
+/* The above example is for rotate which, rotates an element around a fixed point on a 2D plane.
+Then there is rotate3d() which rotates an element around a fixed axis in 3D sapce.
+rotateX() which rotates an element around the horizontal axis. 
+rotateY() which rotates an element around the vertival axis.
+rotateZ() which rotates an element around the z-axis. 
+These aren't used as often but they can be useful, when making a card that can turn around and show something behind it.
+
+
+
+The next one to mention is scale which is basically resizing, growth/shrinking of elements. Scale also has the properties like above as follows:
+scale()
+scale3d()
+scaleX()
+scaleY()
+scaleZ()
+
+A live example of this is shown below. It makes the element half the size it should normally be. In this way it's shirking both on the X and Y axis by 0.5. I can change this by using the commeneted out properties. */
+section:first-of-type h2:nth-of-type(2) {
+  transform: scale(0.5);
+  /* transform: scale(2, 1); - With this example the length would double from the original and the height would stay as the original. If I just wanted to scale the Y or X and not change the other then I could just us the property from above respectively. */
+}
+
+/* Next I'm looking at translate, which allows for me to move around an element on the page rather than positioning it with different containers and making sure they're all the correct size. I can either move it in one direction or two at the same time.
+Translate also has the properties of:
+translate()
+translate3d()
+translateX()
+translateY()
+translateZ()
+When applying these, they need a length (which allows for any of the units that I've looked at before). The example below will push the element to the right by the value of unit I give it, in this case it's being pushed right from it's original location
+by 200px. Just a reminder to make something like this go to the left it would be a negative. (-200px) */
+section:first-of-type h2:nth-of-type(3) {
+  transform: translate(200px);
+}
+
+/* The last one I'll be looking at for now is skew. This accepts degrees and angles, it's like warping the image, almost as if the 2D was shown from a different angle.
+With this property there are only 3 properties it has being:
+skew()
+skewX()
+skewY() */
+section:first-of-type h2:nth-of-type(4) {
+  transform: skew(15deg, 15deg);
+}
+
+/* Using the transform property allows me to not only use a singular function for this property, but I can use multiple by spacing them out, and example of this is shown below. I'm rotating it by -15 degrees and then increasing the size by 50%. 1.5 being
+the setting since 1.0 is original and anything higher than 1.0 is bigger than original. And obviously anything smaller than 1.0 is shrinking the element. */
+section:nth-of-type(2) h2:nth-of-type(1) {
+  transform: rotate(-15deg) scale(1.5);
+}
+/* With this example below I am shrining the size to be 80% of the original size and then moving it to the left by 8ems. */
+section:nth-of-type(2) h2:nth-of-type(2) {
+  transform: translate(-8em) scale(0.8);
+}
+
+/* With this example I'm taking the entire second section element and applying some transform properties to it. In this case I have increased everything within the 2nd section element by 10% */
+section:nth-of-type(2) {
+  transform: scale(1.1) translateY(10em);
+}
