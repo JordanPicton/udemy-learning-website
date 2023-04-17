@@ -1,0 +1,50 @@
+/* So I've used the background property a lot with the different style sheets I've been using, mainly like the one I have below. Just to make it a little nicer than the other sheets after learning about this.
+However, there are other background properties I can use and I'll be learning this within here. */
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* The example below is obviously the colour background where when this is used it's setting a background colour to the specific element that's been selected. */
+#colour {
+  background-color: grey;
+}
+
+/* The example below the background property sets the background of the specific element to be an image, this image can either be stored locally or externally. Below I have used the live option of an image interally, though I have
+also included a commented our version of how to do it externally if I was to use an image from the web.
+Not only that but with this I can add a gradient with this if I wanted to but I won't be looking into this just yet. These are just the properties in how the background looks, there are more properties I can use to change the size of the background 
+along with the repeat of the background, basically meaning if the background itself should be repeating or not. More in depth information here: https://developer.mozilla.org/en-US/docs/Web/CSS/background-image */
+#image {
+  background-image: url("../brown-Guernsey-cow.jpg");
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png");
+  background-size: - This allows me to set the size of the elements background image, contain makes the image as large as it can be without cropping but you get a repeat or stretching and cover allows for the image to cover the element with cropping.
+  background-repeat: - Allows for us to mess around with the repeating of the background image.
+  background-position: - Allows for us to set the part of the image we want to display, so if the image is too large and you want to display only part of it, you can set it to top, left, right, or bottom and it will display that part of the image.
+  background-clip: - Unsure about this one.
+  background-origin: - Unsure about this one too.
+  background-attachment: - Also unsure about this one.
+
+  The order in which these are used within the background short hand generally doesn't matter, there is one thing that does matter, that being the background position if I wanted to do something like cover but also set the position to center then it
+  would look something like center/cover or center/50% etc. So it's position and then size, if not it will break. */
+  height: 50vh;
+}
+
+/* Background, so as you can probably guess this is similar to the border property where it's the short hand for all the background based properties in one. The below example is the image from an external source along with having no-repeat and then
+being centered with 100% size of the image. And then fixed so it follows the user on the page and only the content scrolls where as the image stays/follows the user. */
+#background {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png")
+    no-repeat center/80% fixed;
+}
+
+/* With the example below it demonstrates on how I can apply two backgrounds to an element within the same property. */
+#multiple {
+  background: center/40% no-repeat
+      url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?cs=srgb&dl=pexels-miguel-%C3%A1-padri%C3%B1%C3%A1n-255379.jpg&fm=jpg"),
+    blue;
+}

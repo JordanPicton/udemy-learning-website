@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* I've used google fonts before and honestly they're really good they allow you to use any font within their library on your website and you just need a bit of code to get this to work. I'm assuming there's more to this
+but I also remember installing my own font.
+
+I've looked into some fonts before, being the "web-safe" (small list of fonts) fonts where they're built into each browser or operating system. Google fonts is free and it gives a wide range of fonts. However, you can buy fonts and sometimes they can cost in the
+thousands especially if they charge per view page. Technically speaking I could use any font I want given I have it on my machine, but that doesn't mean it's going to be on everyone elses machine. So there's an easier way to do this with things like google fonts.
+
+Something I seemed to have missed out as well is that if I want to change somethings font then I have to use the property font-family. One way to include a font seems to be from the actual document itself, so the HTML document. Kind of how stylesheets work. */
+h1,
+h2,
+h3,
+h4 {
+  /* Below is the piece of code that gives the google font (or a custom font if needed) to the element. */
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+}
+
+/* This just shows how I would call for another font that was also embedded with the other. */
+main {
+  font-family: "Anuphan", sans-serif;
+  font-weight: 300;
+  font-size: normal;
+}
