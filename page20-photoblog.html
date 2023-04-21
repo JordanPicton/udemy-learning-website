@@ -7,20 +7,47 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Photo Blog - Code Along</title>
    <link rel="stylesheet" href="styles/photoblog-codealong.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
    <header>
       <h1>Photo Blog - Code Along</h1>
       <nav>
+         Jordan Picton
          <ul>
             <li><a href="page1-agriculture.html">Home</a></li>
          </ul>
       </nav>
-      <hr>
    </header>
    <main>
+      <!-- Okay so something I noticed when writing this out myself is that when I have the images wrote on a new line, instead of being wrote on the same line and having the software collapsing the text, it breaks the site slightly in the sense there is extra
+      padding or margin somewhere because of the space between the elements. Turns out there's a really anooying thing with HTML where there is white space when moving to the next line when doing something like this meaning that HTML is accounting for an
+      invisible character basically. 
+      
+      So think of doing something like: <span>Hello</span><span>World</span> It would look like HelloWorld 
+      Where as if I did it like this:
+      <span>Hello</span>
+      <span>World</span>
+      It would look like this: Hello World
+      Kind of weird this wasn't taught earlier on and honestly just very weird to begin with. However when we get to flexbox this won't be an issue. -->
 
+      <img src="https://wallpapercave.com/wp/wp5405231.jpg" alt="Synthwave Background"><img
+         src="https://wallpapers.com/images/featured/1080p-3qmj7oaige168170.jpg" alt="No Mans Sky Background"><img
+         src="https://images5.alphacoders.com/112/thumb-1920-1123013.jpg" alt="Fantasy Stary Night Background">
+
+      <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Desktop-Wallpapers-1920x1080-HD.jpg"
+         alt="Blue Night Background"><img src="https://images4.alphacoders.com/936/thumb-1920-936378.jpg"
+         alt="Dreamlandscape Background"><img
+         src="https://wallpapers.com/images/hd/red-forest-trees-n8z3bf3dv0b2cj6w.jpg" alt="Crimson Forest">
+
+      <img src="https://cdn.wallpapersafari.com/55/7/GmrvPR.jpg" alt="Simple Background"><img
+         src="https://preview.redd.it/38aeu51hq3d61.jpg?auto=webp&s=ae0c88bc1b22516c312823c697e44285e961f748"
+         alt="Alient Planet Background"><img
+         src="https://images.wallpaperscraft.com/image/single/astronaut_ring_neon_156673_1920x1080.jpg"
+         alt="Warpgate Background">
    </main>
    <footer>
 

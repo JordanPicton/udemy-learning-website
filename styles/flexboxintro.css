@@ -1,0 +1,62 @@
+body {
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* So the first introduction into flexbox, it's more of a newer part of CSS. Apparently it's only become standard across browsers within the last 2-3 years. It's a series of properties to layout items across the page. Interesting, when a  piece of content on a
+page is spread out, for example within the lesson video for this Colt shows off the Airbnb website and how things take up different amounts of space which is shared out. When shrinking or expanding the page the content acts differently depending on the size of
+the page. Pieces of content that is sat next to each other becomes a list when the display screen becomes small enough. It's basically flexible layouts.
+Flexbox consists with about 8-10 properties and they all work together. */
+h1,
+h2 {
+  text-align: center;
+}
+
+#container {
+  background-color: #003049;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  border: 5px solid #003049;
+  /* Adding display flex to this ID element makes it so that the div elements are no longer in a block container formation, meaning that instead of the elements being one underneath the next they are sat next to each other in the same space. 
+  When giving the display this value it basically turns on flexbox to begin with meaning it wouldn't work really without this first step. Now all the other properties will work since they rely on this being set first.
+  When setting a container to flexbox, there are two main axis to note, the main axis and the cross axis. There's a nice diagram to show this on lesson 104 in section 10 of the Udemy course.
+  By default the main Axis goes from left to right. This can be changed with another property called flex-direction. */
+  display: flex;
+  /* Default is row. row-reverse makes it go from right to left rather than the default left to right. Think of it as, English and then Japanese in the way of reading and writing. There some other options being: column and column-reverse.
+  Basically meaning top to bottom and then bottom to top. Since the divs themselves are set to 200px and this parent container is only set to 500px it means when they're set to something like the column or column-reverse property they are
+  only taking up the space they can and spread out evenly between each div. This is because flexbox is being used, I can turn off or change this behaviour (not entirely sure how yet though).
+  Switched back to the default row to show off other properties. */
+  flex-direction: column;
+  /* With justify-content the default value is flex-start however, this does not mean that it's always on the left hand side. Not only that but it seems like this only works for the MAIN axis when it comes to flex.
+  Using the value flex-end moves the content over to the end of the flexbox meaning the last div is on the right side of the container. Where as before the cyangreen div would be the one on the end. There are some other options, for example center.
+  The property value center is pretty straight forward, it moves the content within the container to the center. There's a few others which are interesting. There's space-between which I'm assuming is only horiztonal space and then there's space-around which
+  I'm also assuming is space on all sides.
+  
+  space-between makes it so there is space between the content but not between the content and the container, meaning the first and last pieces of content will not have any margin with the parent container. When testing this it looks like there is a margin but 
+  there isn't just read the code above and you can see there's a border with the same colour.
+  
+  space-around isn't what I thought it was, I thought it would have been space on all sides but it's just the same as space-between but with space on the first and last pieces of content where with space-between they will touch the edges of the container however,
+  with space-around there is also space here too. So these two properties only affect the horzontal space it seems. Something to note about space-around is that even though this looks better than the one before, it still is a little funky looking on the sides where
+  the content meets the edges of the container, there is space there but it's less than what is between the content themselves since it accounts for lets say the right side of content 1 and the left side of content 2 meaning there's the combination of both of those
+  spaces.
+  
+  space-evenly does what you would think, it spaces out evenly across all the content within the container and has the same spacing between the container edges and the content and the content with other content.
+  
+  People ask why is it called jusity-content and not something to do with horzitonal, that's because with the flow-direction we can change it from being horizontal to being vertical. */
+  /* justify-content: space-around; */
+
+  /* The next thing I'll be looking into is called flex-wrap. I've set the other properties to be default, changed it to be a column to show off the wrap and commented out the justify-content to show this off a little more. So there's only really two
+  values for this I need to remember and they're wrap and warp-reverse. Setting this to wrap allows the content to shift over and use it's full space again. It's hard to explain this from my own words so I'll see if Colt explains it better for me. Yeah he did
+  instantly, so what happens is it begins like a normal column and then goes onto a new column if there isn't enough space for the content if it has a set width and height etc.
+  And as you can probably guess, wrap-reverse just does this in reverse, so it starts on the opposite side of the page. */
+  flex-wrap: wrap;
+}
+
+/* I've seen the display property before but I haven't used the value of flex before, here I'm selecting all the divs within the container ID and giving them the display value of flex, this is something I have to do firstly. */
+#container div {
+  width: 200px;
+  height: 200px;
+}

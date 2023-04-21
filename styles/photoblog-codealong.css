@@ -2,4 +2,29 @@ body {
   margin: 0;
   background-color: black;
   color: white;
+  margin: 0 auto;
+}
+
+/* CSS code for the test site */
+
+/* When learning flexbox later there will be better ways to space things out but for now this is fine. Seeing numbers like the one for margin used to be common until flexbox was introduced.
+  There is another way to do this however and I will show it in a different margin. I've commented out the margin with the decimal percentage to show the better way. */
+img {
+  width: 28%;
+  /* margin: 1.666%; */
+  margin: calc(
+    16% / 6
+  ); /* Instead of try doing all the calculation myself I can use calc() and have it do it for me rather than going through with a calculator and doing all the work myself. */
+}
+
+/* I could use a logo here or something like an emoji etc. For now I'm just going to use the text aka my name to give me an understanding in how this works.*/
+nav {
+  text-transform: uppercase;
+  border-bottom: 2px solid #f3f3f3;
+  width: 30%;
+  margin-left: calc(16% / 6);
+  padding: 1.2em 0;
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
 }
