@@ -17,7 +17,7 @@ h2 {
 #container {
   background-color: #003049;
   width: 90%;
-  height: 500px;
+  /* height: 500px; This is commented out to explain flex-basis better. */
   margin: 0 auto;
   border: 5px solid #003049;
   /* Adding display flex to this ID element makes it so that the div elements are no longer in a block container formation, meaning that instead of the elements being one underneath the next they are sat next to each other in the same space. 
@@ -29,7 +29,7 @@ h2 {
   Basically meaning top to bottom and then bottom to top. Since the divs themselves are set to 200px and this parent container is only set to 500px it means when they're set to something like the column or column-reverse property they are
   only taking up the space they can and spread out evenly between each div. This is because flexbox is being used, I can turn off or change this behaviour (not entirely sure how yet though).
   Switched back to the default row to show off other properties. */
-  flex-direction: column;
+  flex-direction: row;
   /* With justify-content the default value is flex-start however, this does not mean that it's always on the left hand side. Not only that but it seems like this only works for the MAIN axis when it comes to flex.
   Using the value flex-end moves the content over to the end of the flexbox meaning the last div is on the right side of the container. Where as before the cyangreen div would be the one on the end. There are some other options, for example center.
   The property value center is pretty straight forward, it moves the content within the container to the center. There's a few others which are interesting. There's space-between which I'm assuming is only horiztonal space and then there's space-around which
@@ -46,17 +46,84 @@ h2 {
   space-evenly does what you would think, it spaces out evenly across all the content within the container and has the same spacing between the container edges and the content and the content with other content.
   
   People ask why is it called jusity-content and not something to do with horzitonal, that's because with the flow-direction we can change it from being horizontal to being vertical. */
-  /* justify-content: space-around; */
+  justify-content: center;
 
   /* The next thing I'll be looking into is called flex-wrap. I've set the other properties to be default, changed it to be a column to show off the wrap and commented out the justify-content to show this off a little more. So there's only really two
   values for this I need to remember and they're wrap and warp-reverse. Setting this to wrap allows the content to shift over and use it's full space again. It's hard to explain this from my own words so I'll see if Colt explains it better for me. Yeah he did
   instantly, so what happens is it begins like a normal column and then goes onto a new column if there isn't enough space for the content if it has a set width and height etc.
-  And as you can probably guess, wrap-reverse just does this in reverse, so it starts on the opposite side of the page. */
-  flex-wrap: wrap;
+  And as you can probably guess, wrap-reverse just does this in reverse, so it starts on the opposite side of the page. 
+  Setting the flex-wrap to wrap reverse changes how the axis work. Since I've set the flex-direction to column, the content goes top to bottom. But then this is where the cross axis gets changed. Since the main axis has changed from going left to right to bottom
+  to top this means when the flex-wrap starts wrapping it goes from right to left (when it's default state is top to bottom) this is because it's been set to wrap-reverse (but also because we're using columns here).
+  
+  I've added a few more div elements so I can see how these properties would work with the row value for flex-direction instead of column. There's also technically a value, being nowrap. */
+  /* flex-wrap: wrap; */
+
+  /* The next property I'll be looking at is the align-items property. This works similar in the way flex-direction the only difference being this works on the cross axis instead of the main axis. Setting both flex-direction and align-items to center allows
+  me to center all the content within this container in the middle of the containter rather than just the top middle, bottom middle, right middle etc. There's another value for this which is called baseline, which aligns the content to lets say the text within
+  these divs. So when they're all aligned they'll be based of the text. If there were different sized fonts within each div, then they would be offset (the backgrounds would be) but not the text itself if using baseline, think of a ruled page and the text
+  sitting on that ruled page. Instead of the content following the flow of the background, it would follow the flow of the text instead, because all the text is written ontop that one same line. */
+  align-items: flex-start;
+
+  /* Another property within the similar area is align-content, with this I'm assuming it's got something to do with the content itself, for example remember the items think of them as the backgrounds and borders etc. Stuff that is the element itself.
+  And then think of the align-content as the actual content between the opening and closing tags, I believe I can manipulate the way this looks on a page with this property. I'm not 100% sure but I believe it works like this.
+  Okay so that's not how this works, the way this works is think of when there is a bunch of elements wrapping because they take too much space and go onto the next column, there's a default space between them and this is where I can manipulate that space myself
+  to reach the desired effect for what I want. 
+  
+  Yeah so when this isn't set, and the flex-direction is column on the examle I'm using, they wrap around and make new columns when they become too big for the space. Only problem with this is that they are spread out
+  too far apart and that is where this property comes in to take over. This only works when flex-wrap has wrap or wrap-reverse.
+  
+  align-content: flex-start;
+
+  There is another property called align-self, this can only be applied to a single element however. Doesn't have to be one, more about individual items in the flex container. It is shown below via the div:nth-last-of-type() selectors.*/
 }
 
 /* I've seen the display property before but I haven't used the value of flex before, here I'm selecting all the divs within the container ID and giving them the display value of flex, this is something I have to do firstly. */
 #container div {
   width: 200px;
   height: 200px;
+  /* Okay so this file has a lot of comments already and I would really like to switch to a different document to show how different things work however, I should be fine pointing out that I've changed something etc. I should understand what is going on.
+  So the next property I'll be looking into for flex is called flex-basis, what it says is that it "defines the initial size of an element before additional space is distributed" which I can only assume means that it is basically distrubuting space after this
+  element has been given it's desired space. But I'm not 100% sure, since when this is applied, it negates the actual size of the content if it has a width property. I can comment out width now or remove it since it's not being used or the better term would be that
+  it's being overridden. flex-basis is the measurement that will be used when flex-direction is set to the value of "row". When it's set to row and flex-basis is used, I'd get wider elements but when set to column I get taller elements. */
+  flex-basis: 600px;
 }
+
+/* To make it easier to understand I've added text into each div to show it's number. So I can see how each flexbox change actually works. */
+div {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 900;
+  color: black;
+}
+
+/* Can't use this if there is align-content being used in the parent element it seems. Having this code just moves one of the elements in this case it's the 2nd and it's moved to the center. This is because it has to be within the flex container. This
+is the first property where I can apply it to the specific piece of content rather than the flex container itself. */
+/* div:nth-last-of-type(2) {
+  align-self: center;
+}
+
+div:nth-last-of-type(3) {
+  align-self: flex-end;
+} 
+
+The next one I'm going to look at is flex-grow, this controls the amount of space an element takes up, if there is any extra space available it will fill this space. This can be applied to any element (as long as it's within the flex box elements I'm guessing?)
+I'm going to apply this to the first div within the selection of divs I've got setup. Flex grow allows me to use a number that is unitless, meaning it doesn't need a unit like %, px, vh etc. (Learn more about these numbers later on.) Now I've set the same
+setting to both of these divs, being the first and last div. They equally take up the same extra space they can. If I was to set all the divs to have this setting then, if they're set to a smaller size than the parent element they will all grow to fill that
+space, distrubuting the extra space evenly. If flex-wrap is set to wrap and the page changes, via device or something and the elements are set to be around 200px for example if the space gets too small to hold all the elements on the same row or column then
+the element that gets pushed over in the wrap will take up all of the free space in the new wrap location.
+
+This behaviour can be changed for example if I don't want a certain div to go above or below a certain height or width I can set a max/min-height/width on the element I don't want to get too small or too big. For example I could set one element to have a min or 
+max of 30% etc. Not only this but using the example below I don't have to just use the number 1 for flex-grow. I could make one of them 2, I did this with the example below to test and it's basically taking double the space the other one is. I can also use
+decimals for this, meaning I can set flex-grow to be something like 1.3 etc.
+If there is not additional space and flex-basis is much larger or the elements themselves are larger then this wouldn't work as flex-grow only works if there is additional space or flex-wrap is wrap.  */
+div:nth-of-type(1) {
+  flex-grow: 1;
+}
+
+div:nth-of-type(5) {
+  flex-grow: 2;
+  flex-shrink: 3;
+}
+
+/* flex-shrink, if I was to set the flex basis to be something bigger like 600px the elements would fight for space and get squished into the parent element. So when elements get forced to downscale, there's a way to make some of them downscale a lot
+more than the others. It's how some websites have a big navbar on the Desktop version but on mobile they might have the 3 horizontal lines to indicate there's options there. flex-shrink will only apply when there is not enough space. */
