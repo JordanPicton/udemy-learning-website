@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Okay so Responsive Design and Media Queries, I'm not sure if this is going to really require a page as of right now but I've made it just in case. Responsive websites are basically websites that are able to respond to the device they're on
+being the screen size, orietation of the device, and some other things that can be noted.
+
+The way to do this is via media queries, they're written in CSS and allow me to change the style of a page and pages depending on the orientation of a screen or device the user is using etc.
+So this is mainly about media queries, since this is the way to make the website itself actually seem responsive. Using media queries allow me to restyle things based on the users device, this even allows me to change the website based on the
+amount of ambient light around the device. */

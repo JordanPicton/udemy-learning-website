@@ -1,0 +1,26 @@
+body {
+  background: black;
+  color: white;
+  margin: 0 auto;
+}
+
+/* So moving onto the shorthand for flex, this property was created because the others were used frequently that it just made sense to do so. It allows us to set flex-grow, flex-shrink and flex-basis all in one. Depending on what units are used
+determines the flex properties that are used. But when using all 3 values it goes in the order of the list I stated earlier. It's basically the previous lesson to take reference from. If I need a refresher on this topic here is the video link
+https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/21917756#overview */
+
+main {
+  width: 80%;
+  margin: inherit;
+  border: 5px solid white;
+  height: 500px;
+  display: flex;
+}
+
+main .sidebar {
+  background-color: aqua;
+  flex: 1 2 20vmax;
+}
+main .maincontent {
+  background-color: aquamarine;
+  flex: 2 1 80vmax;
+}
