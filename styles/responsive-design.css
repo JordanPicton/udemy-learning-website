@@ -1,6 +1,33 @@
+/* Below is just some basic start up code. */
 body {
   background-color: black;
   color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  font-size: 6em;
+  text-align: center;
+}
+main nav {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+main ul {
+  /* display: flex !important; */
+  border: 1px solid white;
+  flex: 1;
+  max-width: 50%;
+  justify-content: space-evenly;
+}
+
+main ul,
+main li {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 /* Okay so Responsive Design and Media Queries, I'm not sure if this is going to really require a page as of right now but I've made it just in case. Responsive websites are basically websites that are able to respond to the device they're on
@@ -8,4 +35,103 @@ being the screen size, orietation of the device, and some other things that can 
 
 The way to do this is via media queries, they're written in CSS and allow me to change the style of a page and pages depending on the orientation of a screen or device the user is using etc.
 So this is mainly about media queries, since this is the way to make the website itself actually seem responsive. Using media queries allow me to restyle things based on the users device, this even allows me to change the website based on the
-amount of ambient light around the device. */
+amount of ambient light around the device.
+
+All media queries begin with "@media" and then withing the parentheses, there's different media features I can change like width and height.
+To begin I use what I just said the "@media ()" and I give the a value between the parantheses, something like width or height, there's probably more that I don't know about right now but when that's given a value then this style is given to 
+the device or screen of that size. Basically give the parentheses a value like 800px below and then the browser will look at the device the user is using and if it's 800px or less it will us the style within the @media element made below.
+
+For example the H2 has a font size of 6ems but if the screen size is only 800px then this font size might be too big so lets make it 3ems and test this out. It's kind of like having a style sheet withing a style sheet.
+Okay so setting it to 800px means it's only looking for exactly 800px and not anything lower. Testing this actually helped me understand that it does work properly. This way of using media is not common becuase it's set for a specific size
+rather than a 800 and less than. */
+/* @media (width: 800px) {
+  h2 {
+    color: pink;
+    font-size: 3em;
+  }
+}
+
+/* Using min-width instead of just width, makes it so that when the screen size is above 801px then the style below gets used. */
+/* @media (min-width: 801px) {
+  h2 {
+    color: orange;
+    font-size: 6em;
+  }
+} */
+
+/* Where as the code below will change the style based on the the screen size being smaller than 799. */
+/* @media (max-width: 799px) {
+  h2 {
+    color: chartreuse;
+    font-size: 2em;
+  }
+} */
+
+/* Something else I can do is have a style between X size and Z size, for example 300 to 600 pixels could have a different style compared to the rest. Using the keyword "and" I can combine these sizes together. */
+/* @media (max-width: 900px) and (min-width: 600px) {
+  h2 {
+    color: blue;
+    font-size: 3em;
+  }
+} */
+
+/* The most common way to do this is shown below, only problem with the setup below is the order things are written in. The one that's set to 800px has a higher priority meaning that since the 800px is the last one it's the one
+with more priority and this is the style for everything even at the 500px. To stop this from happening I would need to put the lower value towards the end of the document to get the correct changes, or I could just use the method above using the keyword "and".
+
+So to summarise, it begins with @media then the media feature which is most commonly the max-width */
+@media (max-width: 800px) {
+  h2 {
+    color: blue;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    color: red;
+  }
+}
+
+/* Just for fun lets try one with orientation. */
+@media (orientation: portrait) {
+  main {
+    background-color: brown;
+  }
+}
+
+/* I'm gonna continue with more examples below where I'll be trying to make a responsive nav bar. */
+@media (max-width: 1655px) {
+  h2 {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 1370px) {
+  h2 {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 1100px) {
+  h2 {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 830px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
+/* This is part of the reponsive navigation bar. */
+@media (max-width: 790px) {
+  main nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main section nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
