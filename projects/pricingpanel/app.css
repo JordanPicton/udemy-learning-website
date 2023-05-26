@@ -1,0 +1,8 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box; /* Remember when this is set the elements will include the border with the element size. */
+}
+
+body {
+    background-color: aqua;
+}
