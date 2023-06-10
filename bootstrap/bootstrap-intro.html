@@ -14,13 +14,13 @@
 
 <body>
     <header>
-        <h1 class="boot-h1 container">Bootstrap Introduction</h1>
+        <h1 class="boot-h1 container display-1">Bootstrap Introduction</h1>
     </header>
     <main>
         <!-- So below I'm using the "container" class for this section and the section below to style the content on the page being centered and not using the full amount of space, just because it looks nicer. I could use the method they use on the docs
         which is where they use a div to wrap the content I'd want with the container class however, I can also just put it into the class parameter of the different elements I want to have this class too. Resziing also shows that this is responsive too. -->
         <section class="whatis-boot container">
-            <h2>What Is Bootstrap?</h2>
+            <h2 class="display-3">What Is Bootstrap?</h2>
             <p>Bootstrap selfproclaims that it is "The worlds most popular CSS framework." What this means is that
                 bootstrap lays down the building blocks in which I can use within my webpage. Basically saying I can use
                 Bootstraps CSS instead of making my own. (I really want to look into how they make the navigation bars
@@ -33,13 +33,13 @@
             <p>Some other frameworks are as follows: Foundation, Semantic UI etc.</p>
         </section>
         <section class="boot-grid container">
-            <h2>Bootstrap Grid</h2>
+            <h2 class="display-2">Bootstrap Grid</h2>
             <p>With Bootstrap you can layout your content using the Grid they provide. Particular classes used help in
                 the way of creating different areas on a webpage. This seems like it is done using divs. However, I feel
                 like I would rather do this myself so then I have more control over this.</p>
         </section>
         <section class="buttons container">
-            <h2>Bootstrap Buttons</h2>
+            <h2 class="display-3">Bootstrap Buttons</h2>
             <p>To start I'll be using some buttons to figure out how this all works other than that it should be smooth
                 sailing from here. It sounds pretty self explanatory either way honestly. Just copy the element from the
                 website/docs and paste it seems to do the trick.</p>
@@ -84,6 +84,38 @@
             <button type="button" class="btn btn-primary" disabled>Primary</button>
             <button type="button" class="btn btn-secondary">Secondary</button>
             <button type="button" class="btn btn-success">Success</button>
+        </section>
+        <section class="typography container">
+            <h2 class="display-3">Bootstrap Typography</h2>
+            <h3 class="display-4">Bootstrap Headings</h3>
+            <p>With Bootstrap typography it tells me a little about the global changes that Bootstraps CSS file makes.
+                For example the font family has been changed. I've added display-1 and display-2 classes to the
+                respective H classes. With these the headers look bigger than before, giving a clear idea on when the
+                subject changes. For example below I will show the differences for these by doing the following, I will
+                show the display-1 class heading first and then the normal h1 and do this for the next h tags.</p>
+            <h1 class="display-1">Bootstrap Display 1</h1>
+            <h1>Normal H1</h1>
+            <h2 class="display-2">Bootstrap Display 2</h2>
+            <h2>Normal H2</h2>
+            <h3 class="display-3">Bootstrap Display 3</h3>
+            <h3>Normal H3</h3>
+            <h4 class="display-4">Bootstrap Display 4</h4>
+            <h4>Normal H4</h4>
+            <p>As seen above they're way bigger and stand out a lot nicer than the normal ones, however I belive these
+                would be too big for something like a tablet or a mobile device. So that's where using the normal h tags
+                might come in easier for those devices. Something else to note is that I can use for example a display-2
+                class on a h3 since it's only the look of the element and not what it actually means. I could have two
+                elements with the display-1 class but I should really only have a h1 on the page.</p>
+            <h3 class="display-4">Paragraph Lead</h3>
+            <p>So with the class of lead for paragraphs, Bootstrap says it makes the paragraph stand out more so what
+                I'm going to do is leave this paragraph as default.</p>
+            <p class="lead">And then have this paragraph contain the class of lead and see what the differences are.
+                Okay so it seems that the difference is that this paragraph has a bigger font size and maybe some
+                padding etc. But then the padding could just be default for the new bootstrap stuff. The only other
+                thing I can think of is this paragraph maybe having more spacing between each word. Well apparently all
+                it changes is the font size and the font weight.</p>
+            <h3 class="display-4">Blockquotes</h3>
+            <p></p>
         </section>
     </main>
     <footer>
