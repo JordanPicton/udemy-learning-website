@@ -8,7 +8,8 @@
     <title>Bootstrap Intro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css"> <!-- Putting this style sheet after the bootstrap one allows me to have the changes made in this css file have a higher priority since it reads the code from top to bottom. -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Putting this style sheet after the bootstrap one allows me to have the changes made in this css file have a higher priority since it reads the code from top to bottom. -->
 </head>
 
 <body>
@@ -36,6 +37,53 @@
             <p>With Bootstrap you can layout your content using the Grid they provide. Particular classes used help in
                 the way of creating different areas on a webpage. This seems like it is done using divs. However, I feel
                 like I would rather do this myself so then I have more control over this.</p>
+        </section>
+        <section class="buttons container">
+            <h2>Bootstrap Buttons</h2>
+            <p>To start I'll be using some buttons to figure out how this all works other than that it should be smooth
+                sailing from here. It sounds pretty self explanatory either way honestly. Just copy the element from the
+                website/docs and paste it seems to do the trick.</p>
+            <!-- The button below is copy and pasted from the docs of Bootstrap and as you can see from my files there's no styling for this button it's purely built from the stylesheet imported from an external source being Bootstrap.
+            All I need to do is give them the proper classes I want to give them. Also the type of the buttons having the value of "button" doesn't mean anything, it just tells the browser that it has no default behaviour unlike if it was a 
+            sumbit or reset button. -->
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <p>Along with this is where I get to see the colours semantics/names. With Bootstrap they already have
+                colours setout for us to use however, these colours can be changed at any point, they just here for us
+                to use and see how stuff works. It's not set in stone that we're stuck with these colours. Just the
+                semantics/naming schemes stay the same. Which makes sense because every website has a primary colour, a
+                secondary colour, success and danger etc. But these can all be changed to match the theme of the
+                website. So the colours are just built in options and there is a way on how to change them that I'll
+                look into later.</p>
+            <p>The buttons that will be displayed below will also have the same naming scheme however they're different
+                because they have a different class name. Instead of being "btn-primary" it would be
+                "btn-outline-primary" something else to note is that all these buttons have the base class of btn which
+                will also be shown below. It's a little hard to see because of my background but as you can see it
+                doesn't have much styling other than a hover effect.</p>
+            <button type="button" class="btn">Base class</button>
+            <p>Onto the outline buttons now.</p>
+            <button type="button" class="btn btn-outline-primary">Primary Outline</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary Outline</button>
+            <button type="button" class="btn btn-outline-success">Success Outline</button>
+            <button type="button" class="btn btn-outline-danger">Danger Outline</button>
+            <p>There is something else I can do with these buttons which is use the already made sizing for them, there
+                is Large and small which I will show below. I'll have a button in the middle for the default size. All I
+                need to do is add the class for small or large on the button I want to apply it to.</p>
+            <button type="button" class="btn btn-primary btn-lg">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success btn-sm">Success</button>
+            <p>And the Outlines too because why not?</p>
+            <button type="button" class="btn btn-outline-primary btn-lg">Primary Outline</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary Outline</button>
+            <button type="button" class="btn btn-outline-success btn-sm">Success Outline</button>
+            <p>I can also have a button be disabled to where the user can't interact with it, which could be used for
+                something like a form where some information needs filling. As I can see from below the first button is
+                disbaled as it has a kind of greyscale/lower saturation than before.</p>
+            <button type="button" class="btn btn-primary" disabled>Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
         </section>
     </main>
     <footer>
