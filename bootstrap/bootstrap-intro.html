@@ -6,14 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Intro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css"> <!-- Putting this style sheet after the bootstrap one allows me to have the changes made in this css file have a higher priority since it reads the code from top to bottom. -->
 </head>
 
 <body>
     <header>
-        <h1>Bootstrap Introduction</h1>
+        <h1 class="boot-h1 container">Bootstrap Introduction</h1>
     </header>
     <main>
-        <section class="whatis-boot">
+        <!-- So below I'm using the "container" class for this section and the section below to style the content on the page being centered and not using the full amount of space, just because it looks nicer. I could use the method they use on the docs
+        which is where they use a div to wrap the content I'd want with the container class however, I can also just put it into the class parameter of the different elements I want to have this class too. Resziing also shows that this is responsive too. -->
+        <section class="whatis-boot container">
             <h2>What Is Bootstrap?</h2>
             <p>Bootstrap selfproclaims that it is "The worlds most popular CSS framework." What this means is that
                 bootstrap lays down the building blocks in which I can use within my webpage. Basically saying I can use
@@ -26,7 +31,7 @@
                 bootstrap for everything but it is good to know how to use it and what it can do. </p>
             <p>Some other frameworks are as follows: Foundation, Semantic UI etc.</p>
         </section>
-        <section class="boot-grid">
+        <section class="boot-grid container">
             <h2>Bootstrap Grid</h2>
             <p>With Bootstrap you can layout your content using the Grid they provide. Particular classes used help in
                 the way of creating different areas on a webpage. This seems like it is done using divs. However, I feel
@@ -36,6 +41,13 @@
     <footer>
 
     </footer>
+    <!-- I haven't gotten into scripts as of yet, but I will shortly. Just need these two below for Bootstrap. There's also a reason to which I'll find out later to why they're at the bottom. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
