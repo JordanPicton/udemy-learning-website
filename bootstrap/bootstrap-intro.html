@@ -84,6 +84,36 @@
             <button type="button" class="btn btn-primary" disabled>Primary</button>
             <button type="button" class="btn btn-secondary">Secondary</button>
             <button type="button" class="btn btn-success">Success</button>
+            <h3 class="display-3">Button Groups</h3>
+            <p class="container">Coming back to buttons after finsing up the badges section, there is another section
+                that needs to be
+                added up here which is the button groups section where there is a group of buttons grouped together and
+                make for some interesting design choices. It's pretty common to do this to make nice looking selects
+                rather than using a radio button however, we won't be doing this right now due to it taking some
+                JavaScript to get this to work properly. To get this to work, I need to have a parent container and then
+                the buttons within said container and the best container seems to be a div container to me honestly.
+                Section could work but I feel like that's more reserved for sections of content rather than just a small
+                section of content like a group of buttons. Using the class "bt-group" on the div element removes the
+                padding the buttons have which squishes them together and only rounds the corners on the two buttons
+                which are on the left edge and the right edge, not rounding any of the corners that touch another
+                button. I suppose I can see how this is done by using the built in browser development tools and reading
+                what styles are being applied.</p>
+            <div class="btn-group" role="group">
+                <button class="btn btn-warning">One</button>
+                <button class="btn btn-warning">Two</button>
+                <button class="btn btn-danger">Three</button>
+                <button class="btn btn-info">Four</button>
+            </div>
+            <p class="container">
+                This also allows me to mix and match the colours or styles of the buttons still. Some stuff to know
+                about this style of button I need to be aware about if I use these over using the radio buttons for
+                selecting, is that if these are supposed to only to have one option or options for something else. I
+                need to give the parent element a "role" attribute within the HTML document. For example the above role
+                would have the value of "group", it just indicates to screen readers that the contents of this is a
+                group of buttons. There's a lot more examples and different was of how I can use buttons via the docs
+                which I can have a look at any time. I actually have a plan to make an entire website using Bootstrap
+                rather than writing my own CSS. I feel like this would be a fun challenge.
+            </p>
         </section>
         <section class="typography container">
             <h2 class="display-3">Bootstrap Typography</h2>
@@ -133,9 +163,29 @@
         </section>
         <section class="utilities container">
             <h2 class="display-3">Utilities</h2>
-            <p class="container text-info bg-danger">Utilities allow us to center things and colour things quickly, for example
+            <p class="container text-info bg-danger">Utilities allow us to center things and colour things quickly, for
+                example
                 this paragraph is given the utility class of info. Not only that but I have changed the background to
                 be that of danger which by default is a red background.</p>
+        </section>
+        <section class="badges container">
+            <h2 class="display-3">Badges</h2>
+            <p class="container">Now moving onto badges, these are pretty cool honestly and I want to make some for my
+                own site since I believe these would be good for my wiki area of my site for the various different
+                projects I'll be working on. Below I will have th following:</p>
+            <ul>
+                <li>Rounded Success <span class="badge rounded-pill text-bg-success">Success</span></li>
+                <li>Rounded Info <span class="badge rounded-pill text-bg-info">Info</span></li>
+                <li>Rounded Number <span class="badge rounded-pill text-bg-danger">5</span></li>
+                <li><button class="btn btn-primary">Updates <span class="badge text-bg-light">9</span></button></li>
+            </ul>
+            <p class="container">
+                Something to note before wrapping up badges, is that some of the class names are slightly different and
+                some of them might not exist or there'll be new ones due to me being on a higher or lower version of
+                Bootstrap, it just depends. Also the most use case for badges are within a button on a navigation bar
+                for updates or notifications. There are slightly more ways to make these a little nicer but I can look
+                at these via the docs.
+            </p>
         </section>
     </main>
     <footer>
