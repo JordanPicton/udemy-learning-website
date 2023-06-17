@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bootstrap Grid System</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+   <section class="grid container">
+      <h1 class="display-1 text-center text-primary">Grid System</h3>
+         <p>Moving onto the Grid System for BootStrap, I'm not sure if it's similar or as complicated as Flexbox. For
+            some reason it takes a little getting used to for me when it comes to these concepts and practices. The
+            main difference for this, well at least I think it is, is that the grid system via using Bootstrap is
+            prebuilt to be responsive already.</p>
+         <p>There's a few things that need to be mentioned before using the grid system and the first one is that to
+            use the grid system, it must be within an element with the container class. The next thing is to create
+            an element with the class of row. The most important piece to understand is the content going into the
+            element with the class of row. Every row has 12 units of space to div up, for example if there was 4
+            elements then each would get 3 units each. Some can take more than others but the total is always 12.</p>
+         <p>Columns are what go within here and to do this it's done with the "col" class. Below is an example of a
+            really simple way to divide up the space. There are other and more in depth ways to do this though which
+            will be shown in example 2.</p>
+         <h2 class="display-2 text-center text-info">Example 1</h2>
+         <div class="row">
+            <div class="col text-center bg-warning">Col Autosized</div>
+            <div class="col text-center bg-primary">Col Autosized</div>
+            <div class="col text-center bg-danger">Col Autosized</div>
+         </div>
+         <h2 class="display-2 text-center text-info">Example 3</h2>
+         <p>Might be wondering why example 3 is here, and it's mainly because I did the autosizing "col" class first but
+            either way there's something else to take from this. And it's that I was right the other just autosize based
+            on how many units are left over. Although apparently this is the lazy way to do it. It also shows off that I
+            can do a mixture of auto-sized and manually set columns.</p>
+         <div class="row">
+            <div class="col text-center bg-primary">Autosized</div>
+            <div class="col text-center bg-info">Autosized</div>
+            <div class="col-9 text-center bg-warning">Manual</div>
+            <div class="col text-center bg-danger">Autosized</div>
+         </div>
+         <h2 class="display-2 text-center text-info">Example 2</h2>
+         <p>With the example below I'll be looking at a more in depth way to split up this grid system. So from the
+            example below the first column uses a different class which is "col-4" what this means is Column and then 4
+            units. So the first column is taking up 4 units from the 12, meaning there's 8 units left over. The second
+            column is using "col-6" which it is pretty straight forward now. So the answer would be that it's using 6
+            units instead of the 4. And lastly the final column is using the final 2 units, I didn't have to put col-2 I
+            don't think. I'm sure bootstrap would understand there's only 2 units left so it would only get those two
+            units. But I filled it in anyway. I can also have them total to less than 12, and later on I'll learn how to
+            center stuff or allowing the others to use up that extra space etc.
+         </p>
+         <p>
+            I can put any content within these columns that I want like forms, images etc. Something interesting
+            mentioned was Cards which we haven't gotten into quite yet. Another thing to mention is that container
+            classed elements can be nested inside one another. Having the two examples below shows that the one with a
+            div is slightly smaller than the one that isn't nested inside another container. Finally, col-# col = column
+            and # = the number of units to give this column.
+         </p>
+         <div class="row">
+            <div class="col-4 text-center bg-warning">Col-4</div>
+            <div class="col-6 text-center bg-primary">Col-6</div>
+            <div class="col-2 text-center bg-danger">Col-2</div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-4 text-center bg-warning">Col-4</div>
+               <div class="col-6 text-center bg-primary">Col-6</div>
+               <div class="col-2 text-center bg-danger">Col-2</div>
+            </div>
+         </div>
+   </section>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
