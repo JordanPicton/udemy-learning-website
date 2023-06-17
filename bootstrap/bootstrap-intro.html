@@ -192,14 +192,55 @@
             <p>Alerts provide some feedback to the users after they do something or a page loads. For example it could
                 say "Saved" or "Failed to save" etc. They're supposed to alert or bring attention to something making
                 the user to check it out. Below will be an example of this, something to note is that when using the
-                alert, it is possible for me to include other elements if I was to do so.</p>
+                alert, it is possible for me to include other elements if I was to do so, which is shown on the 3rd
+                example.</p>
+            <div class="alert alert-danger">
+                This has not saved.
+            </div>
+            <div class="alert alert-success">
+                But this has.
+            </div>
+            <div class="alert alert-info">
+                <h4 class="alert-heading">Info Example</h4>
+                <hr>
+                This is the info example with the alert heading.
+            </div>
+            <p>The next thing I'm looking at with the alerts is something called "Dismissing", which basically allows
+                users to remove the alert by clicking the X symbol. This involves some JavaScript but with Bootstrap you
+                don't have to write any. Would be cool if I started learning some JavaScript however. The example of a
+                dismissable alert is shown below:</p>
+            <div class="alert alert-warning alert-dismissible fade show">
+                <h5 class="alert-heading" role="alert">This is a warning!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    <!-- Adding the aria-label here gives it more accessability for screen readers. All aria prefixes have something to do with accessability and screen readers. -->
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    <!-- aria-hidden="true" means that this doesn't need to show up on screen readers. Because the screen reader wouldn't know what "&times;" means. -->
+                </button>
+                <hr>
+                <p>This is an example alert warning. Something to note about this is that the version I'm using of
+                    BootStrap requires a different classname for the close button. Within the course it was "close",
+                    however
+                    with the version I'm using it's "btn-close". Something else I just noticed is that the span element
+                    isn't actually needed either. It's doing it all with the button itself which is interesting. One
+                    more
+                    thing is that instead of using the property 'data-dimiss="alert"' it's 'data-bs-dismiss="alert"'.
+                    <hr>
+                    That seems to be working now. :D I'm assuming that the bs stands for Bootstrap, but it doesn't say.
+                    I also was having some funky behaviour with the alert closing and figured out I put the classes
+                    "alert-dismissible", "fade", and "show" in the wrong place, the joys of coding. role="alert" is also
+                    really handy for screen readers, it basically reads content that loads later on but it's important,
+                    say if something changes on the page and the alert pops up, the screen reader won't read that new
+                    content until later unless it has this property and value.
+                </p>
+            </div>
+            <p>
+                Also since this isn't shown on the course but it looks cool anyway, I want to add it here without the
+                help of the course and see if I can do it myself. It's basically just adding icons to the different
+                alerts to make them more interesting and helpful in a way. So I'll be figuring this out below. Actually
+                nevermind, it seems a little more complicated than I first realised. But I can add icons to this
+                apparently, I might just need more practice.
+            </p>
         </section>
-        <div class="alert alert-danger">
-            This has not saved.
-        </div>
-        <div class="alert alert-success">
-            But this has.
-        </div>
     </main>
     <footer>
 
