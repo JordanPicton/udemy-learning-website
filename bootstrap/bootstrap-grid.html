@@ -93,6 +93,39 @@
          complicated than I originally thought since I've already looked into col-8 etc. But apparently there's ones
          such as col-sm-8 which I have no idea what this would mean.
       </p>
+      <p>
+         So below I have two elements that are 50%/50% which is 6/6 units. But if I wanted to have only one of the
+         elements on the page at a time then the way I would do this is by the following; Instead of using col-6 I could
+         use col-md-6. What this means is that after medium breakpoint and up take up 6 units and everything below is
+         the medium size. To make it easier to see, the div elements have been given a background colour each.
+         I could also make it so if I had another two div elements which I will add now, I could have all 4 elements
+         take up the same space if on a large breakpoint. Meaning the bigger the screen the more content it can have
+         horizontally and the smaller the screen, I can move that horizontal content vertically. Right now all I've done
+         is made the elements take up 6 units of space if the screen size is bigger than the medium breakpoint and sit
+         by themselves if the screen size is lower than this breakpoint.
+      </p>
+      <div class="row">
+         <div class="col-md-6 bg-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius deleniti tempore modi numquam praesentium
+            atque mollitia amet, illum voluptates quo itaque a odio vitae, porro repellendus! Dolorem mollitia odit
+            quidem.
+         </div>
+         <div class="col-md-6 bg-info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius deleniti tempore modi numquam praesentium
+            atque mollitia amet, illum voluptates quo itaque a odio vitae, porro repellendus! Dolorem mollitia odit
+            quidem.
+         </div>
+         <div class="col-md-6 bg-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius deleniti tempore modi numquam praesentium
+            atque mollitia amet, illum voluptates quo itaque a odio vitae, porro repellendus! Dolorem mollitia odit
+            quidem.
+         </div>
+         <div class="col-md-6 bg-info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius deleniti tempore modi numquam praesentium
+            atque mollitia amet, illum voluptates quo itaque a odio vitae, porro repellendus! Dolorem mollitia odit
+            quidem.
+         </div>
+      </div>
    </section>
 
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
