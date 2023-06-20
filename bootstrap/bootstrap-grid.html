@@ -25,52 +25,74 @@
          <p>Columns are what go within here and to do this it's done with the "col" class. Below is an example of a
             really simple way to divide up the space. There are other and more in depth ways to do this though which
             will be shown in example 2.</p>
-         <h2 class="display-2 text-center text-info">Example 1</h2>
+         <h3 class="display-3 text-center text-info">Example 1</h3>
          <div class="row">
             <div class="col text-center bg-warning">Col Autosized</div>
             <div class="col text-center bg-primary">Col Autosized</div>
             <div class="col text-center bg-danger">Col Autosized</div>
          </div>
-         <h2 class="display-2 text-center text-info">Example 3</h2>
-         <p>Might be wondering why example 3 is here, and it's mainly because I did the autosizing "col" class first but
-            either way there's something else to take from this. And it's that I was right the other just autosize based
-            on how many units are left over. Although apparently this is the lazy way to do it. It also shows off that I
-            can do a mixture of auto-sized and manually set columns.</p>
-         <div class="row">
-            <div class="col text-center bg-primary">Autosized</div>
-            <div class="col text-center bg-info">Autosized</div>
-            <div class="col-9 text-center bg-warning">Manual</div>
-            <div class="col text-center bg-danger">Autosized</div>
-         </div>
-         <h2 class="display-2 text-center text-info">Example 2</h2>
-         <p>With the example below I'll be looking at a more in depth way to split up this grid system. So from the
-            example below the first column uses a different class which is "col-4" what this means is Column and then 4
-            units. So the first column is taking up 4 units from the 12, meaning there's 8 units left over. The second
-            column is using "col-6" which it is pretty straight forward now. So the answer would be that it's using 6
-            units instead of the 4. And lastly the final column is using the final 2 units, I didn't have to put col-2 I
-            don't think. I'm sure bootstrap would understand there's only 2 units left so it would only get those two
-            units. But I filled it in anyway. I can also have them total to less than 12, and later on I'll learn how to
-            center stuff or allowing the others to use up that extra space etc.
-         </p>
-         <p>
-            I can put any content within these columns that I want like forms, images etc. Something interesting
-            mentioned was Cards which we haven't gotten into quite yet. Another thing to mention is that container
-            classed elements can be nested inside one another. Having the two examples below shows that the one with a
-            div is slightly smaller than the one that isn't nested inside another container. Finally, col-# col = column
-            and # = the number of units to give this column.
-         </p>
-         <div class="row">
-            <div class="col-4 text-center bg-warning">Col-4</div>
-            <div class="col-6 text-center bg-primary">Col-6</div>
-            <div class="col-2 text-center bg-danger">Col-2</div>
-         </div>
-         <div class="container">
+         <h3 class="display-2 text-center text-info">Example 3</h2>
+            <p>Might be wondering why example 3 is here, and it's mainly because I did the autosizing "col" class first
+               but
+               either way there's something else to take from this. And it's that I was right the other just autosize
+               based
+               on how many units are left over. Although apparently this is the lazy way to do it. It also shows off
+               that I
+               can do a mixture of auto-sized and manually set columns.</p>
+            <div class="row">
+               <div class="col text-center bg-primary">Autosized</div>
+               <div class="col text-center bg-info">Autosized</div>
+               <div class="col-9 text-center bg-warning">Manual</div>
+               <div class="col text-center bg-danger">Autosized</div>
+            </div>
+            <h3 class="display-3 text-center text-info">Example 2</h3>
+            <p>With the example below I'll be looking at a more in depth way to split up this grid system. So from the
+               example below the first column uses a different class which is "col-4" what this means is Column and then
+               4
+               units. So the first column is taking up 4 units from the 12, meaning there's 8 units left over. The
+               second
+               column is using "col-6" which it is pretty straight forward now. So the answer would be that it's using 6
+               units instead of the 4. And lastly the final column is using the final 2 units, I didn't have to put
+               col-2 I
+               don't think. I'm sure bootstrap would understand there's only 2 units left so it would only get those two
+               units. But I filled it in anyway. I can also have them total to less than 12, and later on I'll learn how
+               to
+               center stuff or allowing the others to use up that extra space etc.
+            </p>
+            <p>
+               I can put any content within these columns that I want like forms, images etc. Something interesting
+               mentioned was Cards which we haven't gotten into quite yet. Another thing to mention is that container
+               classed elements can be nested inside one another. Having the two examples below shows that the one with
+               a
+               div is slightly smaller than the one that isn't nested inside another container. Finally, col-# col =
+               column
+               and # = the number of units to give this column.
+            </p>
             <div class="row">
                <div class="col-4 text-center bg-warning">Col-4</div>
                <div class="col-6 text-center bg-primary">Col-6</div>
                <div class="col-2 text-center bg-danger">Col-2</div>
             </div>
-         </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-4 text-center bg-warning">Col-4</div>
+                  <div class="col-6 text-center bg-primary">Col-6</div>
+                  <div class="col-2 text-center bg-danger">Col-2</div>
+               </div>
+            </div>
+   </section>
+   <section class="container">
+      <h2 class="display-2">Responsive Layouts Using Bootstrap</h2>
+      <p>
+         So now moving onto the more important part of Bootstrap grid. It's basically the responsive part of it all of
+         how things rescale depending on the screen size etc. Or as Colt says "Create responsive layouts". This is done
+         via the built in breakpoints in bootstrap, I think this means that at X pixels there's a media query basically.
+         Eitherway, it seems that using the predefined class names for example col-sm is small which is set around 540px
+         to 768, anything below this is classed as being extra small and anything above this is classed as medium. These
+         can be referenced at any point with elements when using the grid system. Okay it seems a little more
+         complicated than I originally thought since I've already looked into col-8 etc. But apparently there's ones
+         such as col-sm-8 which I have no idea what this would mean.
+      </p>
    </section>
 
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
