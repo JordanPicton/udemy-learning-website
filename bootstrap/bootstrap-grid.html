@@ -168,6 +168,73 @@
       </div>
    </section>
 
+   <section class="container">
+      <h2 class="text-center display-2">Bootstrap Grid Utilities</h2>
+
+      <h3 class="text-center display-3">Grid Alignment</h3>
+         <p>
+            The next thing is helper classes to help align content. Knowing flexbox will help with this since Bootstrap
+            uses the same terminology for it's own class system since it's built ontop of flexbox. Below I'll be
+            tinkering
+            with these. The columns below are all of the same size and height however, I'm going to change one of them
+            to
+            be twice the height. As seen below, ALL elements grow shown by their background colour stretching. There's
+            columns that Bootstrap adds that can be used within the parent element of the column elements. Basically
+            where
+            I've been defining the row element. Here are a few classes I can use "align-items-start",
+            "align-items-center",
+            and "align-items-end". Setting the example to the align-items-center class makes it so they start at the
+            middle of the element and
+            then don't continue above or below, the background gets cut out from stretching.
+         </p>
+         <p>
+            I can also set one of the items using "align-self-end" which allows me to set an individual element just
+            like in flexbox. I'll set the end one to be aligned to the botton (end) and the first to the top (start).
+            This can be done the CSS way, but Bootstrap is used to simplify that process. There's also classes to
+            control horizontal spacing but with the example below it wouldn't do much since the content is already using
+            up all of the space.
+         </p>
+
+         <div class="row align-items-center">
+            <div class="col bg-warning align-self-start">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
+                  amet
+                  libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
+                  architecto
+                  minus, illo nihil.</p>
+            </div>
+            <div class="col bg-primary">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
+                  amet
+                  libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
+                  architecto
+                  minus, illo nihil.</p>
+            </div>
+            <div class="col bg-danger">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
+                  amet
+                  libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
+                  architecto
+                  minus, illo nihil. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius adipisci,
+                  reprehenderit
+                  perspiciatis odio vero laborum ducimus qui nostrum ratione nesciunt nisi voluptates aut doloribus hic
+                  error accusamus. Dolorem, fuga nisi!</p>
+            </div>
+            <div class="col bg-info align-self-end">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
+                  amet
+                  libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
+                  architecto
+                  minus, illo nihil.</p>
+            </div>
+         </div>
+         
+         <h3 class="text-center display-3">Justify Content</h3>
+         <p>
+            Which is where I jump to this example showing off the justify-content classes.
+         </p>
+   </section>
+
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"></script>
