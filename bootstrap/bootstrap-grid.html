@@ -172,67 +172,199 @@
       <h2 class="text-center display-2">Bootstrap Grid Utilities</h2>
 
       <h3 class="text-center display-3">Grid Alignment</h3>
-         <p>
-            The next thing is helper classes to help align content. Knowing flexbox will help with this since Bootstrap
-            uses the same terminology for it's own class system since it's built ontop of flexbox. Below I'll be
-            tinkering
-            with these. The columns below are all of the same size and height however, I'm going to change one of them
-            to
-            be twice the height. As seen below, ALL elements grow shown by their background colour stretching. There's
-            columns that Bootstrap adds that can be used within the parent element of the column elements. Basically
-            where
-            I've been defining the row element. Here are a few classes I can use "align-items-start",
-            "align-items-center",
-            and "align-items-end". Setting the example to the align-items-center class makes it so they start at the
-            middle of the element and
-            then don't continue above or below, the background gets cut out from stretching.
-         </p>
-         <p>
-            I can also set one of the items using "align-self-end" which allows me to set an individual element just
-            like in flexbox. I'll set the end one to be aligned to the botton (end) and the first to the top (start).
-            This can be done the CSS way, but Bootstrap is used to simplify that process. There's also classes to
-            control horizontal spacing but with the example below it wouldn't do much since the content is already using
-            up all of the space.
-         </p>
+      <p>
+         The next thing is helper classes to help align content. Knowing flexbox will help with this since Bootstrap
+         uses the same terminology for it's own class system since it's built ontop of flexbox. Below I'll be
+         tinkering
+         with these. The columns below are all of the same size and height however, I'm going to change one of them
+         to
+         be twice the height. As seen below, ALL elements grow shown by their background colour stretching. There's
+         columns that Bootstrap adds that can be used within the parent element of the column elements. Basically
+         where
+         I've been defining the row element. Here are a few classes I can use "align-items-start",
+         "align-items-center",
+         and "align-items-end". Setting the example to the align-items-center class makes it so they start at the
+         middle of the element and
+         then don't continue above or below, the background gets cut out from stretching.
+      </p>
+      <p>
+         I can also set one of the items using "align-self-end" which allows me to set an individual element just
+         like in flexbox. I'll set the end one to be aligned to the botton (end) and the first to the top (start).
+         This can be done the CSS way, but Bootstrap is used to simplify that process. There's also classes to
+         control horizontal spacing but with the example below it wouldn't do much since the content is already using
+         up all of the space.
+      </p>
 
-         <div class="row align-items-center">
-            <div class="col bg-warning align-self-start">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
-                  amet
-                  libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
-                  architecto
-                  minus, illo nihil.</p>
-            </div>
-            <div class="col bg-primary">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
-                  amet
-                  libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
-                  architecto
-                  minus, illo nihil.</p>
-            </div>
-            <div class="col bg-danger">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
-                  amet
-                  libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
-                  architecto
-                  minus, illo nihil. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius adipisci,
-                  reprehenderit
-                  perspiciatis odio vero laborum ducimus qui nostrum ratione nesciunt nisi voluptates aut doloribus hic
-                  error accusamus. Dolorem, fuga nisi!</p>
-            </div>
-            <div class="col bg-info align-self-end">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
-                  amet
-                  libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
-                  architecto
-                  minus, illo nihil.</p>
-            </div>
+      <div class="row align-items-center">
+         <div class="col bg-warning align-self-start">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
+               amet
+               libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
+               architecto
+               minus, illo nihil.</p>
          </div>
-         
-         <h3 class="text-center display-3">Justify Content</h3>
-         <p>
-            Which is where I jump to this example showing off the justify-content classes.
-         </p>
+         <div class="col bg-primary">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
+               amet
+               libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
+               architecto
+               minus, illo nihil.</p>
+         </div>
+         <div class="col bg-danger">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
+               amet
+               libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
+               architecto
+               minus, illo nihil. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius adipisci,
+               reprehenderit
+               perspiciatis odio vero laborum ducimus qui nostrum ratione nesciunt nisi voluptates aut doloribus hic
+               error accusamus. Dolorem, fuga nisi!</p>
+         </div>
+         <div class="col bg-info align-self-end">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate cumque tempora ipsum
+               amet
+               libero vitae! Cumque consectetur quaerat incidunt perspiciatis minima adipisci at quis culpa
+               architecto
+               minus, illo nihil.</p>
+         </div>
+      </div>
+
+      <h3 class="text-center display-3">Justify Content</h3>
+      <p>
+         Which is where I jump to this example showing off the justify-content classes. By default the columns within
+         the row are aligned to the start of the element. Which can be seen as I've added a border class to the row
+         element. I can change this by adding justify-content classes in the row element. Setting it to space between
+         does exactly what you think it would. It puts space between the content within the row element. I'll show this
+         off a little better below using some examples. As shown below these are the different ways to space content
+         within a row. However there needs to be space for this to work, if the elements take up the full 12 units of
+         space then this might not work, I'll add another example at the bottom to test this.
+      </p>
+
+      <h4 class="text-center display-4">Justify Start</h4>
+      <div class="row border justify-content-start">
+         <div class="col-3 bg-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-warning">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+      </div>
+
+      <h4 class="text-center display-4">Justify Center</h4>
+      <div class="row border justify-content-center">
+         <div class="col-3 bg-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-warning">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+      </div>
+
+      <h4 class="text-center display-4">Justify End</h4>
+      <div class="row border justify-content-end">
+         <div class="col-3 bg-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-warning">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+      </div>
+
+      <h4 class="text-center display-4">Justify Around</h4>
+      <div class="row border justify-content-around">
+         <div class="col-3 bg-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-warning">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+      </div>
+
+      <h4 class="text-center display-4">Justify Between</h4>
+      <div class="row border justify-content-between">
+         <div class="col-3 bg-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-warning">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+      </div>
+
+      <h4 class="text-center display-4">Justify Full 12 Units</h4>
+      <p>
+         Just as I thought when the space is fully utilizied then nothing changes.
+      </p>
+      <div class="row border justify-content-around">
+         <div class="col-3 bg-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-warning">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+         <div class="col-3 bg-danger">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt magni dolores quibusdam impedit optio esse
+            vero ullam, id unde adipisci accusantium doloremque? Temporibus ex, et ullam id minus itaque adipisci?
+         </div>
+      </div>
+
+      <h4 class="text-center display-4">Justify Content Expanded Upon</h4>
+      <p>
+         So there's the normal justify content classes that I've used up above, however there's more classes than what
+         I've been using. I could have the elements align to the start on small screens and above and then center on
+         medium and above and so on so forth. I'll show off some examples below. So right now the columns below will
+         stack when they're smaller than medium. And they take up 4 units when they're medium and above. I've set the
+         main justify-content class to be center. And when the screen gets to the large breakpoint they get aligned to
+         the end of the parent container. Then at the xl breakpoint it gets set to space between.
+      </p>
+
+      <div class="row border justify-content-center justify-content-lg-end justify-content-xl-between">
+         <div class="col-md-4 bg-danger">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae debitis impedit facilis accusantium placeat
+            mollitia, est minima asperiores quod consequatur tempore vitae reprehenderit unde dolorem inventore dicta,
+            ducimus dolores aspernatur.
+         </div>
+         <div class="col-md-4 bg-light text-dark">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae debitis impedit facilis accusantium placeat
+            mollitia, est minima asperiores quod consequatur tempore vitae reprehenderit unde dolorem inventore dicta,
+            ducimus dolores aspernatur.
+         </div>
+      </div>
    </section>
 
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
