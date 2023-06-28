@@ -16,9 +16,135 @@
    <section class="container">
       <p>
          Moving on to forms, they can be annoying to style but hopefully with Bootstrap this will be made easier. The
-         first core component or class I need to know is called "form-control".
+         first core component or class I need to know is called "form-control". This class is what goes on the input
+         element of the forms, what this does is give a nicer looking form input. There's another class called
+         "form-group", which basically groups together a form and a label. It doesn't do a whole bunch but it just
+         groups these two together.
+      </p>
+      <p>
+         Below I have a form, the Name input doesn't have the "form-control" class but the email does and it looks a lot
+         nicer than first one. "form-control" can be used on other inputs like select, multiple select and textarea.
       </p>
    </section>
+
+   <div class="container">
+      <form action="#nowhere">
+         <div class="form-group">
+            <label for="text">Name</label>
+            <input type="text">
+         </div>
+         <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="email@email.com">
+         </div>
+         <div class="form-group">
+            <label for="country">Country</label>
+            <select name="country" id="country" class="form-control">
+               <option value="UK">UK</option>
+               <option value="Wales">Wales</option>
+               <option value="Scotland">Scotland</option>
+               <option value="Ireland">Ireland</option>
+            </select>
+         </div>
+      </form>
+   </div>
+
+   <section class="container">
+      <p>
+         There's also ways of making inputs bigger or smaller by using classes such as "form-control-lg" or
+         "form-control-sm". Moving onto check boxes and radio buttons, these are harder to change in the way of
+         appearance. There's one option that's to use the browsers default checkbox and then to use a class called
+         "form-check" which does the spacing differently. The way to accomplish this is to have a default browser
+         checkbox that is hidden below another element that is styled in the way of a checkbox and they're linked.
+      </p>
+   </section>
+
+   <h2 class="display-2 container">Default Browser Checkbox</h2>
+   <div class="container">
+      <form action="#nowhere">
+         <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Default Checkbox</label>
+         </div>
+      </form>
+   </div>
+
+   <h2 class="display-2 container">Custom Bootstrap Checkbox</h2>
+   <div class="container">
+      <form action="#nowhere">
+         <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label for="customCheck1" class="custom-control-label">This is a custom checkbox via Bootstrap.</label>
+         </div>
+      </form>
+   </div>
+
+   <section class="container">
+      <p>
+         The same can be done for radio buttons like I've done for the checkboxes. I'll be going over a lot of this in
+         an up coming project however so I won't be spending too much time on Bootstrap as of right now. There's also
+         switches which look really nice compared to the other checkboxes and radio inputs. They're apparently built
+         ontop of a checkbox as well. There's also custom selects, range. There is a course that Colt does for this but
+         it's for Bootstrap 4 where as this version I'm currently using is 5. So I'll probably learn it myself from the
+         docs or just look up a different course or youtube.
+      </p>
+   </section>
+
+   <h2 class="display-2 container">Form Layouts</h2>
+   <section class="container">
+      <p>
+         Now moving onto the forms layout, this should be the last thing I go over with forms. Rather than having
+         everything on it's own line, I could make it so it could look better since the form elements when using the new
+         classes from bootstrap use the entirety of the parent container or at least most of it.
+      </p>
+      <p>
+         So using the row and column classes I learned previous to this I can space out my form in a nicer looking
+         fashion. I can use the normal row class however, there is a form-row class I can use instead. What it does is
+         make the spacing between the form elements a little closer meaning they have less padding or margin between one
+         another. Although actually, it doesn't seem like this version of Bootstrap has this anymore. What I can do for
+         the username and email inputs though is move them onto their own line of space if they're on medium screens and
+         above. I changed this to be large and above.
+      </p>
+   </section>
+
+   <div class="container">
+      <form action="#nowhere">
+         <div class="row">
+            <div class="form-group col-lg-6">
+               <label for="username">Username</label>
+               <input type="text" class="form-control" id="username" placeholder="username">
+            </div>
+            <div class="form-group col-lg-6">
+               <label for="email">Email</label>
+               <input type="email" class="form-control" id="email" placeholder="email@email.com">
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="stadd">Street Address</label>
+            <input type="text" class="form-control" id="stadd" placeholder="64 Zoo Lane">
+         </div>
+         <div class="row">
+            <div class="form-group col-lg-6">
+               <label for="city">City</label>
+               <input type="text" class="form-control" id="city" placeholder="London">
+            </div>
+            <div class="form-group col-lg-3 col-6">
+               <label for="postcode">Post Code</label>
+               <input type="text" class="form-control" id="postcode" placeholder="AB12 3CD">
+            </div>
+            <div class="form-group col-lg-3 col-6">
+               <label for="country">Country</label>
+               <select name="country" id="country" class="form-control">
+                  <option value="UK">UK</option>
+                  <option value="Wales">Wales</option>
+                  <option value="Scotland">Scotland</option>
+                  <option value="Ireland">Ireland</option>
+               </select>
+            </div>
+         </div>
+         <button type="submit" class="btn btn-success">Register</button>
+      </form>
+   </div>
 
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
