@@ -11,8 +11,8 @@
 </head>
 
 <body>
-   <h1 class="display-1 container">Bootstrap Navigation Bars</h1>
-   <section class="container">
+   <h1 class="display-1">Bootstrap Navigation Bars</h1>
+   <section>
       <p>
          Navigation bars, the thing I wish I knew how it worked. So navbars for me are something that I really want to
          get into and learn the ins and outs of them so I fully know how they work. Apparently the signature bootstrap
@@ -22,7 +22,197 @@
          do with Bootstrap. There's a lot of different things with the Navigation bar with Bootstrap or just in general
          honestly.
       </p>
+      <p>
+         Below is an example of a "basic" nav bar with Bootstrap. I feel like basic is an overstatement however, since
+         all it is is the logo or main text of the web page really. As you can see it's not the most pleasing navigation
+         bar and it doesn't really have much to go from. I feel like this would be really cool for something like my
+         portfolio page on my main website. It can be created inside a nav or div element although nav makes more sense
+         due to the recent updates with browsers and HTML 5.
+      </p>
    </section>
+
+   <h2 class="display-2">Basic Navbars</h2>
+   <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Brand Dark</a>
+   </nav>
+   <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Brand Light</a>
+   </nav>
+   <nav class="navbar navbar-light bg-warning">
+      <a class="navbar-brand" href="#">Brand Warning</a>
+   </nav>
+   <section class=>
+      <p>
+         As shown from the examples above, they're basically the same thing however, one is dark and the other is light.
+         There is something else that I can add to this apparently to make the text stand out more and it's by using the
+         classes "mb-0" and "h1". Also the class "navbar-light" or "navbar-dark" only changes the text, it doesn't
+         actually change the background. I've use the class for the backgrounds already which is "bg-dark" or something
+         else. If I really wanted to I could do something like "bg-primary" which would give me the primary colour as a
+         background. I'll add another example above to show this off using the warning colour. "mb-0" and "h1" are to
+         just style this a little differently it seems.
+      </p>
+      <p>
+         In the next example below I'll be adding an image to the brand, it still won't have any links just yet but I'll
+         get onto that in the example after. The below example is using container-fluid class and not container.
+      </p>
+   </section>
+
+   <h3 class="display-3">Basic Navbar Logo</h3>
+   <nav class="navbar bg-primary">
+      <div class="container-fluid">
+         <a href="#" class="navbar-brand">
+            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap"
+               width="30" height="24">
+         </a>
+      </div>
+   </nav>
+
+   <section>
+      <p>
+         With the next example I'm going to combine the Brandname with the logo.
+      </p>
+   </section>
+
+   <h3 class="display-3">Basic Navbar Logo and Brandname</h3>
+   <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+         <a href="#" class="navbar-brand">
+            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Logo" width="30"
+               height="24" class="d-inline-block align-text-top">
+            Bootstrap
+         </a>
+      </div>
+   </nav>
+
+   <h2 class="display-2">Navbars With Links</h2>
+   <section>
+      <p>
+         Okay so with the more basic navbars out of the way I'll be moving onto the more "exciting" part of this since I
+         love figuring out how stuff like this works, apart from the grid system, flexbox or the bootstrap grid and
+         alignment system. Those are hard for my head for some reason. Eitherway lets get onto making a normal navbar,
+         without any drop downs for now.
+      </p>
+      <p>
+         So what's interesting already is that there's a few ways to put the links within the navbar and the one method
+         I knew of was to add an un-ordered list and then li elements within that list with a elements within those. But
+         it looks like there's an easier to read method at least to do this. It's using divs which I don't really like
+         to use but it seems a bit nicer to me. Below are some screenshots of what I mean.
+      </p>
+   </section>
+
+   <div class="row">
+      <h3 class="display-3 col-6">Un-ordered List Method</h3>
+      <h3 class="display-3 col-6">Div Element Method</h3>
+   </div>
+   <div class="row">
+      <img class="col-6" src="images/un-ordered list.png" alt="Un-ordered list Method">
+      <img class="col-6" src="images/div element.png" alt="Div Element Method">
+   </div>
+
+   <section>
+      <p>
+         As you can see from the list method it seems very chaotic, which is why I'm trying out the div method on my
+         main website right now. I'm still a little reluctant to use bootstrap on my main website still though. I really
+         want to figure out how these work in both ways so I can make and edit my own anytime I want to. Either way I'm
+         going to continue onto the next navbar.
+      </p>
+   </section>
+
+   <h3 class="display-3">First Navbar With Links</h3>
+   <section>
+      <p>
+         So it starts off like any other nav bar, you have the nav class as the main parent class and then an a link for
+         the main element which is usually a logo or a brandname. Then the links come in and this is the part that can
+         be different like I've showcased above.
+      </p>
+      <p>
+         After writing this all out, I'm a little confused honestly but I feel like I'll figure it out after the end of
+         this lesson. Some of the classes or attributes used are a little confusing or haven't been explained yet,
+         mainly talking about the aria attributes. But I believe there was one mentioned a while ago saying it had
+         something to do with accessability. Yeah something that Colt says is that "Even though it's shorter, there's
+         still a lot to do." I couldn't resonate with this more if I tried.
+      </p>
+      <p>
+         Some of the first few classes that are mentioned are "active" and "disabled". And I mean these first two are
+         pretty straight forward. Active is to show which link is active in the navbar aka which link the user has
+         currently selected. Where as disabled is the opposite basically, it's showing a link that cannot be selected.
+         There are a few other classes mentioned which have to do with the a elements within the div. It seems like the
+         a links need the classes "nav-link" and "nav-link". This is where I would also put the classes I mentioned
+         before "active" and "disabled".
+      </p>
+      <p>
+         Something to note is that if the div with the class of "navbar-nav" was not a child of another div with the
+         classes of "collapse" and "navbar-collapse" then the a links would not go across the navbar like how I'd expect
+         they would go to the end of the navbar and act as if they were in a column. The collapse class is a plugin a
+         part of Bootstrap that allows us to collapse and hide things, used on stuff like accordians etc. It can also be
+         used in navbars to show and hide things. So to get the navbar to expand these links, I have to put a class
+         inside the nav element called "navbar-expand-(size)". Giving a size to where I want to the navbar to expand.
+         For example if I set it to navbar-expand-md then the navbar will expand the collapsed navbar to show the links
+         at the medium breakpoint. And below it would stop showing these links. It's good for when there's a burger menu
+         implemented for the smaller screens.
+      </p>
+      <p>
+         So for the burger menu that shows up is from the button which is nested within the main nav element. The button
+         has the class of "navbar-toggler". I'm not sure this is what makes it tranform however, since I know some
+         JavaScript goes into this to make it work, I'm sure I'll get shown this later in how this works. Button has a
+         span with the class of "navbar-toggler-icon" inside of it which is basically the icon for the little toggleable
+         menu. If I was just to include the button and the span with the classes I've given it then it wouldn't really
+         do much since it hasn't been "linked" with the actual navbar that has the links. Meaning if I don't link it
+         with the actual navbar it doesn't do anything but does display.
+      </p>
+      <p>
+         The way to connect the button with the navbar/links to extend when clicking on the button is by adding a
+         "data-target" attribute with the same value as the id in the div that surrounds the navlinks. The only
+         difference is that the data-target attribute has a # infront of the value. So for example id=testNav meaning
+         that the data-target=#testNav. There is one other thing too with this however, that being a data-toggle
+         attribute which is set collapse. Which is also a class within the same div around the navlinks. data-target is
+         the id of something that we want it to expand of collapse. Also just as I thought, without Javascript this
+         doesn't work.
+      </p>
+   </section>
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="#" class="navbar-brand">Pictostudio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle Navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+         <div class="navbar-nav">
+            <a href="#" aria-current="page" class="nav-item nav-link active">Portfolio</a>
+            <a href="#" class="nav-item nav-link">Guides</a>
+            <a href="#" class="nav-item nav-link">Projects</a>
+            <a href="#" class="nav-item nav-link">News & Blog</a>
+            <a href="#" class="nav-item nav-link disabled">About</a>
+         </div>
+      </div>
+   </nav>
+
+   <h3 class="display-3">Navbar With Dropdowns</h3>
+   <section>
+      <p>
+         Ah the dreaded drop down navbar, something I hope to master one day. It's not looked at I don't think within
+         the course so I'm going to try figure it out myself. So lets take a look and take the example I have from
+         above and see if I can expand upon it below.
+      </p>
+   </section>
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="#" class="navbar-brand">Pictostudio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle Navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+         <div class="navbar-nav">
+            <a href="#" aria-current="page" class="nav-item nav-link active">Portfolio</a>
+            <a href="#" class="nav-item nav-link">Guides</a>
+            <a href="#" class="nav-item nav-link">Projects</a>
+            <a href="#" class="nav-item nav-link">News & Blog</a>
+            <a href="#" class="nav-item nav-link">About</a>
+         </div>
+      </div>
+   </nav>
 
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
