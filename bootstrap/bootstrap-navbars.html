@@ -193,23 +193,54 @@
       <p>
          Ah the dreaded drop down navbar, something I hope to master one day. It's not looked at I don't think within
          the course so I'm going to try figure it out myself. So lets take a look and take the example I have from
-         above and see if I can expand upon it below.
+         above and see if I can expand upon it below. Something else to note is that I technically can put any content
+         within the nav but I wouldn't really other than a form which is normally used for a search box input. So it
+         seems like with drop down menus I can't really use the method above. Meaning I will need to use the method with
+         more markup.
+      </p>
+      <p>
+         Looks like I'll be figuring out the other method in how to build one of these.
       </p>
    </section>
 
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a href="#" class="navbar-brand">Pictostudio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle Navigation">
-         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-         <div class="navbar-nav">
-            <a href="#" aria-current="page" class="nav-item nav-link active">Portfolio</a>
-            <a href="#" class="nav-item nav-link">Guides</a>
-            <a href="#" class="nav-item nav-link">Projects</a>
-            <a href="#" class="nav-item nav-link">News & Blog</a>
-            <a href="#" class="nav-item nav-link">About</a>
+      <div class="container-fluid">
+         <a href="#" class="navbar-brand">Pictostudio</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarNav"
+            aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <!-- This is where it gets different from the previous method. -->
+         <div class="collapse navbar-collapse" id="navBarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown" aria-current="page">
+                     Portfolio
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li></li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a href="#" class="nav-link">Guides</a>
+               </li>
+               <li class="nav-item">
+                  <a href="#" class="nav-link">Projects</a>
+               </li>
+               <li class="nav-item">
+                  <a href="#" class="nav-link">News & Blog</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     About
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" class="dropdown-item">Team</a></li>
+                     <li><a href="#" class="dropdown-item">Contact</a></li>
+                     <li><a href="#" class="dropdown-item">Legal</a></li>
+                  </ul>
+               </li>
+            </ul>
          </div>
       </div>
    </nav>
