@@ -214,7 +214,8 @@
          <div class="collapse navbar-collapse" id="navBarNav">
             <ul class="navbar-nav">
                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown" aria-current="page">
+                  <a href="#" class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown"
+                     aria-current="page">
                      Portfolio
                   </a>
                   <ul class="dropdown-menu">
@@ -234,14 +235,23 @@
                      <li><a href="#" class="dropdown-item disabled">Other</a></li>
                   </ul>
                </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">Projects</a>
+               <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                     Projects
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" class="dropdown-item">In-Game Content</a></li>
+                     <li><a href="#" class="dropdown-item">Modding</a></li>
+                     <li><a href="#" class="dropdown-item">Bots</a></li>
+                     <li><a href="#" class="dropdown-item">Other</a></li>
+                  </ul>
                </li>
                <li class="nav-item">
                   <a href="#" class="nav-link">News & Blog</a>
                </li>
                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                     aria-expanded="false">
                      About
                   </a>
                   <ul class="dropdown-menu">
@@ -254,6 +264,31 @@
          </div>
       </div>
    </nav>
+
+   <section>
+      <p>
+         Okay so from what I've done above is made a dropdown navbar using the content I would put inside it for my
+         website. Just so I don't have to put random ideas inside it basically and see what an actual use case would
+         look like. The first thing I noticed about making these is that the "li" element with the class of "nav-link",
+         now has another class called "dropdown-toggle" along with a few more attributes being, 'type="button"' and
+         'data-bs-toggle="dropdown"'. I'm not sure exactly what these do however, but I believe the data-bs-toggle has
+         something to link this element with javascript maybe?
+      </p>
+      <p>
+         As for the 'role="button"' I'm just assuming it makes this a link act like a button rather than a hyperlink.
+         But then it gives the question of "Why not just use a button then?" And right now I don't have an answer to
+         this sadly. :/ Moving onto the next piece of this, there's another un-ordered list within this "li" element
+         with the class of "dropdown-menu", something to do with the styling I'm assuming. Not sure how JavaScript fully
+         works right now so it might have something to do with this as well but I'm not 100% sure.
+      </p>
+      <p>
+         Within that ul element there are more li elements with a elements nested inside with the class name of
+         "dropdown-item" which is actually the most straight forward thing about this so far. Since the a elements are
+         basically the content in which I would want to drop down and be the links that are supposed to be there. And
+         that's about it honestly. I would love to know how to do this via HTML and CSS though. The HTML I can see and
+         understand. It's the CSS. I know Javascript is in this as well but I will want to learn that later.
+      </p>
+   </section>
 
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
