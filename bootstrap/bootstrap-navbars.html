@@ -290,6 +290,138 @@
          that's it for now, I'll be doing Navbar practices on my <a
             href="https://github.com/JordanPicton/navbar-testing">Github Repository Here</a>.
       </p>
+      <p>
+         I'm not sure if I mentioned this earlier but I'm sure I did however, I'll explain it again and hopefully in
+         better detail. Anything inside of the div with the class of collapse like a form etc will be added to the
+         responsive drawer design. Like drop downs which I've just done, forms, buttons and some other stuff I'm
+         probably not thinking of right now. I'm now going to copy the drop down menu above and the menu without the
+         drop downs to below and add forms to them which is how I would get a search box on my navbar.
+      </p>
+   </section>
+
+   <h3 class="display-3">Navbars With Forms/Search Bars</h3>
+   <section>
+      <p>
+         Okay so now I'm going to copy two navbars from above below here so I can explain how forms work within the
+         navbar. I'm not going to go into full detail about how they actaully work etc. But I will be showing off that
+         other things can be added to the navbar etc.
+      </p>
+      <p>
+         The only thing that I learn for the form right now is to get it to align to the far right side of the navbar
+         since by default it would go next to the last navlink. However, Colt says that this is something we're supposed
+         to learn a little later. The way to get it aligned to the far right side of the navbar towards the end is to do
+         something completely different than what the video tells us. After reading the updated Bootstrap documentation
+         about this, all I have to do is remove the form from the both divs and haveis be a direct child of the nav
+         element. This doesn't include it within the burger menu though it seems. I wonder if there's a different way to
+         do this. I can't figure out how to do it with the navbar below but apparently this works with the other way of
+         making the navbar the one where it has un-ordered lists and list items. I'm going to comment out the broken one
+         for now.
+      </p>
+      <p>
+         Figured out how to do it for the first one. Just add another div enasing the other two with the class of
+         "container-fluid" and then that should be it really.
+      </p>
+   </section>
+
+   <!-- Need to figure this one out still. Finally got it! :D -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="#" class="navbar-brand">Pictostudio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle Navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container-fluid">
+         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+               <a href="#" aria-current="page" class="nav-item nav-link active">Portfolio</a>
+               <a href="#" class="nav-item nav-link">Guides</a>
+               <a href="#" class="nav-item nav-link">Projects</a>
+               <a href="#" class="nav-item nav-link">News & Blog</a>
+               <a href="#" class="nav-item nav-link disabled">About</a>
+               <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+         <a href="#" class="navbar-brand">Pictostudio</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarNav"
+            aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <!-- This is where it gets different from the previous method. -->
+         <div class="collapse navbar-collapse" id="navBarNav">
+            <ul class="navbar-nav me-auto my-2 my-lg-0">
+               <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown"
+                     aria-current="page">
+                     Portfolio
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" class="dropdown-item">Websites</a></li>
+                     <li><a href="#" class="dropdown-item">Applications</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                     Guides
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" class="dropdown-item disabled">Gaming</a></li>
+                     <li><a href="#" class="dropdown-item disabled">Networking</a></li>
+                     <li><a href="#" class="dropdown-item disabled">Programming</a></li>
+                     <li><a href="#" class="dropdown-item disabled">Self Hosting</a></li>
+                     <li><a href="#" class="dropdown-item disabled">Other</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                     Projects
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" class="dropdown-item">In-Game Content</a></li>
+                     <li><a href="#" class="dropdown-item">Modding</a></li>
+                     <li><a href="#" class="dropdown-item">Bots</a></li>
+                     <li><a href="#" class="dropdown-item">Other</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a href="#" class="nav-link">News & Blog</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                     aria-expanded="false">
+                     About
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" class="dropdown-item">Team</a></li>
+                     <li><a href="#" class="dropdown-item">Contact</a></li>
+                     <li><a href="#" class="dropdown-item">Legal</a></li>
+                  </ul>
+               </li>
+            </ul>
+            <form class="d-flex" role="search">
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+         </div>
+      </div>
+   </nav>
+
+   <section>
+      <p>
+         I was having trouble with the method above but I figured it out and I'm actually not even sure if it's possible
+         to do the same thing with the other div method. I actually got the div method working by 50% It's just not
+         aligned properly. Howeever, moving onto the one that's right above here I got it working but placing the form
+         right after the last un-ordered list. Whilst adding the classes "me-auto my-2 my-lg-0" to the first un-ordered
+         list element. I don't really know what they mean or do though which is a little annoyin since I would like to
+         know.
+      </p>
    </section>
 
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
