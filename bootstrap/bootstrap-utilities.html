@@ -15,6 +15,59 @@
         <h1 class="display-1">Bootstrap Utilities</h1>
     </header>
     <main>
+        <section>
+            <h2 class="display-2">Border Utilities</h2>
+            <p>
+                These are not individual components, these will be a set of utilities that might not seem to make a huge
+                impact right away. But they do make a difference over time, I've used some of them already and they're
+                just quick ways of applying some CSS styles like turning borders on or off, adding border radius,
+                changing display property, adding margin. Bootstrap allows me to do this via singular classes.
+            </p>
+            <p class="border">
+                The first thing I'll be looking at is the border utility, I'll be using this paragraph as my test. There
+                are five different border classes being, "border" (all sides), "border-top", "border-end",
+                "border-bottom", and "border-start". The thing I can't control is the width through bootstrap. I can
+                either set a width I'd like to have or use the default. For this example I'll use the default and look
+                into maybe setting one.
+            </p>
+            <p class="border border-top-0">
+                There's another class that allows me to remove a border, this sounds like it would be useful if I wanted
+                a full border on an element but wanted one side removed. I'll test that out here in this paragraph too,
+                I'll remove the top border. And the way to do this is to use a class such as "border-0" and similar
+                classes used above. Worked exactly like I thought it would.
+            </p>
+            <p class="border border-primary">
+                The next one I'm looking at is changing the border colour, which is done pretty similary to how I've
+                changed the colour of other elements during learning bootstrap. And again I'll be using this paragraph
+                as my example. Interestingly I need to also include the main border class for this to work it seems,
+                though I suppose the class for border-&lt;colourname&gt; would be something like just "border-color:
+                &lt;variablename&gt;". There's also subtle versions of these border colours that have a more mellow and
+                greyed out version of the base colour. Would be useful for things like disabled buttons etc.
+            </p>
+            <p class="border rounded">
+                A really useful one would be the border radius utility, allowing me to make different borders with a
+                different radius by just using this utility rather than typing it out for different ones if they're all
+                not the same. It makes circles and pill shaped borders especially easier to do. The only thing about the
+                circle is that the element will need to be a square for it to work properly. The one example I have on
+                this paragraph will round out the corners by using the class "rounded". For the version I'm using the
+                classes are very different from what the lesson is teaching me.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="display-2">Text & Background Utility</h2>
+            <p class="bg-success">
+                The next utility is about text and background colours, I've used these utilities countless times before
+                throughout the course of learning Bootstrap. I keep forgetting how to do text though it seems, I know
+                that the class for backgrounds is as follows: "bg-&lt;colourname&gt;". There seems to be another type of
+                colour class I can use which turns the base colour into a more pastel lighter colour and the class looks
+                like: "bg-&lt;colourname&gt;-emphasis".
+            </p>
+            <p>
+                I found out how to do text and it's very easy, which makes me slightly laugh since it's what I should
+                have expected honestly. 
+            </p>
+        </section>
     </main>
     <footer>
 
