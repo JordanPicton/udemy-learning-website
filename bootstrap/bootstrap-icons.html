@@ -66,11 +66,42 @@
             <p>
                 It starts off with a div with a class of "input-group" with another div inside with the class of
                 "input-group-prepend" which darkens the section that the icon is inside of, showing the user they can't
-                type there.
+                type there. Along with prepend meaning it starts at the beginning and append being towards the end.
+                After this there's a span element with the class name of "input-group-text" nested inside that div. Then
+                after this there's the actual input element, which is nested withing the input-group div.
+            </p>
+            <p>
+                The row and col divs don't really matter here since it will be styled properly when actually used on a
+                website, this is just to make it look slightly nicer for right now. As by default it spans across the
+                entire page. The example below doesn't really look the best but when I'm doing my website project that
+                is built with bootstrap I'll look more into this and read the docs for the version I'm using at the time
+                a little more properly since I'm following a guide on an older version.
+            </p>
+            <p>
+                There are other icon libraries out there, such a Font Awesome or Flaticon. They can have way more icons
+                and a lot more features, there are paid ones which mak sense but they also allow us to change the
+                colours there and then etc. Bootstrap Icons are still worth using however.
+            </p>
+            <p>
+                SVG's are Scalable Vector Graphics, copy, paste and they kind of behave like text within the website.
             </p>
         </section>
-        <div>
 
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" palceholder="Search">
+                </div>
+            </div>
         </div>
     </main>
     <footer>
