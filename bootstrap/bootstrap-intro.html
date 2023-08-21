@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Intro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <!-- Putting this style sheet after the bootstrap one allows me to have the changes made in this css file have a higher priority since it reads the code from top to bottom. -->
+</head>
+
+<body>
+    <header>
+        <h1 class="boot-h1 container display-1">Bootstrap Introduction</h1>
+    </header>
+    <main>
+        <!-- So below I'm using the "container" class for this section and the section below to style the content on the page being centered and not using the full amount of space, just because it looks nicer. I could use the method they use on the docs
+        which is where they use a div to wrap the content I'd want with the container class however, I can also just put it into the class parameter of the different elements I want to have this class too. Resziing also shows that this is responsive too. -->
+        <section class="whatis-boot container">
+            <h2 class="display-3">What Is Bootstrap?</h2>
+            <p>Bootstrap selfproclaims that it is "The worlds most popular CSS framework." What this means is that
+                bootstrap lays down the building blocks in which I can use within my webpage. Basically saying I can use
+                Bootstraps CSS instead of making my own. (I really want to look into how they make the navigation bars
+                work.) It's also good for being responsive. Think of it as a pre-made CSS library to styling different
+                things. All I would have to do is write out lets say a button and then include the bootstrap styling for
+                that button via a class name and that's it, the button would use bootstraps already made styling for the
+                button with me just needing to import it like other style sheets and then setting the class name to the
+                element with what style I want to use. It's important to understand that I shouldn't be relying on
+                bootstrap for everything but it is good to know how to use it and what it can do. </p>
+            <p>Some other frameworks are as follows: Foundation, Semantic UI etc.</p>
+        </section>
+        <section class="boot-grid container">
+            <h2 class="display-2">Bootstrap Grid</h2>
+            <p>With Bootstrap you can layout your content using the Grid they provide. Particular classes used help in
+                the way of creating different areas on a webpage. This seems like it is done using divs. However, I feel
+                like I would rather do this myself so then I have more control over this.</p>
+        </section>
+        <section class="buttons container">
+            <h2 class="display-3">Bootstrap Buttons</h2>
+            <p>To start I'll be using some buttons to figure out how this all works other than that it should be smooth
+                sailing from here. It sounds pretty self explanatory either way honestly. Just copy the element from the
+                website/docs and paste it seems to do the trick.</p>
+            <!-- The button below is copy and pasted from the docs of Bootstrap and as you can see from my files there's no styling for this button it's purely built from the stylesheet imported from an external source being Bootstrap.
+            All I need to do is give them the proper classes I want to give them. Also the type of the buttons having the value of "button" doesn't mean anything, it just tells the browser that it has no default behaviour unlike if it was a 
+            sumbit or reset button. -->
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <p>Along with this is where I get to see the colours semantics/names. With Bootstrap they already have
+                colours setout for us to use however, these colours can be changed at any point, they just here for us
+                to use and see how stuff works. It's not set in stone that we're stuck with these colours. Just the
+                semantics/naming schemes stay the same. Which makes sense because every website has a primary colour, a
+                secondary colour, success and danger etc. But these can all be changed to match the theme of the
+                website. So the colours are just built in options and there is a way on how to change them that I'll
+                look into later.</p>
+            <p>The buttons that will be displayed below will also have the same naming scheme however they're different
+                because they have a different class name. Instead of being "btn-primary" it would be
+                "btn-outline-primary" something else to note is that all these buttons have the base class of btn which
+                will also be shown below. It's a little hard to see because of my background but as you can see it
+                doesn't have much styling other than a hover effect.</p>
+            <button type="button" class="btn">Base class</button>
+            <p>Onto the outline buttons now.</p>
+            <button type="button" class="btn btn-outline-primary">Primary Outline</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary Outline</button>
+            <button type="button" class="btn btn-outline-success">Success Outline</button>
+            <button type="button" class="btn btn-outline-danger">Danger Outline</button>
+            <p>There is something else I can do with these buttons which is use the already made sizing for them, there
+                is Large and small which I will show below. I'll have a button in the middle for the default size. All I
+                need to do is add the class for small or large on the button I want to apply it to.</p>
+            <button type="button" class="btn btn-primary btn-lg">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success btn-sm">Success</button>
+            <p>And the Outlines too because why not?</p>
+            <button type="button" class="btn btn-outline-primary btn-lg">Primary Outline</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary Outline</button>
+            <button type="button" class="btn btn-outline-success btn-sm">Success Outline</button>
+            <p>I can also have a button be disabled to where the user can't interact with it, which could be used for
+                something like a form where some information needs filling. As I can see from below the first button is
+                disbaled as it has a kind of greyscale/lower saturation than before.</p>
+            <button type="button" class="btn btn-primary" disabled>Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <h3 class="display-3">Button Groups</h3>
+            <p class="container">Coming back to buttons after finsing up the badges section, there is another section
+                that needs to be
+                added up here which is the button groups section where there is a group of buttons grouped together and
+                make for some interesting design choices. It's pretty common to do this to make nice looking selects
+                rather than using a radio button however, we won't be doing this right now due to it taking some
+                JavaScript to get this to work properly. To get this to work, I need to have a parent container and then
+                the buttons within said container and the best container seems to be a div container to me honestly.
+                Section could work but I feel like that's more reserved for sections of content rather than just a small
+                section of content like a group of buttons. Using the class "bt-group" on the div element removes the
+                padding the buttons have which squishes them together and only rounds the corners on the two buttons
+                which are on the left edge and the right edge, not rounding any of the corners that touch another
+                button. I suppose I can see how this is done by using the built in browser development tools and reading
+                what styles are being applied.</p>
+            <div class="btn-group" role="group">
+                <button class="btn btn-warning">One</button>
+                <button class="btn btn-warning">Two</button>
+                <button class="btn btn-danger">Three</button>
+                <button class="btn btn-info">Four</button>
+            </div>
+            <p class="container">
+                This also allows me to mix and match the colours or styles of the buttons still. Some stuff to know
+                about this style of button I need to be aware about if I use these over using the radio buttons for
+                selecting, is that if these are supposed to only to have one option or options for something else. I
+                need to give the parent element a "role" attribute within the HTML document. For example the above role
+                would have the value of "group", it just indicates to screen readers that the contents of this is a
+                group of buttons. There's a lot more examples and different was of how I can use buttons via the docs
+                which I can have a look at any time. I actually have a plan to make an entire website using Bootstrap
+                rather than writing my own CSS. I feel like this would be a fun challenge.
+            </p>
+        </section>
+        <section class="typography container">
+            <h2 class="display-3">Bootstrap Typography</h2>
+            <h3 class="display-4">Bootstrap Headings</h3>
+            <p>With Bootstrap typography it tells me a little about the global changes that Bootstraps CSS file makes.
+                For example the font family has been changed. I've added display-1 and display-2 classes to the
+                respective H classes. With these the headers look bigger than before, giving a clear idea on when the
+                subject changes. For example below I will show the differences for these by doing the following, I will
+                show the display-1 class heading first and then the normal h1 and do this for the next h tags.</p>
+            <h1 class="display-1">Bootstrap Display 1</h1>
+            <h1>Normal H1</h1>
+            <h2 class="display-2">Bootstrap Display 2</h2>
+            <h2>Normal H2</h2>
+            <h3 class="display-3">Bootstrap Display 3</h3>
+            <h3>Normal H3</h3>
+            <h4 class="display-4">Bootstrap Display 4</h4>
+            <h4>Normal H4</h4>
+            <p>As seen above they're way bigger and stand out a lot nicer than the normal ones, however I belive these
+                would be too big for something like a tablet or a mobile device. So that's where using the normal h tags
+                might come in easier for those devices. Something else to note is that I can use for example a display-2
+                class on a h3 since it's only the look of the element and not what it actually means. I could have two
+                elements with the display-1 class but I should really only have a h1 on the page.</p>
+            <h3 class="display-4">Paragraph Lead</h3>
+            <p>So with the class of lead for paragraphs, Bootstrap says it makes the paragraph stand out more so what
+                I'm going to do is leave this paragraph as default.</p>
+            <p class="lead">And then have this paragraph contain the class of lead and see what the differences are.
+                Okay so it seems that the difference is that this paragraph has a bigger font size and maybe some
+                padding etc. But then the padding could just be default for the new bootstrap stuff. The only other
+                thing I can think of is this paragraph maybe having more spacing between each word. Well apparently all
+                it changes is the font size and the font weight.</p>
+            <h3 class="display-4">Blockquotes</h3>
+            <p>Below shows off a blockquote.</p>
+            <blockquote class="blockquote text-center">
+                <p class="mb-0">This is a blockquote, I wonder if I can apply this class to a p element instead of a
+                    blockquote
+                    element. It seems like it just adds some font weight to the text along with a bigger font size.
+                    Something else to note is that the name underneath this quote also gets a style from the class
+                    "blockquote-footer". Also within this p element I've included a class called "mb-0" which basically
+                    margin-botton and then 0 which means it's being removed. Adding "text-center" to this does exactly
+                    what you think it would.</p>
+                <footer class="blockquote-footer">Jordan</footer>
+                <!-- Something cool to note is that the blockquote element allows a footer which is the footer of the blockquote only. -->
+            </blockquote>
+            <p class="blockquote">This is also uisng the class blockquote, however this is a p element and not a
+                blockquote element. It seems like it works still. The idea of bootstrap is to make things faster for
+                ourselves.</p>
+        </section>
+        <section class="utilities container">
+            <h2 class="display-3">Utilities</h2>
+            <p class="container text-info bg-danger">Utilities allow us to center things and colour things quickly, for
+                example
+                this paragraph is given the utility class of info. Not only that but I have changed the background to
+                be that of danger which by default is a red background.</p>
+        </section>
+        <section class="badges container">
+            <h3 class="display-4">Badges</h3>
+            <p class="container">Now moving onto badges, these are pretty cool honestly and I want to make some for my
+                own site since I believe these would be good for my wiki area of my site for the various different
+                projects I'll be working on. Below I will have th following:</p>
+            <ul>
+                <li>Rounded Success <span class="badge rounded-pill text-bg-success">Success</span></li>
+                <li>Rounded Info <span class="badge rounded-pill text-bg-info">Info</span></li>
+                <li>Rounded Number <span class="badge rounded-pill text-bg-danger">5</span></li>
+                <li><button class="btn btn-primary">Updates <span class="badge text-bg-light">9</span></button></li>
+            </ul>
+            <p class="container">
+                Something to note before wrapping up badges, is that some of the class names are slightly different and
+                some of them might not exist or there'll be new ones due to me being on a higher or lower version of
+                Bootstrap, it just depends. Also the most use case for badges are within a button on a navigation bar
+                for updates or notifications. There are slightly more ways to make these a little nicer but I can look
+                at these via the docs.
+            </p>
+        </section>
+        <section class="alerts container">
+            <h3 class="display-4">Alerts</h3>
+            <p>Alerts provide some feedback to the users after they do something or a page loads. For example it could
+                say "Saved" or "Failed to save" etc. They're supposed to alert or bring attention to something making
+                the user to check it out. Below will be an example of this, something to note is that when using the
+                alert, it is possible for me to include other elements if I was to do so, which is shown on the 3rd
+                example.</p>
+            <div class="alert alert-danger">
+                This has not saved.
+            </div>
+            <div class="alert alert-success">
+                But this has.
+            </div>
+            <div class="alert alert-info">
+                <h4 class="alert-heading">Info Example</h4>
+                <hr>
+                This is the info example with the alert heading.
+            </div>
+            <p>The next thing I'm looking at with the alerts is something called "Dismissing", which basically allows
+                users to remove the alert by clicking the X symbol. This involves some JavaScript but with Bootstrap you
+                don't have to write any. Would be cool if I started learning some JavaScript however. The example of a
+                dismissable alert is shown below:</p>
+            <div class="alert alert-warning alert-dismissible fade show">
+                <h5 class="alert-heading" role="alert">This is a warning!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    <!-- Adding the aria-label here gives it more accessability for screen readers. All aria prefixes have something to do with accessability and screen readers. -->
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    <!-- aria-hidden="true" means that this doesn't need to show up on screen readers. Because the screen reader wouldn't know what "&times;" means. -->
+                </button>
+                <hr>
+                <p>This is an example alert warning. Something to note about this is that the version I'm using of
+                    BootStrap requires a different classname for the close button. Within the course it was "close",
+                    however
+                    with the version I'm using it's "btn-close". Something else I just noticed is that the span element
+                    isn't actually needed either. It's doing it all with the button itself which is interesting. One
+                    more
+                    thing is that instead of using the property 'data-dimiss="alert"' it's 'data-bs-dismiss="alert"'.
+                    <hr>
+                    That seems to be working now. :D I'm assuming that the bs stands for Bootstrap, but it doesn't say.
+                    I also was having some funky behaviour with the alert closing and figured out I put the classes
+                    "alert-dismissible", "fade", and "show" in the wrong place, the joys of coding. role="alert" is also
+                    really handy for screen readers, it basically reads content that loads later on but it's important,
+                    say if something changes on the page and the alert pops up, the screen reader won't read that new
+                    content until later unless it has this property and value.
+                </p>
+            </div>
+            <p>
+                Also since this isn't shown on the course but it looks cool anyway, I want to add it here without the
+                help of the course and see if I can do it myself. It's basically just adding icons to the different
+                alerts to make them more interesting and helpful in a way. So I'll be figuring this out below. Actually
+                nevermind, it seems a little more complicated than I first realised. But I can add icons to this
+                apparently, I might just need more practice.
+            </p>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- I haven't gotten into scripts as of yet, but I will shortly. Just need these two below for Bootstrap. There's also a reason to which I'll find out later to why they're at the bottom. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

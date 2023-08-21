@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Icons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1 class="display-1">Bootstrap Icons <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                fill="currentColor" class="bi bi-folder" viewBox="0 0 16 16">
+                <path
+                    d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z" />
+            </svg></h1>
+        <section>
+            <p>
+                So with the video I'm learning from with Colt, these are apparently newer for when he made the video,
+                they're in alpha from that point. For me though they're out of alpha and beta meaning they're fully
+                implemented I'm assuming from their docs and website. It's basically a free set of icons I can use from
+                bootstrap instead of using another library like flaticons or downloading them and implementing them with
+                image elements.
+            </p>
+            <p>
+                Something to note is that when using these icons, the colours can be changed. And apparently it's
+                similar to image elements but they're called svg and seem to have a lot more settings for them which is
+                scary but also interesting. SVG stands for Scalable Vector Graphics. It seems like I can install these
+                icons locally if I really wanted to and just use the i element over any of the img or svg elements.
+            </p>
+            <p>
+                With the example below, I can position it differently along with change the font size. By looking at the
+                code below I can see that the svg has a size of 16 being height and width are set to 16 but I'm not 100%
+                sure what that really means. The default code that is used with the svg element has the width and height
+                set to 16. I've found out that using 1em for the sizing works better for me personally. Also someone
+                replied to my question about the svg being only set to 16 and not something like 16% or 16px etc. Turns
+                out it probably just means pixels (px).
+            </p>
+        </section>
+
+        <div class="input-group mb-3">
+
+        </div>
+
+        <div class="container">
+            <button class="btn btn-lg btn-primary">Download <svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                    height="1em" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path
+                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                </svg></button>
+        </div>
+        <section>
+            <p>
+                A common place to use icons would be something like inputs for a form, for example the @ symbol and some
+                others like dollar sign etc. I feel like for my main project however, I'll be using a lot of the
+                download symbol. They can be used for a search field, I'll be making an example of this below.
+            </p>
+            <p>
+                It starts off with a div with a class of "input-group" with another div inside with the class of
+                "input-group-prepend" which darkens the section that the icon is inside of, showing the user they can't
+                type there. Along with prepend meaning it starts at the beginning and append being towards the end.
+                After this there's a span element with the class name of "input-group-text" nested inside that div. Then
+                after this there's the actual input element, which is nested withing the input-group div.
+            </p>
+            <p>
+                The row and col divs don't really matter here since it will be styled properly when actually used on a
+                website, this is just to make it look slightly nicer for right now. As by default it spans across the
+                entire page. The example below doesn't really look the best but when I'm doing my website project that
+                is built with bootstrap I'll look more into this and read the docs for the version I'm using at the time
+                a little more properly since I'm following a guide on an older version.
+            </p>
+            <p>
+                There are other icon libraries out there, such a Font Awesome or Flaticon. They can have way more icons
+                and a lot more features, there are paid ones which mak sense but they also allow us to change the
+                colours there and then etc. Bootstrap Icons are still worth using however.
+            </p>
+            <p>
+                SVG's are Scalable Vector Graphics, copy, paste and they kind of behave like text within the website.
+            </p>
+        </section>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" palceholder="Search">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
