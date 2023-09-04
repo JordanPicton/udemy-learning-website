@@ -33,6 +33,8 @@
                 as a "2". Numbers are permitted a certain amount of space within memory, they're not permitted to just
                 fill up the memory cap.
             </p>
+        </section>
+        <section>
             <h2>Operators</h2>
             <p>
                 Javascript comes built in with some basic operations, similar to other languages, I can use things like
@@ -45,6 +47,50 @@
                 So there's something called the exponentiation operator within Javascript, and I don't remember seeing
                 this being used anywhere prior. But basically this is how it looks firstly, "4 ** 6" which means 4 to
                 the power of 6 which would give the result of 4096. (Totally didn't use the console to figure that out.)
+            </p>
+        </section>
+        <section>
+            <h2>NaN - Not a Number</h2>
+            <p>
+                So NaN is technically classed as a number within Javascript, it's something like a concept but it
+                represents something that is not a number hence the name. Some examples are shown below:
+            <ul>
+                <li>0/0 - This is a NaN.</li>
+                <li>1 + NaN - This is also a NaN.</li>
+            </ul>
+            With the first example "0/0" this is impossible to do with normal numbers so the same applies to Javascript,
+            there's something that this contributes to which is something I haven't touched on yet that is called
+            "typeof", I have no idea how this works though. Apparently it's considered similar to an operator, like the
+            plus sign for addition.
+            </p>
+            <p>
+                However, the difference with the "typeof" operator is that instead of needing 2 inputs like the others,
+                this one only needs the one to work. When I type something like "typeof 4" into the console the console
+                will print out "number" showing me that this is classed as a number, the same goes for "32.23221" this
+                is also classed as a number. And guess what? typing in "NaN" also gives the output of number.
+            </p>
+            <p>
+                Knowing about NaN is useful for when trying to figure out what is going wrong with some code when an
+                operation isn't giving the desired output and gives a NaN. It just means something went wrong somewhere.
+                It's also useful to know that when using NaN in operations like the second example then it will also
+                return NaN. Kind of like how X number divided by 0 always ends up at 0.
+            </p>
+        </section>
+        <section>
+            <h2>Numbers - Quiz</h2>
+            <p>
+                Moving onto a little quiz, I just need to figure out what this "4+3*4/2" equation means. This is to be
+                done without the use of console. So using PEMDAS, 3*4 would be first giving us 12, making the equation
+                look like "4+12/2". Now onto the next step, "12/2" which gives me 6, and then I just need to add 4 to
+                the 6 which gives me 10.
+            </p>
+            <p>
+                The next question is this "(13%5)**2" 13%5 would be 3 since 5 goes into 13 twice and then 3 is left
+                over. Moving onto 3**2, this would give me 9 since 3*3 is 9.
+            </p>
+            <p>
+                Finally the last equation "200 + 0/0". Well 0/0 would output a NaN so 200+NaN would give me the final
+                output of NaN.
             </p>
         </section>
     </main>
