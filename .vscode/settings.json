@@ -1,4 +1,5 @@
 {
     "editor.fontSize": 15,
-    "editor.fontFamily": "Comfortaa, Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "Comfortaa, Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace"
 }
