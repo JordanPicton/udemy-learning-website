@@ -171,11 +171,64 @@
             </p>
         </section>
         <section>
+            <h2>Variables Can Change Types</h2>
+            <p>
+                Variables can change the data type, it might not make sense to change a boolean to a number or vice
+                versa, but it can be done. If I was to make a variable "let numPuppies = 6;" then this variable is not
+                stuck storing a number forever. If I really wanted to I could do something like "sumPuppies = true;" if
+                I really wanted to. It's pretty rare to have a use case for this.
+            </p>
+            <p>
+                There is a fancier version of Javascript called Typescript which does enforce those kind of pratices
+                where if you make it a number variable then it must always stay a number varaible. But with Javascript
+                it doesn't have this kind of restriction.
+            </p>
+        </section>
+        <section>
+            <h2>Variable Naming And Conventions</h2>
+            <p>
+                So I thought I was finished with variables but that's very wrong, when making a variable whether it's
+                using let, const or var (don't use var). When coming up with a name for a variable, there are some hard
+                rules within Javascript that I must follow when creating these variable names. To be honest I think I
+                know one of them which is called Camel case where the begging of the word doesn't start with a captial
+                letter and then every other word does. For example Mynameisjordan or MyNameIsJordan would not work. The
+                way I would have to name the variable would be something like myNameIsJordan.
+            </p>
+            <p>
+                Along with some Javascript best pratices and conventions that I should follow, since most Javascript
+                developers follow these. But it doesn't mean that I actually have to follow these. Using the example
+                again from above, myNameIsJordan would be the identifier aka the variable name. Even something like My
+                Name, as soon as that hits the space it's classed as a separate entity and isn't part of the variable
+                name anymore. My would be the variable name and name would be an error I'm guessing?
+            </p>
+            <p>
+                I do get an error and it's to do with the [unexpected token] identifier, well the first thing I can tell
+                is that there's something wrong with the variable name since it's talking about the identifier which is
+                basically the variable name. Something good to know is that I can have letters and numbers in the
+                variable name. For example "iAmAVariable23" this would be accepted.
+            </p>
+            <p>
+                I also found out that trying something like "let testJavascript1 = 4;" and then trying to do it again
+                like "let testJavascript1 = 6;" will error me due to the variable name testJavascript1 already being set
+                prior to this one. And it will tell me this within the error log. Also even though I can use numbers
+                within the names of variables, it doesn't allow me to create a variable name that begins with a number.
+                In the sense of a variable it doesn't make any sense. If I want to read more into variable
+                names/identifiers then my favourite site MDN has everything on there that I need to know about these
+                little buggers.
+            </p>
+        </section>
+        <section>
             <h2>Summary</h2>
             <p>
                 With what I know right now let is used to make a variable that I can reassign, const is used for making
                 a variable unchangeable, and var just shouldn't be used really. Eventually I'll find out that const is
                 more useful than what I've seen so far.
+            </p>
+            <p>
+                Numbers and booleans are primitive data types and variables can be switched from number to boolean and
+                others that I will learn about later but it's not really needed or done at all. And if I was using an
+                extension called Typescript, like a library or something then it would enforce the user to keep a
+                boolean variable to always be a boolean variable.
             </p>
         </section>
     </main>
