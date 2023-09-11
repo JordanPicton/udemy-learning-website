@@ -21,7 +21,161 @@
         <section>
             <p>
                 So I have a pretty good understanding to how these work already honestly thanks to some dabbling in some
-                Java and Python. 
+                Java and Python. It's where you can store one piece of data in human language in a sense, for example if
+                I needed to store the age of someone then I would be able to say something like age = (randomNumber),
+                then instead of using (randomNumber) I would be able to use just age. I can reuse it, and even change
+                the number later on.
+            </p>
+            <p>
+                It's just a way of simplifying the code to make it easier so then I don't have to remember the actual
+                piece of data itself and I can use simplified English basically. The syntax for this would be the
+                following; "let someName = value;". The example Colt gives within the course is "let year = 1985", using
+                the word year instead of 1985 is easier to remember than the year all the time.
+            </p>
+            <p>
+                So using the console, I can set some different variables which I won't actually do here since they'll be
+                forgotten when I reload the page. However, I will note down what will happen here. For starters let's
+                make our first variable which is let servers = 7. With our first variable complete I'll make a second
+                one; lets pis = 5. With this I could then make another variable which could be like this; let
+                totalMachines = servers + pis. If I was to get the output of totalMachines I would get the number 12
+                since what it's doing is basically adding the two variables (servers and pis) together to give me the
+                number 12 for total machines.
+            </p>
+            <p>
+                If I wanted to update one of the two variables (servers or pis) then the way I would do this is simply
+                to do this servers = 8; so instead of servers being 7 it would now be updated to equal 8. Or another way
+                to do this is by the way I thought of doing it which is servers = servers + 1, which would increment the
+                servers value by + 1.
+            </p>
+            <p>
+                Interestingly, if I was to run totalMachines I would not get the update value. I would still get the
+                same value I got when I set the totalMachines variable last. So for example if I was to run it right now
+                without any update after creating it, the value I would get would still be 12. However if I was to run
+                the same variable command again for totalMachines now, then I would get the updated value of 13. Kind of
+                behaves in a different way I believe but I could be wrong. It's like the variable takes a snapshot of
+                what I set it to originally and doesn't update jsut because one of the other variables updated since
+                they're not properly linked.
+            </p>
+        </section>
+        <section>
+            <h2>Updating Variables</h2>
+            <p>
+                Touching on more about how to update variables, well mainly talking about numbers still for now. Since I
+                can store more things in a variable like strings, booleans etc. So let's begin by creating a new number
+                variable, I'll be following the one from Colt since I'm not creative. Firstly lets create a variable
+                called score and set it to 0. "let score = 0;" score is now set to equal 0, but now I want to add 5 so
+                let's do that by doing "score = 5;".
+            </p>
+            <p>
+                This would only work the first time since score was originally set to 0. If I was to do this again for
+                example "score = 8" then score would now equal 8 and will have overidden the 5 from earlier, this is why
+                I can only do this the first time. After doing that for the first time if I want to change the value of
+                score by increasing or descreasing it I would need to do something like the following "score = score +
+                5" which would now give me the output of 10 since I'm not counting the part where I set it to 8 since
+                that was an example and explanation.
+            </p>
+            <p>
+                The way this works, is like this; "let score = 0" (the variable gets created with the value of 0),
+                "score = 5" (then score gets given the value of 5), "score = score + 5" (then score is given the value
+                of score which is currently 5 then 5 is added to this giving score the new value of 10). Everytime I
+                want to add something to score I can do it like this and it can be another number like 21 for example
+                which if I was to do that right now it would give me the total of 31. This also works for subtraction
+                which would look like "score = score - 2" which in this case would give score the value of 8.
+            </p>
+            <p>
+                However, there is a easier and shorter way in doing this and it looks a little something like "score +=
+                5" what this means is score, set it equal to score + 5. It's just the short hand of doing what I've been
+                doing up above but condensed. And subtraction would look something like "score -= 5" which would take
+                away 5 from score. There are other operators I can use in the same way, for example I've already shown
+                addition +=, then subtraction -=, there's multiplication *=, and division /=.
+            </p>
+            <p>
+                Within coding, it's very common to increment and decrement a value by 1, so + 1 or - 1. For now I'll
+                create a new variable (I say this but for now I'm just typing it here) called numLives, again folloiwng
+                Colt. "let numLives = 9;" as you can see I've created a variable called numLives which has a value of 9.
+                I'm going to increment and decrement this. Lets say I lose a life then I would do something like this
+                "numLives -= 1;" however, there's a simpler version for this even. If I'm only adding or subtracting 1
+                then there's a way simpler way to do this, I learned it with Java and knowing it works in Javascript is
+                really cool to know honestly. But the way I can do this simple version is by doing "numLives--" to take
+                1 away from the value of numLives or to add I would do the following: "numLives++". I remember doing
+                this in Java so it's pretty simple to understand.
+            </p>
+        </section>
+        <section>
+            <h2>i++ vs ++i</h2>
+            <p>
+                Depending on the increment or decrement operators placement it can change when the number value gets
+                return, before before or after the increment/decrement. First off starting with i++, this is know as the
+                post increment operator meaning you write the variable name and then the operator. When this is used it
+                returns the current value of the variable and then increments it by one.
+            </p>
+            <p>
+                For example if I set the variable "i" to 0, "let i = 0". Then doing "i++" would print out 0 in the
+                console, but it would have a value of 1 after printing this out. I've just tested it in the console to
+                make sure I fully understood it and I do. Basically i++ prints the variable then increments. Meaing I
+                don't get to see the updated number because the increment comes after the variable is printed. To fix
+                this I can do ++i which baically increments i by 1 to the original value of i and then prints out the
+                variable. Meaning I get to see the increment in real time rather than having to double check by typing
+                the variable again. A little finicky but it's not too bad honestly since it is pretty straight forwards.
+            </p>
+            <p>
+                One more thing about this is that, when doing something like i++ (between the square brackets is the
+                value given) this is what happens "let i = 5", "let result = i++", "result [5]", "i [6]", running
+                "result"
+                increments i by 1 but then I have to run i in console to check if it actually incremented i.
+            </p>
+            <p>
+                The better way to do this is the following "let i = 5", "let result = ++i", "result [6]", "i [6]". As
+                shown I don't need to run i at the end to see the updated value since the value is printed out after the
+                increment. Works for decrement too, kind of straight forward in that regard.
+            </p>
+        </section>
+        <section>
+            <h2>Const And Var</h2>
+            <p>
+                I've already set a variable with the keyword "let" like so "let variableName = 3;", but there are other
+                ways I can variables, and I believe they each have their different uses.
+            </p>
+            <h3>Const</h3>
+            <p>
+                Starting with Const which stands for constant, it does exactly what you think it does, it's works in the
+                same way let does so I can use it like "const variableName = 3;" the only difference being that I CANNOT
+                change the value of this. So I can't increment or decrement this number or add other numbers to it etc.
+                It's a constant meaning that it's constant, what a shocker.
+            </p>
+            <p>
+                Here are some examples of errors and things I cannot do with a constant. First off is trying to change
+                the variable directly, for example; "const chairs = 4;", and then trying "chairs = 8;" this would give
+                me an error bcause I can't change the constant. The same thing would happen if I was to try changing the
+                value in the following way; "const people = 23;", "people = people + 1;", this would also error since I
+                CANNOT change a constant! Another way I can't change this is by doing this "const dogs = 3;", "dogs +=
+                1;", this again would not work.
+            </p>
+            <p>
+                The error I would get would be something like this "Type Error: Assignment to constant variable." The
+                use case for const may seem very limited but it's actually really useful for when you want something to
+                stay the same. Some good example of this are; "daysInWeek = 7;", "feetInMile = 5280;". There are use
+                cases for these, just a good idea to keep them in mind.
+            </p>
+            <p>
+                When I go over Arrays and Objects, then I'll see more use cases where const would make more sense than
+                using let. Javascript will yell at me for trying to change a const and will not let me.
+            </p>
+            <h3>Var</h3>
+            <p>
+                Moving on Var, which is interesting since it just stands for variable I believe. It seems like this is
+                an old variable keyword, before let and const. Var was the only way of declaring variables but with let
+                and var there's no real point in using it anymore. This keyword still works, but there's not much point
+                in using it. Var will be better explained later one when I learn more about different methods and topics
+                about Javascript, there should be no real reason to use Var anymore.
+            </p>
+        </section>
+        <section>
+            <h2>Summary</h2>
+            <p>
+                With what I know right now let is used to make a variable that I can reassign, const is used for making
+                a variable unchangeable, and var just shouldn't be used really. Eventually I'll find out that const is
+                more useful than what I've seen so far.
             </p>
         </section>
     </main>
