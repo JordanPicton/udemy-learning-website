@@ -4,12 +4,13 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Javascript Strings</title>
+   <title>JavaScript Strings</title>
+   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
    <header>
-      <h1>Javascript Strings</h1>
+      <h1>JavaScript Strings</h1>
    </header>
    <main>
       <section>
@@ -17,7 +18,7 @@
             So far I've messed around with two other primitive data types which were numbers and booleans however, now
             I'm going to mess around with my third which is a string and I've messed with Strings before, they're used
             through out different languages, I've seen them in both Java and Python so far and it's no surprise that
-            Javascript has them too.
+            JavaScript has them too.
          </p>
          <p>
             Strings are commonly used just as numbers and booleans, a String is basically a bunch of characters combined
@@ -34,8 +35,92 @@
          <p>
             An actual example of how this is supposed to be done is the following, 'let username = "jordan";' this again
             doesn't actually include the singular quote when used it's just show the example but the difference with
-            this example is that I've included the double quotes which would actually tell Javascript Hey look I'm a
+            this example is that I've included the double quotes which would actually tell JavaScript Hey look I'm a
             string.
+         </p>
+         <p>
+            There's a few ways to make Strings, obviousy the double quotes (let firstName = "Jordan";) will work, (let
+            msg = "Hey look this is a String!";), along with single quotes (let animal = 'Charlie Dog';) this will also
+            work. However, I cannot mix and match for example (let badExample = "this will error;') this method will
+            error meaning it is wrong and shouldn't be done.
+         </p>
+         <p>
+            Something to note is that I've tested this with the console and it seems like doing this (let testing1 =
+            "Does 'this' work?") actually works. Along with (let testing2 = 'But does "This" work?') and again yes this
+            does work. Meaning as long as I close the quotes for the String and for the emphasis then it should work I
+            just can't close the String quotes before the emphasis quote depending on what I'm using. Colt confirmed
+            this for me.
+         </p>
+         <p>
+            There are certain situations using certain quotations over the other wil make more sense but using the ones
+            you're most comfortable with should be just fine. Though within a single JavaScript document I shouldn't be
+            switching from double to single for basic Strings. Also just staying consistent is a good idea no matter
+            what the case.
+         </p>
+         <p>
+            Having a number in a String like this (let thisIsAStringNotNumber = "24";) this is still a String and not
+            classed as a number meaning I cannot add this to another number so I shouldn't expect any adding or
+            subtracting with this since it's specified as a String and not a Number.
+         </p>
+         <p>
+            I can also have special characters within the string, so if I really wanted to I could have a String with
+            the value of "This is classed as a String !!££$£$£%$^$%^" I had to remove the other double quotes though
+            since that would close the string. So any special character that isn't the String closing character. Using
+            one quote to close the other like so "'This is wrong' will cause JavaScript to throw a syntax error.
+         </p>
+         <p>
+            Just to add onto the double quotes being used like this "Hello I am a String Error' think of it being
+            similar to this ("Hello this doesn't have a closing quote.) they're basically the same thing. I'll be
+            spending more time with Strings because there's more to them than there is to do with Numbers for example.
+            Although I feel like both are going to be used extensively either way.
+         </p>
+         <p>
+            Some stuff I'll be learning in the future is something called "Methods" not entirely sure if this is
+            anything to do with String but I'll have to find out with more learning. There's also empty Strings which
+            I've seen before which are basically like this "" and then long Strings.
+         </p>
+      </section>
+      <section>
+         <h2>Indices And Length</h2>
+         <p>
+            Moving onto indices and length for Strings, I already basically know what this is which is where each
+            character in a String is given a number and it starts from 0 and then inceases with each character by one.
+            Yeah, I've done this before with Java so far and not really Python, so it works in the sense of what I said
+            above and then you can pull characters based on the indice. Meaning if I have a String like this "Hello I am
+            a String" and I was to pull the 5th indice, then it would give me the output of " " it wouldn't be "o"
+            because this has the indice value of 4 since it begins at 0 and not 1.
+         </p>
+         <p>
+            Strings being indexed means every character within said String has an index/indice value associated with it.
+            Kind of how Microsoft Word will count how many characters are written in a paragrph if you select/highlight
+            it. Only difference being that this value starts with the first character having the value of 0. Example of
+            this is here: "Jordan", "012345". Imagine the numbers being directly under the name Jordan, those are the
+            values given to each character within the name Jordan in this example. It's pretty straight forward. Indices
+            values are also given to spaces like mentioned above and then also special characters.
+         </p>
+         <p>
+            When using the console and after I have some Strings created, if I wanted to access the indice of a variable
+            I created called name with the value of Jordan then to get the 3rd characters indice I would type something
+            like "name[2]" 2 being the third in this case because it starts at 0 and not 1 remember. The output this
+            would be "r" which is the 3rd character within that String.
+         </p>
+         <p>
+            If I was to put something like name[10] (using the same variable example from above) and entered this I
+            would get an undefined return since the String doesn't have 10 characters it only has the 6, looking for 10
+            technically means the String would have to be 11 characters long but still it wouldn't give anything back
+            since again it's only 6 characters long.
+         </p>
+         <p>
+            Undefined is a special primitive value that I'll be learning about shortly, it's basically JavaScript
+            telling us that there is currently nothing there I don't know what you want me to do. Normally indices
+            aren't used in this manner, of showing where we know that a specific character is already there and want to
+            know the number to find it, when we would already really know the number because we counted to get there
+            and then take away 1.
+         </p>
+         <p>
+            Usually indices are used to do something like, check the first character of a String, checking a phone
+            number for example some people might input their phone number like so (+44)12345-67891011 or they might do
+            it without, so we could use it to check if the first part of the String is a
          </p>
       </section>
    </main>
