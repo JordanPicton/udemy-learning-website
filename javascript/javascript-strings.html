@@ -120,7 +120,89 @@
          <p>
             Usually indices are used to do something like, check the first character of a String, checking a phone
             number for example some people might input their phone number like so (+44)12345-67891011 or they might do
-            it without, so we could use it to check if the first part of the String is a
+            it without, so we could use it to check if the first part of the String is a parenthesis and most likely
+            ignore this part, just getting the number itself.
+         </p>
+         <p>
+            Normally when using this, it's not to try and find the first instance of something, it's normally used for
+            what's the first character the last character, first half of the string etc. This is done via the method
+            above the variable name with the square brackets with an index inside.
+         </p>
+         <p>
+            Apparently something to note on Strings is that everyone of them have a "built in magical property" as Colt
+            says, this being called length. So how this works is if I add this to the end of my variable for example
+            name.length. If I was to do it like this then I would get a number value in return. Being the amount of
+            characters within that String. Something else to remember is that using length, it counts in the way we
+            count so it starts from 1.
+         </p>
+         <p>
+            Meaning that name.length would give me a value of 6, with "n" being the final character but this means that
+            when doing jordan[5] it would also give me an "n" just something to not forget about. Another thing to note
+            is that if I want the length of a String without it being a variable then I can do something like "How long
+            is this".length and this would work fine. Works the same for indices, "Hey I'm a String!"[2] would give the
+            value of "y".
+         </p>
+         <p>
+            I can also add Strings together, it works a bit differently than when trying to do it with numbers, but if I
+            have two Strings and I add them together like this "Jordan" + "Picton" my output would be that of
+            "JordanPicton", there's no space here because JavaScript has to be specifically told to use one.
+         </p>
+         <p>
+            I would either put a space in one of the Strings I was adding together like "Jordan " + "Picton", or
+            "Jordan" + " Picton". There is more ways of doing this but the only other one I know is similar to this
+            being, "Jordan" + " " + "Picton" or firstName + " " + surName would also work. This is called concatenation,
+            concatenating, shoving together two Strings. This creates a new String. I could also save the new String to
+            a variable by doing let fullName = firstName + " " + surName; or et fullName = "Jordan" + " " + "Picton";
+         </p>
+         <p>
+            Here's another example: "let firstName = 'John', let surName = 'Smith'" then I could add these together like
+            so, "firstName" + "surName" which would value "JohnSmith" which is a new String. Check firstName and surName
+            within the console would show that those two Strings have not changed.
+         </p>
+         <p>
+            Apparently when defining a String like I have been "let firstName = 'Jordan'" I can't change that String,
+            for example if I wanted to change Jordan to be jordan then I can't just update one character at a time
+            within the String. Doing firstName = "jordan" is fine but this would be a completely new String. Apparently
+            it's not worth understanding in the basic level of JS but it is useful to note and I'll be learning about
+            this later either way. They look similar to us but they're different in memory.
+         </p>
+         <p>
+            Can't update 1 character by itself manually, only way to do it really is by overwritting the entire
+            character. I've done a bunch of concatenating with Java and it took a little time to get my head around it
+            to begin with but I understand how it works now.
+         </p>
+         <p>
+            When doing something like 1 + "Hi" it gave a value I wasn't expecting since 1 is a number and "Hi" is a
+            String. It gave the output of "1Hi" which is also a String, and also kind of weird since I wasn't expecting
+            this honestly. Lets say I was to give this a variable for example "let test = 1 + 'Hi'" then tried doing
+            "typeof test" it would tell me that this is a String because it would look like "1Hi"
+         </p>
+         <p>
+            So why does it give a String and not a number or both? Well it's something I'll learn again later but for
+            now put basically it's JavaScript trying to find the common ground between the two and then giving them both
+            that common ground, which in this case would be to make them both a String.
+         </p>
+      </section>
+      <section>
+         <h2>String Methods</h2>
+         <p>
+            Now for a bigger topic, String Methods. These are things that are built in actions I can perform on
+            individual Strings. They allow us to Search within a String, Replace part of a String, and Change the casing
+            of a String like Upper or Lower case. Actions, called Methods. Every String has all of these. The way to see
+            these Methods easily is by going into my web browser and then doing "hello". having the period right after
+            the String will bring up a bunch of different Methods that can be used on the String. Also checking MDN for
+            this will give me a more in-depth understanding.
+         </p>
+         <p>
+            There's only one property for Strings which I've already seen and talked about called length. As for
+            methods, well lets just say there's a boat load and then the rest. They can also allow me to capitalise a
+            String etc. The syntax for this looks like thing.method(). thing being the String or String variable name
+            and then method obviously being the method I want applied to this String.
+         </p>
+         <p>
+            When using .length above it looks very similar in regards to how to use a method on a String, the difference
+            being that there are parenthesis at the end of the method name. Without the parenthesis, it's how I would
+            access a property. But when using the parenthesis, it's how I'd execute a method.
          </p>
       </section>
    </main>
