@@ -186,7 +186,7 @@
       <section>
          <h2>String Methods</h2>
          <p>
-            Now for a bigger topic, String Methods. These are things that are built in actions I can perform on
+            Now for a bigger topic, String Methods. These are things that are built in ACTIONS I can perform on
             individual Strings. They allow us to Search within a String, Replace part of a String, and Change the casing
             of a String like Upper or Lower case. Actions, called Methods. Every String has all of these. The way to see
             these Methods easily is by going into my web browser and then doing "hello". having the period right after
@@ -199,10 +199,43 @@
             String etc. The syntax for this looks like thing.method(). thing being the String or String variable name
             and then method obviously being the method I want applied to this String.
          </p>
+         <h3>String Property (Length)</h3>
          <p>
             When using .length above it looks very similar in regards to how to use a method on a String, the difference
             being that there are parenthesis at the end of the method name. Without the parenthesis, it's how I would
-            access a property. But when using the parenthesis, it's how I'd execute a method.
+            access a property. But when using the parenthesis, it's how I'd execute a method, the syntax for this
+            looking like thing.property.
+         </p>
+         <h3>String Casing Methods</h3>
+         <p>
+            Trying a simple method on a String, which will be casing. I'll have something like [let name = "jordan";]
+            but lets say there's a place where I want this to show as in all uppercase. Then to do this I would just do
+            something like [name.toUpperCase();] and it would give the output of JORDAN, but the actual value of the
+            String name would stay the same as the original (jordan). There's also the opposite of this, for example if
+            I had [let surname = "PICTON";] and used this method instead [surname.toLowerCase();] it would give me the
+            output of "picton".
+         </p>
+         <p>
+            Using the examples above, I could also do something like [let fullName = name.toUpperCase() + surname;]
+            which would give me the output of "JORDANPICTON" (I think, I'll double check this, yeah this worked as I've
+            stated here.)
+         </p>
+         <p>
+            The next one I'll be looking into is called Trim, this can be useful for example, getting input from a user,
+            or just dealing with data. What it does is trims off any excess white space at the beginning or end of a
+            String. An example of this in action would basically be [let test = " This has white space! ";] and then
+            using this String with the method [test.trim();], giving the output of "This has white space!" however, the
+            original String stays the same. This only removes whitespace and not other characters. An example of this
+            would be "____Hello____", this would stay the same when using the Trim method. Something to note is that
+            this doesn't remove the spaces in between words, just the excess on the beginning and end.
+         </p>
+         <h3>Chaining Methods</h3>
+         <p>
+            I can chain methods together for example if I wanted to trim a String and then make it all uppercase, I'd be
+            able to do this by doing the following [let testTwo = " This is another test !!!!";], I'm actually curious
+            to see if it would trim the white space in the middle of the words there. Using trim to try and trim the
+            white space in the middle of a String does not work and chaining works like so
+            [testTwo.trim().toUpperCase();]
          </p>
       </section>
    </main>
