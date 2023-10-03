@@ -120,7 +120,7 @@
          <p>
             Usually indices are used to do something like, check the first character of a String, checking a phone
             number for example some people might input their phone number like so (+44)12345-67891011 or they might do
-            it without, so we could use it to check if the first part of the String is a parenthesis and most likely
+            it without, so we could use it to check if the first part of the String is a parentheses and most likely
             ignore this part, just getting the number itself.
          </p>
          <p>
@@ -202,8 +202,8 @@
          <h3>String Property (Length)</h3>
          <p>
             When using .length above it looks very similar in regards to how to use a method on a String, the difference
-            being that there are parenthesis at the end of the method name. Without the parenthesis, it's how I would
-            access a property. But when using the parenthesis, it's how I'd execute a method, the syntax for this
+            being that there are parentheses at the end of the method name. Without the parentheses, it's how I would
+            access a property. But when using the parentheses, it's how I'd execute a method, the syntax for this
             looking like thing.property.
          </p>
          <h3>String Casing Methods</h3>
@@ -236,6 +236,64 @@
             to see if it would trim the white space in the middle of the words there. Using trim to try and trim the
             white space in the middle of a String does not work and chaining works like so
             [testTwo.trim().toUpperCase();]
+         </p>
+         <p>
+            When chaining methods together, it's useful to remember that the code reads from left to right, meaning what
+            comes first is what applies first. For the example used above, testTwo = This is another test!!!!, .trim() =
+            remove any useless white space, .toUpperCase() = THIS IS ANOTHER TEST!!!!. So the toUpperCase comes after
+            the trim method.
+         </p>
+         <p>
+            I'll give another example of this here. For example this time lets have something like [let dog =
+            "Charlie";].
+         <ul>
+            <li>dog = Charlie</li>
+            <li>dog.trim(); = Charlie (Without extra spaces, it's hard to show on here due to VSC removing white space
+               when I'm formatting)</li>
+            <li>dog.trim().toUpperCase(); = CHARLIE</li>
+         </ul>
+         Think of it giving the output after every step, for instance dog would output the value of Charlie and then the
+         method would be used, but the code doesn't show you these steps when it's running through. It's just something
+         to be mindful of. Chaining methods together is pretty common for JavaScript.
+         </p>
+         <h3>String Methods With Arguements</h3>
+         <p>
+            Okay so I've done JavaScript methods for example .toUpperCase() is a method. However, you see those
+            brackets? With nothing inside of them? Well those actually accept something called an argument, these modify
+            the behaviour of the method, think of them as inputs and they're inside the parentheses. I kind of figured
+            out how these work already.
+         </p>
+         <p>
+            For example if I have the example from earlier "dog" which has the output of "Charlie" and I wanted to run
+            the .toUpperCase() method on this again but this time I only wanted the letters/characters "L" to change to
+            uppercase then I would do something like this dog.toUpperCase('l');. Okay this technically would work but
+            for uppercase or lowercase it won't work. So my idea is right it just won't work for this method.
+         </p>
+         <p>
+            But it would work for the method indexOf(), and there's a good slide showing this off that in the course.
+            I'll use the same example I have been using in the past little while here, so if I have "dog" and I want to
+            find out the index of the letter "r" then I would do something like dog.indexOf('r');. However, I would also
+            be able to use it like this dog.indexOf('lie'); and this would work, it would basically look for the first
+            instance of the group of characters in that formation "l i e" without the spaces obviously. So if there was
+            an "l" character before this, and it's looking for lie then it wouldn't give the index of the first l
+            character because that isn't the arguement.
+         </p>
+         <p>
+            When using the arguement and using a character or string of characters together and they're not within the
+            actual String or variable then it will output -1 meaning there's none to be found. IndexOf is mainly used to
+            test if something contains something.
+         </p>
+         <p>
+            Moving onto a new and more complicated looking method that uses arguments, it's called slice it seems to
+            have two acceptable arguments or just the one. Always remember to refer to MDN documentation when struggling
+            because they're really useful when it comes to figuring something out. Or just giving more information on
+            something.
+         </p>
+         <p>
+            Slice is used to remove or extract a portion of a String. I'll be using a different example for this being,
+            [let exampleOne = "This is just another test example I'll be using since it's a long String.";]. After slice
+            has removed the part/portion of the String we asked, it will return it as a new String to us but will NOT
+            alter the original.
          </p>
       </section>
    </main>
