@@ -283,6 +283,7 @@
             actual String or variable then it will output -1 meaning there's none to be found. IndexOf is mainly used to
             test if something contains something.
          </p>
+         <h4>Slice Method</h4>
          <p>
             Moving onto a new and more complicated looking method that uses arguments, it's called slice it seems to
             have two acceptable arguments or just the one. Always remember to refer to MDN documentation when struggling
@@ -294,6 +295,36 @@
             [let exampleOne = "This is just another test example I'll be using since it's a long String.";]. After slice
             has removed the part/portion of the String we asked, it will return it as a new String to us but will NOT
             alter the original.
+         </p>
+         <p>
+            The syntax for using slice would look like this [string.slice(startIndex<, endingIndex>)] the value between
+               the less than and then the greater than symbol basically means that "between here is optional and not
+               needed". When I get around to it I will make my website have guides and a wiki and hopefully make these
+               look nicer due to reading through this might be a nightmare.
+         </p>
+         <p>
+            So using the two indices/numbers within the arguement means it will slice out from this index to the next
+            index. I'm also assuming I can't have something like 12 then 6, I would think the lower indice would have to
+            come first. If I was to use just the first index for example [exampleOne.slice(5);] I would get the output
+            of "is just another test example I'll be using since it's a long String." since it slices everything up to
+            the 5th index (and this character as well) and then prints out the rest after that.
+         </p>
+         <p>
+            However, when giving the slice method two arguments it will slice everything else that is NOT in between
+            those two indices. So for example if I was to do something like [exampleOne.slice(5, 17);] I would get the
+            output of 'is just anot', meaning it gives the output of what is between those two indices. Okay I was
+            getting a little confused but I've worked it out. Basically the first indice is included in the output
+            that's where it starts and the second one is where it stops and the character on the second index is NOT
+            included in the output.
+         </p>
+         <p>
+            This can have a negative value, and when a negative value is used it will treat it as string.length - 3. The
+            way this would work would be the following [exampleOne.slice(-4);] this would output "ing.", it would print
+            the the last 4 characters. It works backwards from the end. Again this doesn't impact the original String.
+         </p>
+         <h4>Replace Method</h4>
+         <p>
+            
          </p>
       </section>
    </main>
