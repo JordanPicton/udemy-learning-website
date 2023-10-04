@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JavaScript Template Literals</title>
+   <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+   <header>
+      <h1>JavaScript Template Literals</h1>
+   </header>
+   <main>
+      <section>
+         <p>
+            Moving onto something called JavaScript Template Literals, I've never heard of these before so it'll be
+            interesting.
+         </p>
+         <p>
+            If I wanted to do something like [let game = "Terraria";], [let price = 7.99;], [let quantity = 10;].
+            Let's say I have these variables and I want to make something out of them it would looke something like
+            ["You bought " + quantity + " " + game + "copies. Total is: " + price * quantity;] giving the output of "You
+            bought 10 Terraria copies. Total is: 79.9".
+         </p>
+         <p>
+            Doing this the way above is very time consuming and is unnecessary. There's a better way in doing this. And
+            you guessed it, it's the Template Literal that I'm learning about right now. These Template Literals are
+            newer syntax to JavaScript. They allow us to create Strings, embed an expression inside the String and then
+            that expression will be evaluated and turned into a String.
+         </p>
+         <p>
+            An example of this would be something like [`She had ${5 + 3} puppies!`;] giving the output of "She had 8
+            puppies!". So the "${5 + 3}" gets evaluated and then turned into a String. Something to note, to get this to
+            work you have to use the ` characters which is the button underneath escape (no holding shift, alt, or
+            control).
+         </p>
+         <p>
+            We can also just make a String with these backticks by doing `Hello` this would be classed as a String. The
+            special thing about these backticks however, is that when using this "${}" whatever goes inside of these
+            curly braces will be treated as an expression. Allowing it to get evaluated. A quick example of this would
+            be something like [`test ${1 + 6}`;], which would print out "test 7".
+         </p>
+         <p>
+            Just to be clear, using the backtick character allows this to be evaluated however, if I was to use the same
+            example above and show the output of it using single quotes then it would look exactly like what was typed
+            in being "test ${1 + 6}". It wouldn't get evaluated and would just print out the part of the evaluation
+            without it actually getting evaluated. (What comes out is exactly what was put in, when using single
+            quotes.)
+         </p>
+         <p>
+            If I was to go back to the beginning and recreate the String with the knowledge I have now, it would look
+            something like [`You bought ${quantity} ${game} copies. Total is: ${price * quantity}.`]. As you can see
+            this is way nicer looking and just less work. It's like putting variables into a String and then not having
+            to worry too much about opening and closing the double quotes all the time for spaces etc. Something else to
+            know which is pretty neat is, using the example above again. [`You bought ${quantity} ${game.toUpperCase();}
+            copies. Total is: ${price * quantity}.`] I can use methods inside this, as shown via the game variable and
+            giving it the toUpperCase() method.
+         </p>
+         <p>
+            These are actually pretty cool. :D
+         </p>
+      </section>
+   </main>
+   <footer>
+
+   </footer>
+</body>
+
+</html>
