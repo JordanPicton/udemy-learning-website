@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JavaScript Math Object</title>
+   <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+   <header>
+      <h1>JavaScript Math Object</h1>
+   </header>
+   <main>
+      <section>
+         <p>
+            Math Object is built into JavaScript which contains properties and methods for mathematical constants and
+            functions. It adds a bunch of cool methods for example rounding, absolute values, power to etc. It's an
+            object and well I haven't really gone through objects yet other than knowing it's a collection of properties
+            and methods.
+         </p>
+         <p>
+            [Math.floor(23.90);] (Output 23) What this method does is it literally just removes the decimal point and
+            the numbers after it. Like it just drops it completely. There's another method called ceil which acts a bit
+            differently than I would think honestly. For example if I was to do [Math.ceil(67.2);] then it would round
+            up. Meaning the output for this would be 68 even if it's got .2 which is not .5 or above. Which is the part
+            I find weird. Ah it's because it ALWAYS rounds up and returns the smallest integer that is greater than or
+            equal to a given number.
+         </p>
+         <p>
+            However, the main reason to looking into this is because of the built in method called "random" and well
+            it's pretty straight forward. It generates a random number however, the difference being that instead of
+            giving a full number it gives a number between 0 and 1 (non-inclusive).
+         </p>
+         <p>
+            To get it to use actual integers instead of decimals takes a little more work than just calling the random
+            method. There's not any other method that we can use for this like intRandom or something similar there's
+            just random but there's a way to get it to work the way I would want it to.
+         </p>
+         <p>
+            It's a multi-step process but it can be done. For example if I wanted to get something like a random number
+            between 1 and 10 then there would be 4 steps for this. The first step would be something like [const step1
+            = Math.random();] (Output 0.7148541177023955), [const step2 = step1 * 10;] (Output 7.148541177023955),
+            [const step3 = Math.floor(step2);] (Output 7), [cons step4 = step3 + 1;] (Output 8).
+         </p>
+         <p>
+            The reasoning behind step 4 in the example above is due to the example looking for a number between 1 and
+            10. If it was looking for a number between 0 and 9 then this step wouldn't be needed.
+         </p>
+      </section>
+   </main>
+   <footer>
+
+   </footer>
+</body>
+
+</html>
