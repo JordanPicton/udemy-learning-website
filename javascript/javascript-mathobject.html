@@ -46,7 +46,20 @@
          </p>
          <p>
             The reasoning behind step 4 in the example above is due to the example looking for a number between 1 and
-            10. If it was looking for a number between 0 and 9 then this step wouldn't be needed.
+            10. If it was looking for a number between 0 and 9 then this step wouldn't be needed. A simpler way of doing
+            something above would be to do it this way [Math.floor(Math.random() * 10);] and to finish it off, it would
+            look something like [Math.floor(Math.random() * 10) + 1;] which would give me the same thing as above but
+            within one line/step. Interesting, so if I was doing * 5 instead of 10 it would be 1 to 5. Meaning that I
+            could make it 1 to 100 if I was using 100 instead of 10. Very cool to know this actually.
+         </p>
+         <p>
+            Okay so lets say I'm trying to get a number between 82 and 85, well this would be a bit different. It would
+            look something like [Math.floor(Math.random() * 4) + 82;] It's not that common todo this though, it's more
+            common to generate a number between 0 and something else or from 1 to something.
+         </p>
+         <p>
+            Another one called pow which is to the power of, which looks like [Math.pow(2 ,3);] (Output 8) is the same
+            as doing [2 ** 3;].
          </p>
       </section>
    </main>
