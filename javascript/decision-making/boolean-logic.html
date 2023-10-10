@@ -42,14 +42,74 @@
                 <li>!== - Strict non-equality.</li>
             </ul>
         </section>
-        <h4>&#62; and &#60;</h4>
+        <h4>&#62; and &#60; (&#62;= and &#60;=)</h4>
         <section>
             <p>
                 I basically already know what these mean honestly, I've been learning about them for the past year now
                 since I get them mixed up slightly still, but to think about it easier people tell you to just remember
                 &#62; is greater than because the open side of the triangle is to the left side, whereas &#60; has the
                 closed side to the left side. Meaning when you have something like 82 &#62; 67 then it's asking if 82 is
-                greater than 67 and this case it would give me <span class="import">true</span> because 82 is greater than 67.
+                greater than 67 and this case it would give me <span class="import">true</span> because 82 is greater
+                than 67.
+            </p>
+            <p>
+                It's just how I remembered it, it's basically what I said above. Moving on, if I was to try doing [-1
+                &#62;
+                -1;] then this would output false because -1 is not greater than itself, it's euqal to itself. That's
+                where &#62;= and &#60;= come in. For example if I was to use -1 &#62;= -1 then this would be true
+                because it's not greater than but it is equal to. -1 &#62;= -1 in English means is -1 bigger than or the
+                same amount as -1? Well the first one it's not but the second one it is.
+            </p>
+        </section>
+        <section>
+            <p>
+                Interesting I can use these with Strings however, it's a little confusing and uncommon, the reason for
+                this is mainly due to casing. However, for example when having 'a' < 'b' and getting the output of true.
+                    I thought it did this because of binary but sadly that's not the case, it's a similar method and way
+                    of thinking but a little simpler really. It's to do with Unicode, for example a in unicode has a
+                    value of 61 and b has a value of 62. So it was a valid way of thinking, it just wasn't the correct
+                    one. Just a heads up with Unicode, the Uppercase letters come before the Lowercase letters, meaning
+                    Uppercase letters have a smaller Unicode value to Lowercase. </p>
+                    <p>
+                        Just note when doing comparisons with Unicodes that it might be doing something funky or acting
+                        differently than I'm expecting because of the characters that might be in the String, some might
+                        be bigger than I may expect.
+                    </p>
+        </section>
+        <h4>==, !=, ===, !==</h4>
+        <section>
+            <h5>Double Equals (==)</h5>
+            <p>
+                Below is an explanation of double euqals but honestly it's pretty confusing to me still.
+            <ul>
+                <li>Checks for equality of value, but not equality of type.</li>
+                <li>It coerces both values to the same type and then compares them.</li>
+                <li>This can lead to some unexpected results!</li>
+            </ul>
+            To put it simply, it checks if two values are equal, but doesn't care about the type (if they're the same).
+            It will attempt to coerce two values, move them into being the same type which can give some unexpected
+            results.
+            </p>
+            <p>
+                For example 1 == 1 will give me true because 1 and 1 are both numbers and they're the same value.
+                However, when trying something like 1 == '1' then these two value types are not the same, one is a
+                number and the other is a String. Though this will still give an output of true because they're pretty
+                close, they're both still containing the value of one, they just don't contain the same value type. This
+                can be problematic though because this operator doesn't care about type, because it converts them to the
+                same type and THEN compares.
+            </p>
+            <img src="../imgs/JavaScript Double Equals.png" alt="Examples of Double Equals being weird.">
+            <p>
+                The above image shows off how weird the double equals operator can be (yes I used an image because I'm
+                lazy :D) however, it kind of makes sense to me. For example if you look at the second example 'b' == 'c'
+                this is false and well this is because well they might be the same data type but double equals doesn't
+                care about this it cares more about the value itself.
+            </p>
+            <p>
+                I just tried 'test' and 'Test' which wouldn't work either because "T" has a different unicode to "t" so
+                I should have seen this coming really. But for the most part it makes sense. 0 and '' giving the same
+                output of true like above because they both are nothing really they're both not void but lack value in a
+                sense.
             </p>
         </section>
     </main>
