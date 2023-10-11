@@ -55,7 +55,7 @@
             <p>
                 It's just how I remembered it, it's basically what I said above. Moving on, if I was to try doing [-1
                 &#62;
-                -1;] then this would output false because -1 is not greater than itself, it's euqal to itself. That's
+                -1;] then this would output false because -1 is not greater than itself, it's equal to itself. That's
                 where &#62;= and &#60;= come in. For example if I was to use -1 &#62;= -1 then this would be true
                 because it's not greater than but it is equal to. -1 &#62;= -1 in English means is -1 bigger than or the
                 same amount as -1? Well the first one it's not but the second one it is.
@@ -80,7 +80,7 @@
         <section>
             <h5>Double Equals (==)</h5>
             <p>
-                Below is an explanation of double euqals but honestly it's pretty confusing to me still.
+                Below is an explanation of double equals but honestly it's pretty confusing to me still.
             <ul>
                 <li>Checks for equality of value, but not equality of type.</li>
                 <li>It coerces both values to the same type and then compares them.</li>
@@ -117,10 +117,47 @@
             <p>
                 So this one is a little weird because you can do the samething with other operators but I'm sure there's
                 a reason for this however, for now lets just explain this in the way I have figured out myself so far.
-                It needs to have euqality of both the value AND the type. Meaning the examples used in the last section
+                It needs to have equality of both the value AND the type. Meaning the examples used in the last section
                 won't give the true output like 0 and '', when using this operator it will not longer give the true
                 output. Yeah I'm a little confused though since apparently != and !== do something the same or similar
                 in some regard?
+            </p>
+            <p>
+                With this it does not coerce the types to be of a similar type to each other. I'm kind of understanding
+                this one but most likely need to figure it out a little more myself.
+            </p>
+            <h5>Not Equal (!=) And Strict Non-Equality (!==)</h5>
+            <p>
+                I basically already know this as well actually however, it seems a little different (maybe) within
+                JavaScript. What I mean by different is that 1 != 2 would be true becuase 1 is not equal to two but if I
+                was to try 1 != '1' then it would tell me it's false because the same thing again with Double Equals ,it
+                doesn't care about the value types since it will coerce them to being similar, this again can cause some
+                problems it just really depends if I'm wanting something to be very specific or just loosely specific.
+            </p>
+            <p>
+                Here's some examples: 1 != 2 (true, 1 is not the same as 2, disregarding type), 1 != '2' (true, because
+                1 is not equal to 2 or the String two coerced into a similar data type), 1 != '1' (false, because !=
+                doesn't care about the data type of the value since it will make both of them be similar to each other
+                (or converts) and 1 is equal to 1 so it can't be not equal to 1), this makes sense to me currently but
+                still. For example 1 != '1' (false, is equal so it can't be NOT equal to itself) is the opposite of
+                doing 1 == '1' (true, it is equal).
+            </p>
+            <p>
+                However, when using the strict (!==) equality version like !== on this example again 1 !== '1' this will
+                also give us true but this is a little confusing honestly. Okay so I got a little bit of clarity
+                regarding this, it seems there might be some use cases for one over the other when you might think that
+                one of them is useless, when asking in the Discord of the course I'm taking, someone by the username
+                "Ornable". Below is the answer they gave me.
+            </p>
+            <p>
+                Most of the time you should use strict comparison (Jordan here, this makes sense to me). You can view
+                this <a href="https://shameem.me/strict-vs-loose-equality-in-javascript/">table</a> to see how loose
+                equality works.
+            <ul>
+                <li>!= and !== means not equal to</li>
+                <li>== and != is loose comparison, so for an example "1" == 1 is true</li>
+                <li>=== and !== are strict comparison, so "1" ===1 is false</li>
+            </ul>
             </p>
         </section>
     </main>
