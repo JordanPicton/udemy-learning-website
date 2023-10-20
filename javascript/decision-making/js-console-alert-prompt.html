@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>JavaScript - Console, Alert, Prompt</title>
+   <link rel="stylesheet" href="../main.css">
 </head>
 
 <body>
@@ -50,7 +51,12 @@
          </p>
          <p>
             The next being prompt which is like an alert box but with an input basically. Apparently these are used to
-            save variables from the user and then they're used for a various amount of things.
+            save variables from the user and then they're used for a various amount of things for example it could be
+            age, it's just like an input box basically. And then an alert can be run after it.
+         </p>
+         <p>
+            I tried a little bit of this out at college, and I'll include what I found out below in the internal script
+            element.
          </p>
       </section>
    </main>
@@ -58,5 +64,14 @@
 
    </footer>
 </body>
+
+<script>
+   // So this is what I did in college, there's a variable defined here with age having the value of the prompt. But the age variable only looks for the input to save. And if there 
+   // isn't one it will use the one provided, or of there isn't one provided then it would just be blank. However, age stores input and then can be used like any other variable which 
+   // is demonstrated with the next line  using the alert method. Which also brings me onto another method, the alert method, similar to the prompt method, just without the required
+   // input, it just displays a message or text really.
+   age = prompt("Insert your Age below!", "16");
+   alert("You are " + age + " years old!");
+</script>
 
 </html>
