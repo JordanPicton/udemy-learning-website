@@ -32,7 +32,14 @@
             <p>
                 However, the JavaScript code is located in the script element which from what I know is located at the
                 bottom of the document before the closing body tag, though I just looked it up and it seems it can also
-                be located within the head tag just like the style tag.
+                be located within the head tag just like the link/style tag. But from what I can see it's mostly best to
+                put it towards the bottom just before the closing body tag.
+            </p>
+            <p>
+                The reasoning to why the script element is being placed towards the bottom of the document is due to
+                when JavaScript is interacting with some HTML elements. For example having a button and then when
+                clicked it will run some JavaScript in the background. Well those elements need to be defined first
+                before the JavaScript code is implemented basically because code reads top down.
             </p>
         </section>
         <section>
@@ -46,13 +53,43 @@
             <p>
                 Okay so the difference for linking a JavaScript file is that, instead of using the link element like CSS
                 external files, I'll be using the script element with a src (source) attribute directing the script to a
-                .js file that will hold all the code for JavaScript.
+                .js file that will hold all the code for JavaScript. Also the script element is not a self closing
+                element like the link element is.
+            </p>
+            <p>
+                So from now on the JavaScript code is going to be within a .js file and I'll have notes within them to
+                help me understand how certain things work. HTML files and CSS files are basically the Foundation and
+                then Styling of the page respectively, then JavaScript is more of the doing/responsive kind of things on
+                the website. Being different from the repsonsive styling that can come from CSS, responsive with
+                JavaScript is more like interaction based, for example when someone clicks a like button and you can see
+                how many likes a post has etc.
+            </p>
+            <h3>First JavaScript Code</h3>
+            <p>
+                The first little bit of code I've done with JavaScript is located in the internal-external.js file and
+                the very top piece just prints out a String in console saying "Hello, this is the first JavaScript file
+                I've made!" along with having a comment above this in the js file, that's all I've done up to now. And
+                I'll be adding more with learning.
+            </p>
+            <p>
+                Now that I'm working within the file, I'll be using it to see the results of the code that I'm using
+                within the file. However if I want to actual see anything from the code, like outputs etc. I would have
+                to do what you would do with other languages and get them to manually show in the console otherwise
+                nothing would show there.
+            </p>
+            <p>
+                For example doing 1 + 3; inside the js file will run but it won't show in the console by itself because
+                the browser knows to just run the code within that file however, you have to manually specify it to show
+                the values and outputs with the console.log command to see what is happening. The best way to see the
+                example work would be to make a variable and then printout the variabale to the console and see what
+                it's doing or has done to that variable.
             </p>
         </section>
     </main>
     <footer>
 
     </footer>
+    <script src="internal-external.js"></script>
 </body>
 
 </html>
