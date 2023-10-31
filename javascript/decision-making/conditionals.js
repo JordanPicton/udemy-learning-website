@@ -22,3 +22,24 @@ if (5 + 5 === 11) {
   console.log("If this get's printed out then there's something wrong with my code.");
 }
 console.log("This is after the IF statement that won't print out the message. But as you can see it still prints out this one and the one before.");
+
+// Something else I can do is shown below.
+let random = Math.random();
+if (random < 0.5) {
+  console.log("The number is less than 0.5!!!");
+  console.log(random);
+}
+// What this will do, is firstly set a variable (called random) to the value of Math.random() which will generate a number between 0 and 0.9999999 etc.
+// Then the if statement looks for the condition of random being less than 5, if it's true then it will run the code inside the curly braces which will print a String firstly saying "The number is less than 0.5!!!"
+// Then the next piece of code just prints out the actual value of what Math.random() gave to the random variable.
+// If the condition isn't met/not true then none of the code (being the two console.logs) will not be ran and the code will continue to below if I add more code to this file.
+
+// I could paste the same code I have above with making a few changes to make it work for any number greater than 0.5, more than.
+if (random >= 0.5) {
+  console.log("The number is greater than 0.5!!!");
+  console.log(random);
+}
+// The reason I've done this is to show that something like this "could" be done this way meaning, one condition met = do something but if not then do nothing, however having another condition you could actually use and do something with.
+// However, there is a better way in doing this and I've already messed around with them, IF ELSE statments. IF condition is true do thing one, anything ELSE then do thing two.
+
+// Adding both the less than and greater than pieces of code seem to be working as intended.
