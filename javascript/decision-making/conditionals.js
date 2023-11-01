@@ -43,3 +43,23 @@ if (random >= 0.5) {
 // However, there is a better way in doing this and I've already messed around with them, IF ELSE statments. IF condition is true do thing one, anything ELSE then do thing two.
 
 // Adding both the less than and greater than pieces of code seem to be working as intended.
+
+// This is me testing the ELSE IF statement process due to me thinking I was working on ELSE statments.
+let dayOfWeek = prompt("What is the day today?", "Monday");
+if (dayOfWeek === "Monday") {
+  console.log("This is the first day of the week!");
+} else if (dayOfWeek === "Tuesday") {
+  console.log("This is the second day of the week!");
+} else if (dayOfWeek === "Wednesday") {
+  console.log("This is the third day of the week!");
+} else if (dayOfWeek === "Thursday") {
+  console.log("This is the fourth day of the week!");
+} else if (dayOfWeek === "Friday") {
+  console.log("This is the fifth day of the week!");
+} else if (dayOfWeek === "Saturday") {
+  console.log("This is the sixth day of the week!");
+} else if (dayOfWeek === "Sunday") {
+  console.log("This is the seventh day of the week!");
+} else {
+  console.log("This is not a day within our Earth calendar. You can either have; Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday.")
+}
