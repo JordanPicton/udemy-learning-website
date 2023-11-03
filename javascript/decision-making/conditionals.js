@@ -63,3 +63,11 @@ if (dayOfWeek === "Monday") {
 } else {
   console.log("This is not a day within our Earth calendar. You can either have; Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday.")
 }
+
+// Below is just another example of the ELSE IF statement.
+let age = prompt("Please enter your age down below:");
+if (age  <= 3) {
+  console.log("You go in for free!");
+} else if (age >= 4) {
+  
+}
