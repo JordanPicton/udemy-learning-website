@@ -61,13 +61,37 @@ if (dayOfWeek === "Monday") {
 } else if (dayOfWeek === "Sunday") {
   console.log("This is the seventh day of the week!");
 } else {
-  console.log("This is not a day within our Earth calendar. You can either have; Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday.")
+  console.log("This is not a day within our Earth calendar. You can either have; Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday.");
 }
 
-// Below is just another example of the ELSE IF statement.
-let age = prompt("Please enter your age down below:");
-if (age  <= 3) {
+// 0-3 Free
+// 4-12 Child Price
+// 13-17 Adolescent Price
+// 18-30 Young Adult Price
+// 31-60 Adult Price
+// 61-80 Pensioners Price
+// 81-100 Senior Price
+// 120+ Free
+// Below is just another example of the ELSE IF statement. I was having trouble trying to figure out what I could do for the conditions after the first one and thought it was something
+// magical like between X and Y, but it's a lot easier than that. Basically if the first condition (being the lower one) is false, then that's when the next condition will be run. So going back
+// to what I was learning early on with this, the code below the original if only runs if the IF is false, and the same goes for the second statement and so on so forth.
+const age = prompt("Please enter your age down below:");
+if (age <= 3) {
   console.log("You go in for free!");
-} else if (age >= 4) {
-  
+} else if (age <= 12) {
+  console.log("Price is £3 to enter.");
+} else if (age <= 17) {
+  console.log("Price is £5 to enter.");
+} else if (age <= 30) {
+  console.log("Price is £10 to enter.");
+} else if (age <= 60) {
+  console.log("Price is £15 to enter.");
+} else if (age <= 80) {
+  console.log("Price is £10 to enter.");
+} else if (age <= 100) {
+  console.log("Price is £3 to enter.");
+} else if (age <= 120) {
+  console.log("You go in for free!");
+} else {
+  alert("Make sure you use numbers between 1-120 for your age!");
 }

@@ -179,7 +179,29 @@
                 all (ELSE) statement.
             </p>
             <p>
-                I could have as many ELSE IFs as I'd want, I'd just keep checking for different conditions.
+                I could have as many ELSE IFs as I'd want, I'd just keep checking for different conditions. Something I
+                was struggling with when creating the second example within the .js file was that I was having a hard
+                time trying to figure out how I would get code to run if it was a number between X and Y. The solution
+                was pretty simple.
+            </p>
+            <p>
+                You don't do between X and Y, you just do less then or greater than. Since the first condition is less
+                than or equal to 3. If this condition is found to be true then the IF statement does not move onto the
+                ELSE or ELSE if statment since it doesn't need to, it's already found it's answer. However, if it does
+                move onto the next statement then it will do the same again, compare the value to the condition and
+                check to see if it's true or false until it either runs out of statements or it comes to a true value.
+            </p>
+            <p>
+                So something like age with value of 24 would not be true for the first condition of age is less than or
+                equal to 3. So this one would be false. And instead of looking for something as complicated as age is
+                greater than X but less than Y, I would literally just do the same as what I did with the first
+                condition and have this next one be a greater number for example age is greater than or equal to 12,
+                then again if this returns to be true then it will stop here but if not then it will continue onto the
+                next condition.
+            </p>
+            <p>
+                Meaning I was overthinking how to do the older ages after the first statement because I thought you
+                needed to specify between X and Y but you don't as you can see. (Reading the code helps too.)
             </p>
         </section>
     </main>
