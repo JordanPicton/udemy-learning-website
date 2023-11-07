@@ -128,3 +128,17 @@ if (dayOfWeek2 === "Monday") {
 } else {
   console.log("This is not a day within our Earth calendar. You can either have; Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday.");
 }
+
+// Below is the shorter version of what I was saying above. (Removed all the redundancy and made the ELSE statement catch them instead.)
+const dayOfWeek3 = prompt("What is the day today?", "Monday");
+if (dayOfWeek3 === "Tuesday") {
+  console.log("Tuesdays are okay.");
+} else if (dayOfWeek3 === "Friday") {
+  console.log("Friday lets go!");
+} else if (dayOfWeek3 === "Saturday") {
+  console.log("Saturday!");
+} else if (dayOfWeek3 === "Sunday") {
+  console.log("Sunday, oh no.");
+} else {
+  console.log("Meh.");
+}
