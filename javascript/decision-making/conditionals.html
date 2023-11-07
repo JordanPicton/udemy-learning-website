@@ -89,19 +89,27 @@
             <p>
                 Moving onto the ELSE statements, I've already talked a little about these during the IF statement so
                 I should have a fairly decent overview into what these are and they're not that hard to understand or
-                figure out honestly. (Compared to things like objects or OOP etc these seem pretty easy.)
+                figure out honestly. (Compared to things like objects or OOP etc these seem pretty easy.) ELSE is
+                generally a catch all statement.
             </p>
             <p>
-                An ELSE statement is similar to an IF statement, where it looks for a condition and if that condition
-                is met (true) then it will run some code inside the curly braces however, unlike the IF statement the IF
-                ELSE statement can run different code if the condition is not met.
+                "If nothing else was true, do this..."
             </p>
             <p>
-                An example of this would be, a user loads up my website and a pop up occurs, it asks the user to input
-                their age. Depending if the user puts 18+ (age >= 18) or not will determine what happens with the IF
-                ELSE statment. Lets say the user puts in 18 (true), then the website will say thank you with an alert
-                and load the website. However, is the user inputs something below 18 then they will get a different
-                alert saying "Sorry you cannot access this website." and will redirect them to somewhere else.
+                An ELSE statement is used alongside the IF statment, it looks for everything else that the IF statement
+                is not. For example if the IF statement is looking for the age of 12 and below, and the condition comes
+                back true meaning the value is 12 or below then this IF code block would end here.
+            </p>
+            <p>
+                However, if the value came back and it was false then the ELSE statement would catch this and then run
+                the code block inside itself then end.
+            </p>
+            <p>
+                Another example of this would be, a user loads up my website and a pop up occurs, it asks the user to
+                input their age. The IF statement is looking for the user to be 18+ (age >= 18), lets say the user puts
+                in 18 (true), then the website will say thank you with an alert and load the website. However, if the
+                user inputs something below 18 then they will get a different alert saying "Sorry you cannot access this
+                website." and will redirect them to somewhere else.
             </p>
             <p>
                 I know the above example isn't really plausible since it's not hard to just put 18 into a prompt, but
@@ -165,7 +173,7 @@
             <p>
                 I asked within Colts' Discord this question "The difference between ELSE and ELSE IF is that ELSE is a
                 catch all and ELSE IF allows for more conditions in a sense?" regarding how this would work and it seems
-                it's correct.
+                it's correct. Thanks to "Ace Mounty" who is a Teaching Assistant.
             </p>
             <p>
                 Something else to note is that in the image above you can see the ELSE IF is on the same line as the
@@ -201,7 +209,9 @@
             </p>
             <p>
                 Meaning I was overthinking how to do the older ages after the first statement because I thought you
-                needed to specify between X and Y but you don't as you can see. (Reading the code helps too.)
+                needed to specify between X and Y but you don't as you can see. (Reading the code helps too.) Making it
+                to the first else if gurantees the first condition is false. The order of ELSE IF matters. However,
+                there are different ways in writing this in similar but different code which will be shown later.
             </p>
         </section>
     </main>
