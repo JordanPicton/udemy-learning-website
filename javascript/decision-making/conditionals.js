@@ -142,3 +142,15 @@ if (dayOfWeek3 === "Tuesday") {
 } else {
   console.log("Meh.");
 }
+
+// There is another way to write the random number generator code from above. And I'm going to show this off below.
+// So the difference with this version is moving the console.log(random2) outside of the if statement so it prints if it is true or not.
+// Along with also having the second output if it's greater than or equal to 0.5, moved to an else statement that is linked to the if statement instead of them being separated and in terms
+// of words and file size this method would be smaller.
+let rando2 = Math.random();
+if (random2 < 0.5) {
+  console.log("The number is less than 0.5!!!");
+} else {
+  console.log("The number is greater than or equal to 0.5!");
+}
+console.log(random2);
