@@ -147,10 +147,36 @@ if (dayOfWeek3 === "Tuesday") {
 // So the difference with this version is moving the console.log(random2) outside of the if statement so it prints if it is true or not.
 // Along with also having the second output if it's greater than or equal to 0.5, moved to an else statement that is linked to the if statement instead of them being separated and in terms
 // of words and file size this method would be smaller.
-let rando2 = Math.random();
+let random2 = Math.random();
 if (random2 < 0.5) {
   console.log("The number is less than 0.5!!!");
 } else {
   console.log("The number is greater than or equal to 0.5!");
 }
 console.log(random2);
+
+// Something I want to add to this that I did at college today are the following code blocks. I'll try my best in explaining them.
+// Setting a bunch of variables to some Num names that acquire their values from prompts that the user will actually input the values into.
+let Num1 = prompt("Enter a number between 0 and 9.");
+let Num2 = prompt("Enter a number between 0 and 9.");
+let Num3 = prompt("Enter a number between 0 and 9,");
+
+// Then IF Num1 IS greater than Num2 then run the next IF statment.
+if (Num1 > Num2) {
+  // And if Num1 IS bigger than Num3 then run the console.log.
+  if (Num1 > Num3) {
+    console.log(`Num1 (${Num1}) is bigger than Num3`);
+    // If Num is NOT bigger than Num3 then run console.log.
+  } else {
+    console.log(`Num3(${Num3}) is bigger than Num1`);
+  }
+  // If Num1 is NOT bigger than Num 2 then run the next IF statment.
+} else {
+  // IF Num2 IS bigger than Num3 then run console.log.
+  if (Num2 > Num3) {
+    console.log(`Num2 (${Num2}) is bigger than Num3.`);
+    // IF Num2 is NOT bigger than Num3 then run console.log.
+  } else {
+    console.log(`Num3 (${Num3}) is bigger than Num2`);
+  }
+}
