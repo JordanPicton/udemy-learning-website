@@ -19,3 +19,23 @@
 //   }
 // }
 // ---------Example End---------
+
+const password = prompt("Please enter a possword.");
+// Password must be 6+ characters
+if (password.length >= 6) {
+  console.log("This password is long enough.");
+  // Password cannot include space/white space (This should only really be checked if the password is longer or equal to six characters.)
+  if (password.indexOf(" ") === -1) {
+    console.log("Password is all good!");
+  } else {
+    console.log("Spaces are not allowed within the password.");
+  }
+} else {
+  console.log("Password isn't long enough. Needs to be 6+ characters.");
+}
+// Password cannot include space/white space (I could have this after the first conditional but I'm looking for nested conditionals)
+// if (password.indexOf(" ") === -1) {
+//   console.log("Password is all good!");
+// } else {
+//   console.log("Spaces are not allowed within the password.");
+// }
