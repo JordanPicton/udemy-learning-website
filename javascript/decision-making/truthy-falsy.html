@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Truthy & Falsy</title>
+    <link href="../main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript - Truthy & Falsy</h1>
+    </header>
+    <main>
+        <section>
+            <p>
+                This seems like an interesting part of JavaScript. Seems a little commical but at the same time
+                interesting. First off these aren't really official terms for the way to describe this, but it's to do
+                with how some values within JavaScript will be read as true and others as false.
+            </p>
+            <p>
+                A really good example of this would be the value "null" or "" (an empty String). These two would
+                technically be counted as falsy by JavaScript. However, ALL JavaScript values inherit truthyness or
+                falsyness. A list of falsyness values are show below.
+            </p>
+            <ul>
+                <li>false</li>
+                <li>0</li>
+                <li>"" (empty String)</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>NaN</li>
+            </ul>
+            <p>
+                Reading that list must mean everything else is truthy, because they have an actual value? Well this is
+                my own understanding for now so let's see what I've missed.
+            </p>
+            <p>
+                There's only one set of real true and false, but this concept does matter and will be noticeable when
+                learning more. Every single value within JavaScript is considered truthy except from the ones listed
+                above. Okay this relates to what I saw on the last chapter which was about the nested conditionals,
+                where I saw that if the user hit escape on the prompt box then it would say it's null.
+            </p>
+            <p>
+                Which in turn technically means if this value is needed in a condition then it's classed as false
+                already because null is falsy. Which means that this code would be skipped over as if it was given an
+                actual value and then came back as false.
+            </p>
+            <p>
+                I've added a script on here to see it in practice essentially. So firtly I'm creating a constant
+                variable in which the it's looking for user input. If the user enters no input by hitting enter right
+                away or hitting escape or cancel then the value of userInput would be "" (empty String). Which means
+                that this input would be inheritly falsy from JavaScript.
+            </p>
+            <p>
+                The condition for this example is literally just (userInput) which JavaScript will read and use this
+                Truthy and Falsy concept to figure out if what the user has entered is True or False. If the user has
+                actually given some input then it would be Truthy and the there will be a console message saying this.
+            </p>
+            <p>
+                However, if they give nothing or somehow get one of the other values from the list above then it will be
+                classed as Falsy and will print out Fasly in the console. Writing the condition with just the variable
+                will check for this, no needing to use an operator for this built in inheritance check from JavaScript.
+            </p>
+        </section>
+        <section>
+            <p>
+                Another example would be very similar to the example above, but this time instead of checking userInput
+                and for an empty String. If I was to use the number 0 inside the conditional instead of the String then,
+                JavaScript would do a similar check but in this case it would always be Falsy in the console due to the
+                conditional not pulling the value and having it set there.
+            </p>
+            <p>
+                The same will happen with the other values from the list, if they're passed into the conditional and put
+                in the same place as the 0 was in the last example then they'd get the same output. Something to note is
+                that any other number than 0 being sat in that condition would be Truthy, even negative numbers.
+            </p>
+            <p>
+                This seems to just be because JavaScript would want an actual value there to test before hand, but when
+                given the list of values above then there's no point in checking them because they're already false as
+                they're empty technically. However, given any other value then it will have make sure if the value given
+                is true or false in regards to the condition.
+            </p>
+            <p>
+                Even having a space " ", like this would be considered truthy. It's something that I'd be able to take
+                advantage of later on, when doing something like the first exampe "userInput", being actual user input a
+                variable or some data coming from somewhere else. It's an easy way to check if the value has been
+                defined really. For example if I wanted to make sure someones password was actually set then I'd use the
+                same example as userInput for the password that's already stored and if it comes back as false then I
+                know that there's an anomaly there because in all cases you can't have an account without a password so
+                there SHOULD be a password.
+            </p>
+            <p>
+                Used to check if a variable has data, or if something holds an actual value. I wouldn't need to put
+                something like "if userInput ===" or "if userInput !==" blah blah blah. Simply using the variable name
+                or value itself within the condition can give me that answer. Knowing this will be useful for the next
+                set of lessons around Logical Operators.
+            </p>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="truthy-falsy.js"></script>
+</body>
+
+</html>
