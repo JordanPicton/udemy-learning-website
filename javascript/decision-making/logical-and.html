@@ -65,12 +65,53 @@
             <p>
                 However, with being introduced to the AND logical operator this can be simplified, it will allow me to
                 remove a bunch of code that could speed up the process along with cutting down some storage capacity
-                that the file would take up on the host machine.
+                that the file would take up on the host machine. It allows me to check the two conditions within the
+                same statement instead of separate statements.
             </p>
             <p>
                 I thought my code was broken but it wasn't, I just forgot to include the .length on the end of the
                 variable name for password, this caused the program to not understand what I was looking for and was
                 giving the output I wasn't expecting.
+            </p>
+            <p>
+                Wtih the example in the .js file, it asks for the IndexOf(' '), which is a space and it's checking that
+                this would be -1 since this is telling the browser that hey this shouldn't contain any at all. So just
+                to recap, instead of using more than one statement, I can use the AND Logical operator to check for two
+                or more conditionals to be true before executing the code.
+            </p>
+            <p>
+                When the first conditional is read in an AND logical operator and there's no other logical operators
+                within that condition then JavaScript won't even bother wasting the resources to go and read the rest of
+                them since the first one is false which makes the overal condition false right off the bat.
+            </p>
+            <p>
+                I just tried using this code "if (password.length >= 6 && password.indexOf(' ') === -1 ||
+                password.indexOf('i') >= 1)" and it doesn't seem like it wants to work which is interesting and the only
+                reason to why I think it doesn't work is because the OR logical operator needs to be before the AND but
+                I'm not fully 100% sure on that.
+            </p>
+            <p>
+                Apparently the reason why this won't work is due to <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND#operator_precedence">Operator
+                    Precendance</a> but also because when using password.indexOf("i") >= 1, it would be false when doing
+                something like "ihi" as the input. This is because indexOf is looking for IF the character "i" is 1 when
+                the index starts at 0 and making it greater than 1 doesn't do anything because it's not how index works.
+                Index doesn't give me a total of how many times a character shows up in a String.
+            </p>
+            <p>
+                So the reason why doing the thing above didn't work the way I expected is because I thought it gave a
+                total but also be cause "ihi" means "012" in index terms. Meaning the condition of indexOf("i") >= 1 was
+                false because the index value of "i" was 0, and this was the first instance of "i" so then indexOf
+                doesn't look for anymore. However, if I was to do something like indexOf("i") > 5 (The index value of i
+                is greater than 5) and use the input "HelloTherei" then this would be true because the first index value
+                of i IS greater than 5. This confused me so much but I understand it now.
+            </p>
+            <p>
+                Using indexOf("i") !== -1 then this would be better since it would be looking for if the indexOf "i" is
+                NOT the value of -1 (meaning if one shows up then this would be false because it would have a value,
+                because -1 means there isn't any so if it's higher than this then there is one which the > 5 is looking
+                for, so if it was > 0 and the "i" was at 0 with no other i characters in the String then it would be
+                false and would have to use === 0 or > -1). Yeah so basically this confused me when it shouldn't have.
             </p>
         </section>
     </main>
