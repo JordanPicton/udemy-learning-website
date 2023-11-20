@@ -46,7 +46,39 @@
             </p>
             <p>
                 Using the example I've used before which is the ticket pricing example I'll be redoing this with the OR
-                operator. 
+                operator. So instead of having two clauses for two conditions, it can be easier to just put these two
+                conditions within the same expression making it a larger condition.
+            </p>
+            <p>
+                Basically just taking two similar conditions that make sense and putting them together if only one of
+                them is needed to be correct then use them with the OR operator. Now adding an AND operator to make sure
+                the user is inputting an age between 0 and 5.
+            </p>
+            <p>
+                With this new example, using that expression within the same condition allows there to be less code for
+                the same thing. Not only that but when adding an AND to the same condition also allows me to choose
+                between two values giving a range. So the age >= 0 AND age &lt;=3 would be one expression and then the
+                OR >=65 would be another expression within the conditional.
+            </p>
+            <p>
+                However, this would not stop people being allowed to input -10 due to it initially being false when
+                using the condition above. But when moving onto the next condition, since it doesn't have a range of
+                values and only checks one condition expression. It means that the -10 will work for this condition
+                being IF age &lt;= 12, this would be true since it's not checking if the number is above 0 within this
+                expression it's ONLY checking if the number is below 12 and this would be classed as true. To fix this
+                though, all I would need to do is add an expression with an AND operator. (Which I'm doing right after
+                this sentence by the way!)
+            </p>
+            <p>
+                Combining AND and OR operators gives me ranges that I can work with in the conditionals. Using the AND
+                is what allows the ranges really. Using the OR just allows me to check for something else if the first
+                thing doesn't work but if all things work then just forget about it.
+            </p>
+            <p>
+                Something to note is that Colt talks about precedence here and that how the && operator will be ran
+                before the OR. Something to do to make it clear which one I would like to run first to by using
+                paranthesis and surrounding the expression that I want to be ran first (which I have already done with
+                the first example).
             </p>
         </section>
     </main>
