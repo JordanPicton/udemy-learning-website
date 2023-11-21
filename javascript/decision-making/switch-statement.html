@@ -58,9 +58,61 @@
                 the ELSE equivalent (which is default instead of case).
             </p>
         </section>
+        <section>
+            <p>
+                When creating a switch statement, if the statement doesn't use the keyword "break" it will continue
+                running the code. To put this into perspective think about using the example in the attached script
+                file. Imagine if the value of day was 1, well without a break anywhere it will run the code from the
+                matching 1 case. With this example it would be "Today Is Monday", but it wouldn't stop there, it would
+                print out every other case as well.
+            </p>
+            <p>
+                That's where the break keyword comes in. Before the case clause is closed, putting the keyword break at
+                the end of that clause on a new line from the rest of the code, it will stop running the code there and
+                won't print anything else out in this case.
+            </p>
+            <p>
+                I've copied the code I had already which didn't have the break keyword in and pasted it further down
+                into the file and made it it's own example. The case will run until it either runs out of code to run
+                and then move onto the next case or it will stop after it reaches a break.
+            </p>
+            <p>
+                With the example I have when the switch finds the value of the variable it uses. day in my example if
+                the value matches one of the cases for instance value 1 would match with the case that has value 1. When
+                this happens the case will then run through the code within it's clause, which would be to print
+                something out in console and then it would stop because there's a break there.
+            </p>
+            <p>
+                However, with the extra example I made with the day2 variable instead of having the code stop because of
+                the break. It would just continue until it runs out of cases. For example if the day2 variable value was
+                3, then it would skip both the first and second case due to them being 1 and 2 respectively. Meaning the
+                switch statement would run the code and print out the String for case 3 because that's what my code
+                does, but this code could be anything. But then it would move onto the next case being case 4 and
+                continue until case 7 because there's no breaks within that example. Unless I put one in for testing
+                purposes.
+            </p>
+            <p>
+                The final piece of the puzzle would be the alternative to the ELSE statement, or basically the catch all
+                statement. The way to do this would be to structure it like the case but instead of using the keyword
+                case, the keyword would be default. Like this is the default route for anything else. And then the cases
+                again being a specific case like a police case etc.
+            </p>
+            <p>
+                So when getting some input that doesn't match any of the cases it will get the default code clause that
+                will be the catch all. Running that default code clause instead.
+            </p>
+            <p>
+                Interesting so when if there's a situation where two cases can have the same output, them both run the
+                same exact code. Instead of writing out duplicate cases, I can just write this:
+            </p>
+            <img src="../imgs/switch-redundant-code-slim.png"
+                alt="Switch example showing how to write a shorter version without redundant code for more than one case.">
+            compared to this:
+            <img src="../imgs/switch-redundant-code.png"
+                alt="Switch example that uses more code than it should for cases with the same output.">
+        </section>
     </main>
     <footer>
-
     </footer>
     <script src="switch-statement.js"></script>
 </body>
