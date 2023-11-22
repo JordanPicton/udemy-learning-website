@@ -5,5 +5,8 @@
     "editor.tabCompletion": "on",
     "emmet.triggerExpansionOnTab": true,
     "prettier.proseWrap": "preserve",
-    "prettier.printWidth": 250
+    "prettier.printWidth": 250,
+    "cSpell.words": [
+        "Suzie"
+    ]
 }
