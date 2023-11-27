@@ -31,13 +31,73 @@
             </p>
         </section>
         <section>
+            <h2>Push Method</h2>
             <p>
                 So first up the push method, this adds data to the very end of the array that has already got defined
                 values. It won't add something to the index of 999 unless there was an element or piece of data defined
                 within index value 998.
             </p>
             <p>
-                Again examples are in the linked script file.
+                Again examples are in the linked script file. When using a method on a String the method doesn't
+                actually alter the original String, for example the toUpperCase method when used on a String like so dog
+                = "Charlie", dog.toUpperCase() = "CHARLIE" but dog would still have the value of "Charlie".
+            </p>
+            <p>
+                However, when using the push method on the array, it actually changes the array to keep that new piece
+                of data stored within. Instead of writing the entire list out when using the push method the value given
+                back when doing this in console is the length of the new array list. Just to show it has actually been
+                updated.
+            </p>
+            <p>
+                Something cool that can be done with the push method is that more than one piece of data can be added to
+                the array at a time, removing the need to type out the array variable and then the method with the piece
+                of data to be added every time. So instead of doing arrayVariable.push("data1");
+                arrayVariable.push("data2");. The simpler method would be to just do something like
+                arrayVariable.push("data1", "data2"); Removing the need to write out redundant code for adding more than
+                one piece of data.
+            </p>
+        </section>
+        <section>
+            <h2>Pop Method</h2>
+            <p>
+                Now moving onto the pop method, it does the opposite of push, in regards to adding data. With this
+                method it removes data at the end of the array. So the last defined value gets removed from the array
+                list. There's also no need to do anything with the pop method like the push method. The push method
+                requires some condition between it's brackets but with the pop method this isn't used since it's
+                defaulted to just remove the last value so they can just be empty.
+            </p>
+            <p>
+                What this does it when using this on the array like arrayVariable.pop() (lets say the arrayVariable
+                array has the values of "data1", "data2", "data3") it will give the value of the element or piece of
+                data it's going to remove so for example in this case it would say "data3" but not only that. The
+                element or piece of data called "data3" will also be removed from the array. Now it doesn't actually
+                give the output of data3, it only does this when using it within console.
+            </p>
+            <p>
+                Though after using pop on the example above, it would now have "data1", "data2" stored in the array,
+                with "data3" no longer being there due to it being removed with pop. Something else I can do with this
+                though is say I wanted to save that piece of data that got removed from the array, then I could do
+                something like dataVariable = arrayVariable.pop(), this would then save the removed element/data into a
+                new variable.
+            </p>
+            <p>
+                Here's a different example to show why using both push and pop in conjunction could be useful. There are
+                some use cases where we would want to remove something that just got added into the array, it's not
+                always like a queue where the first thing in line is the first one to get out, there are computer
+                science concepts called stack and queue which are things I don't need to worry about right now.
+            </p>
+            <p>
+                Just to touch up on those concepts that we don't need to know right now, push, pop, shift and unshift
+                come from the traditional computer science structures, stack and a queue. Think of this being a stack,
+                like a stack of papers on a desk, you pull one from the top of the stacking, being the most recently
+                added one.
+            </p>
+            <p>
+                Push being add to the top and pop being remove from the top. So the example was to basically put it into
+                context of when going to the gym and putting weights onto the barbell, normally the bigger ones go on
+                the inside and to take them off you need to take all the other ones off before hand and this works the
+                same here. Before removing an element that is towards the start, you need to remove the ones towards the
+                end before getting back to the start.
             </p>
         </section>
     </main>
