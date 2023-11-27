@@ -8,5 +8,6 @@
     "prettier.printWidth": 250,
     "cSpell.words": [
         "Suzie"
-    ]
+    ],
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }
