@@ -7,7 +7,8 @@
     "prettier.proseWrap": "preserve",
     "prettier.printWidth": 250,
     "cSpell.words": [
-        "Suzie"
+        "Suzie",
+        "Vauxhall"
     ],
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }

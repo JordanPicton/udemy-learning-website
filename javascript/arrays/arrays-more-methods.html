@@ -42,14 +42,68 @@
         <section>
             <h2>Includes Method</h2>
             <p>
-                So includes is a boolean, so when using this method on an array, it searches the array for the value
-                inputted and if it's found then it's classed as true, whereas if the value isn't found then it's classed
-                as false.
+                So the Includes method is a boolean, so when using this method on an array, it searches the array for
+                the value inputted and if it's found then it's classed as true, whereas if the value isn't found then
+                it's classed as false.
             </p>
             <p>
                 This makes more sense when used within something like an IF statement due to how it works, you can check
                 IF something INCLUDES something and if it does then it would be classed as true and if not then it would
                 be false.
+            </p>
+            <p>
+                I've tested this and it works the way I think it does.
+            </p>
+        </section>
+        <section>
+            <h2>IndexOf Method</h2>
+            <p>
+                This method is very similar to how the IndexOf works with a String. For example if I was to have a
+                String "Hello" and used the IndexOf on that String like so "Hello".indexOf("e") then the output value
+                would be 1 since the index starts at the number 0 and this spot would be taken by the character "H".
+                Searching for a character that's not within that String would give the value of -1 because it's not
+                there.
+            </p>
+            <p>
+                It seems when using this method on an array that I may have to use the full piece of data rather than
+                just a section of it however, I'll test this out in the script file. It has to be the exact value that
+                you'd expect within the array. So for example Pig within the array list called animals works just as
+                good as I'd expect it to work. But when looking for Duty part within Call of Duty in the games array
+                list, this doesn't work and I can tell by the value it gives which is -1 meaning it's not found, it's
+                not present.
+            </p>
+            <p>
+                This is an easy way to find out if something is within a certain array or not. IF (condition) is equal
+                to -1 then it's not located within this array.
+            </p>
+            <p>
+                Something else to note about this is that I can start it from a different index if I wanted other than
+                0, this has nothing to do with the IF statement I was just talking about. But if I wanted to do this
+                then it would look like so arrayName.indexOf("Test", 4); in this case the indexOf would start looking
+                FROM index 4 and then onwards.
+            </p>
+            <p>
+                Will only show the first instance of the asked for value condition, just like it would for a String. Can
+                also tell if something is in an array or not but can also tell you where the first instance of that
+                value will be shown first.
+            </p>
+        </section>
+        <section>
+            <h2>Reverse Method</h2>
+            <p>
+                With this method I believe it will reverse the order of the array list for example with the cars array
+                list in the script file that looks like "Toyota", "Nissan", "Vauxhall", "BMW", "Tesla", "Ford" by
+                default, I believe it to look like "Ford", "Tesla", "BMW", "Vauxhall", "Nissan", "Toyota" with the
+                reverse method. (I'm going to double check with both the video and a test like normal.)
+            </p>
+            <p>
+                It does exactly what I thought it would do. However, be careful when using this because it is
+                destructive meaning when using this on the array, it changes the original array.
+            </p>
+            <p>
+                With methods, they usually want some form of condition within their parenthesis, but for the reverse
+                method this isn't needed. Bare minimum those parenthesis need to be there but can be empty, just note
+                that a lot of the methods do require something to be between them.
             </p>
         </section>
     </main>

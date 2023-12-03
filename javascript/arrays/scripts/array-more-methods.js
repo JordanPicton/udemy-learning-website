@@ -13,3 +13,11 @@ if (games.includes("Minecraft")) {
 } else {
   console.log("This is false, the array does not include Minecraft");
 }
+
+// IndexOf Method
+console.log("The index value of Pig within the animals array is " + animals.indexOf("Pig")); // Gives the index value of the full String which is 3 for Pig.
+console.log("The index value of Duty within the games array is " + games.indexOf("Duty")); // A little test to see if it can pick up part of the value and still give the output. This does not work as it can't find Duty within the Call of Duty String.
+
+// Reverse Method
+console.log(games.reverse()); // Reverses the order of the original array but also changes the original array to this. Meaning the original is lost after this point unless it's saved before hand to a separate variable/array.
+//console.log(games); This was to make sure it was actually changing the original array and it does.
