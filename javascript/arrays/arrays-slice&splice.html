@@ -10,12 +10,93 @@
 
 <body>
     <header>
-        <h1>JavaScript - Arrays Slice And Splice</h1>
+        <h1>JavaScript - Arrays Slice, Splice, And Sort</h1>
     </header>
     <main>
         <section>
             <p>
-                Moving onto the Slice and Splice methods for the JavaScript arrays.
+                Moving onto the Slice, Splice, and Sort methods for the JavaScript arrays.
+            </p>
+        </section>
+        <section>
+            <h2>Slice Method</h2>
+            <p>
+                With the slice method it allows me to basically chop off some of the data I don't want for a specific
+                output or use case. For example if I have an array with 100 elements within, but I only want the first
+                10 elements then I would be able to slice this section of elements out and output them. However, this is
+                not how it works, it turns out slice(10) would actually remove the ONLY the first elements, it doesn't
+                single out the number of elements you want from the first index.
+            </p>
+            <p>
+                Instead what this does is it counts from the first index to the number that has been specified and
+                then it removes those elements instead of using them as an output. For example, imagine having an array
+                like so dogs ["Charlie", "Suzie", "Dexter", "Bonny", "Clyde"];. Now using lets try using slice on this
+                array. dogs.slice(3); if I was to do something like this then instead of giving the output of "Charlie",
+                "Suzie", "Dexter". I would get the output of "Bonny", "Clyde". Where I thought it would give the
+                "Charlie", "Suzie", "Dexter" output but this just isn't the case in how it works.
+            </p>
+            <p>
+                So the slice method takes in a number condition to see how many elements it will remove from an array
+                starting at the beginning idex of that array. Actually not quite since there's more I can do with this
+                method. For instance if I wanted to copy an array to another variable then I can just give the method no
+                arguments.
+            </p>
+            <p>
+                I can also select between two indices, meaning if I wanted the elements between 70 and 80 then I would
+                have to do something like arrayName.slice(70, 81); the reason why it would have to be 81 is because if I
+                wanted to include 80 then I need to go one index up since it doesn't include the second argument index
+                itself.
+            </p>
+            <p>
+                Having no arguments within the method allows you to copy the array elements to another variable. If
+                there is one argument then the output will start at that index value of the array and continue until the
+                rest of the elements have been output. Whereas when using two arguments the first argument starts and
+                includes the element at that index but for the second index it stops but doesn't include the element at
+                this index, giving the output of start index to end index -1.
+            </p>
+            <p>
+                Making the argument a negative index will start it from the end of the array instead of the front.
+            </p>
+        </section>
+        <section>
+            <h2>Splice Method</h2>
+            <p>
+                Moving onto the splice method, okay so this sounds confusing, apparently this has a bit more to it, even
+                reading the MDN brief for this is a little confusing. "The splice() method changes the contents of any
+                array by removing or replacing existing elements and/or adding new elements in place." - MDN. It's a
+                little confusing but I'm sure it will make more sense when I actually get on with messing around with
+                it.
+            </p>
+            <p>
+                The syntax for the method is a little weird to use, so the first argument is the index in which I would
+                like to start the splice, with the second one being how many things I want to delete. And optionally a
+                third one to insert new values if needed. Something to note is that this method is destructive to the
+                original array, meaning the output of this method replaces the original array, unless it's a const I
+                think.
+            </p>
+            <p>
+                When using splice and removing elements, the returned output is the elements that are being removed from
+                the array. These can be saved to a variable if desired. For example, if I was to have a array called
+                games with the values ["Zelda", "Sonic", "Spyro", "Fable", "Oblivion"] and I wanted to remove Fable from
+                the array. I would have to do something like games.splice(3, 1); This would go to the index value of 3
+                which would be Fable and then it would only delete/remove 1 element which would be that index, in this
+                case the element which would have the value of Fable. It doesn't go to an index and then delete the next
+                indexed element, it deletes the index that it starts from and then counts up depending on the second
+                number value.
+            </p>
+            <p>
+                However, there's a third argument that can be introduced to this. The way it works is by placing the new
+                elements at the index value of the starting value argument. So if the starting value argument was 3 then
+                it would start inserting these elements at the index of 3. It's not common to use splice to insert
+                content into the middle of arrays as it's not really efficient to do this. It's better to update the end
+                of an array whenever possible, but sometimes this can't be avoided. It's useful for removing elements
+                from an array,
+            </p>
+        </section>
+        <section>
+            <h2>Sort Method</h2>
+            <p>
+                Finally the sort method.
             </p>
         </section>
     </main>
