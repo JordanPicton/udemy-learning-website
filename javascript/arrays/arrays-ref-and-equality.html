@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Reference Types & Equality Testing</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript - Reference Types & Equality Testing</h1>
+    </header>
+    <main>
+        <section>
+            <p>
+                Moving onto something I wish I didn't have to come back to honestly but here we are. It's the === and ==
+                operators. The difference being this will be with arrays instead of Strings or numbers that I've done
+                before.
+            </p>
+            <p>
+                I've tried an array with the value of ["Hi", "Bye"] and then trying something like ["Hi", "Bye"] ===
+                ["Hi", "Bye"] results in false. It looks exactly the same but it's not seen as the same by JavaScript
+                and I think this is because it's an array and the way it stores data is different. This also is false if
+                the array is [1] === [1] but even [] === [] gives the output of false as well.
+            </p>
+            <p>
+                That's not the only thing though, it seems that doing [1] == [1] also give the output of false, meaning
+                both === and == are giving the output of false to arrays that seem like they're the same. But for some
+                reason aren't. The reason to why this is giving the false output is because JavaScript doesn't actually
+                care for the contents of the array, what it is actually looking for is the references in memory.
+            </p>
+            <p>
+                When storing a number for later use which is generally within a variable 
+            </p>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="scripts/array-ref-and-equality.js"></script>
+</body>
+
+</html>
