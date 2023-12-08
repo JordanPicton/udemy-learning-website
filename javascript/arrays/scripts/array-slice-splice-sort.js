@@ -3,6 +3,7 @@ let cats = ["Bella", "Leo", "Ellie", "Bailey", "Piper", "Penny"];
 let dogs = ["Charlie", "Daisy", "Bear", "Buddy", "Cooper", "Max"];
 let people = ["Oliver", "Ivy", "Olivia", "Nova", "Luca", "Sophia", "Amelia", "Noah", "Henry"];
 let months = ["January", "March", "April", "June"];
+let scores = [1, 42, 231, 23124, 7463, 242352, 123412];
 let testOne;
 let testTwo;
 let testThree;
@@ -29,3 +30,4 @@ testTwo.splice(3, 0, "Maya", "Aria", "Mila", "Ava"); // This doesn't delete any 
 console.log(testTwo);
 
 // Sort Method test
+console.log(scores.sort()); // Doesn't sort the numbers the way you'd expect.

@@ -97,7 +97,35 @@
             <h2>Sort Method</h2>
             <p>
                 Finally the sort method, currently it's not going to be as useful as it will be later on but knowing
-                about it is good. The default way in which it sorts elements within the array 
+                about it is good. The default way in which it sorts elements within the array is it compares the
+                elements against each other by converting everything into Strings and then compares the UTF-16 codes for
+                each of those against each other.
+            </p>
+            <p>
+                With the default sorting option from the sort method, it does something that I've come across before
+                which is where numbers would be converted into Strings and then trying to compare them it would give an
+                odd behaviour. This is because when it converts them into Strings it compares the first digit only
+                really so if I was to have a bunch of values like: 1, 42, 231, 23124, 7463, 242352, 123412. Then it
+                wouldn't look like "1 ,42, 231, 7463, 23124, 123412, 242352" it would give the output of "1, 123412,
+                231, 23124, 242352, 42, 7463", which isn't what I'd expect because how is 42 bigger than 231? Well it's
+                not, the reason it does this is because instead of checking the actual number value, it's comparing the
+                value designated to the character of 1 from the <a
+                    href="https://www.fileformat.info/info/charset/UTF-16/list.htm">UTF-16</a> table. And from there
+                it's easy to see why it's getting muddled up and not sorted the way I want it to.
+            </p>
+            <p>
+                It's using the binary/encoded value for the character instead of the actual number value, to change
+                something into a number it would be something like Number(value/variable); but I'm not sure how this
+                works with this array sort method as it is just generally sorted via turning it's values into Strings
+                and then comparing them. There's a way to get around this however where I can make functions that can
+                order it properly for me (I've learnt a little with functions in college and they're still pretty
+                confusing).
+            </p>
+            <p>
+                So for now sort will make more sense later on. There are a lot more other methods that I can try out
+                from MDN (Which I probably really should try at some point). For example there's a method that allows me
+                to convert an Array to a String but this isn't as common, there are use cases for this but not as much
+                as others. With some others just require more knowledge before getting to know.
             </p>
         </section>
     </main>

@@ -7,6 +7,7 @@
     "prettier.proseWrap": "preserve",
     "prettier.printWidth": 250,
     "cSpell.words": [
+        "behaviour",
         "Initialising",
         "Suzie",
         "Vauxhall"
