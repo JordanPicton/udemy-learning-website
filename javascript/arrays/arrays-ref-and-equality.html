@@ -32,7 +32,36 @@
                 care for the contents of the array, what it is actually looking for is the references in memory.
             </p>
             <p>
-                When storing a number for later use which is generally within a variable 
+                When storing a number for later use, which is generally within a variable and when this happens it gets
+                stored within memory. Something else to know is that when storing a number like 0.9999999999, there can
+                only be so many places before it just gets rounded to 1 or something. I'm not sure if this works with
+                other data types but it seems like there's only so many bits of data allowed for these pieces of data.
+            </p>
+            <p>
+                With doing something like let testNumber = 82; think of it storing the memory value of 82 and not really
+                for the variable name testNumber. Though I'm not really sure how this fully works honestly. But this
+                doesn't work for arrays, instead of trying to associate the content of the array with the variable name,
+                instead it stores a reference because arrays can have things added, removed and be changed. JavaScript
+                doesn't really remember how many things are in there.
+            </p>
+            <p>
+                So when making an array, it's given it's own address like a street address and you can't have two houses
+                within the same space, even apartments of flats have different addresses with 15a and 15b for example.
+                So when trying to compare the arrays like [] === [] it won't work because it's technically testing two
+                references against each other. Not actually comparing the content of the arrays themselves. Contents of
+                the two different arrays can be the same but they don't share the same reference within memory.
+            </p>
+            <p>
+                Interestingly when doing something like arrayOne = [1, 2, 3]; and arrayOneCopy = arrayOne; will have the
+                same reference since the second variable is equal to the first variable which is an array meaning the
+                first arrays reference. Even when something is updated to arrayOne, the copy will have the same output
+                because it's still the same reference. It doesn't copy over the actual content stored within but it does
+                copy the reference, so any manipulation that occurs with arrayOne will be done for the copy as well.
+            </p>
+            <p>
+                The only reason to compare arrays is to see if they're the same thing as in the same reference within
+                memory. It won't help in comparing the contents of the array but there are ways to do this, they're just
+                more involved.
             </p>
         </section>
     </main>
