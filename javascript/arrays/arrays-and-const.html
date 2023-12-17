@@ -16,7 +16,31 @@
         <section>
             <p>
                 I've looked at constants before with Strings and how they don't allow for manipulation with the original
-                data. An example would be const testOne = "Hello"; then trying to do something like testOne = "Not Hello";
+                data. An example would be const testOne = "Hello"; then trying to do something like testOne = "Not
+                Hello";. However with arrays this doesn't work the same as you can actually change the const value with
+                arrays.
+            </p>
+            <p>
+                With arrays and consts you're able to change the contents of the array but with the outer
+                shell/reference you can't change this as this is the actual part const cares about. So think of this
+                like a box, you can change the inside of the box, but you can't change the outside.
+            </p>
+            <p>
+                So I can use all the methods I've learnt recently on the array as long as the address of the array stays
+                the same then the const won't error. Things like push, pop, shift, unshift, slice, splice, and sort can
+                be used to manipulate the array as long as the address stays the same.
+            </p>
+            <p>
+                Something like const myEggs = ['brown', 'brown'] is fine to set the array and then adding to the array
+                with push like myEggs.push('purple') will add the element purple at the end of the array. myEggs[1] =
+                'orange' this would change our array to look like 'brown', 'orange', 'purple'. But trying to do
+                something like myEggs = ['blue', 'pink'] would not work, because the array has already been defined
+                meaning the address is already here. Trying to change the array like this will run into an error.
+            </p>
+            <p>
+                Using const with arrays might not work the same way I would expect as it would with strings. It might
+                act a bit funky in regards to how it works with arrays compared to strings. You can change the inside
+                but not the reference.
             </p>
         </section>
     </main>
