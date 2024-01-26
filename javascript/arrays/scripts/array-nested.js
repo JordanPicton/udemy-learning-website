@@ -2,7 +2,7 @@
 let games = [
   ["Doom Eternal", "Apex Legends", "Titanfall 2", "Destiny 2", "Half-Life 2", "Superhot"],
   ["Minecraft", "Terraria", "Vintage Story"],
-  ["Ark Survival Evolved", "Rust", "DayZ", "Subnautic"],
+  ["Ark Survival Evolved", "Rust", "DayZ", "Subnautica"],
 ];
 console.log(games);
 
