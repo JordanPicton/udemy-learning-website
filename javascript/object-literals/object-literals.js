@@ -10,13 +10,28 @@ const playerTwo = {
   tags: ["isAdmin", "hasPermission"]
 };
 
-// console.log("Hello.");
+// Print both objects in console.
+console.log(playerOne); // Prints the playerOne object within console.
+console.log(playerTwo); // Prints the playerTwo object within  console.
+
+// Option 1
+// Show how NOT to use option/method 1
 console.log(playerOne[0]); // Gives undefined as output.
-console.log(playerOne["lootedItems"]);
-console.log("Object Player Two Blocks Mined: " + playerTwo.blocksMined);
+
+// Show off option 1.
+console.log("Player One Looted Items: " + playerOne["lootedItems"]); // First Method of printing key value in console.
+
+// Option 2
+// Show off how NOT to use option 2.
 // console.log(playerTwo."itemsCrafted"); // This breaks the entire script which is funny.
 
+// Show off option 2.
+console.log("Object Player Two Blocks Mined: " + playerTwo.blocksMined); // Second method of printing key value in console.
+
 // Understanding the different between the two options.
+// Creating new object but with numbers for the key names.
 const objectTest = {
-    
-}
+  2: "Good",
+  13: "Bad",
+  82: "Best"
+};

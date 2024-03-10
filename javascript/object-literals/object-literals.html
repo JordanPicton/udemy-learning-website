@@ -171,10 +171,22 @@
         after the object variable name. For colt testing this it says unexpected String, though for me it says "missing
         name after . operator". Also the same concept of using ("Any String Goes Here".length)
       </p>
+      <h3>The Difference</h3>
       <p>
         Even though this second option may seem easier, there is a distinction between the two options. To begin to
         understand this I need to go back to the creation of the object itself. I'll create a new object within the
-        connected JS file to this HTML document. It has the name of "objectTest"
+        connected JS file to this HTML document. It has the name of "objectTest", it contains my favourite numbers
+        being 2 and 82 but also a bad number of 13.
+      </p>
+      <p>
+        When using the console to check the new object, it shows the different key names like it did with the text key
+        names, they don't look any different. When giving an object something other than text or letters I should say
+        for the key name. In the background regardless of what is put there for the key name, it is converted into a
+        String. Though symbols like * are exempt for this which will be covered later as they're not super common.
+      </p>
+      <p>
+        What this means is that when I normally see a Number and String in console the number looks like (323923) and a
+        String would look like ("Hi I am String").
       </p>
     </section>
     <footer>
