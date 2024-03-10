@@ -7,7 +7,6 @@
   <title>Object-Literals</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='../main.css'>
-  <script src='main.js'></script>
 </head>
 
 <body>
@@ -110,7 +109,72 @@
       </p>
       <p>
         There's no real order within the Object unlike arrays, the only thing that matters is what a value is stored
-        under, being the key name for the value. 
+        under, being the key name for the value.
+      </p>
+    </section>
+    <section>
+      <h2>Retrieving Data From Object</h2>
+      <p>
+        Now that I know how to create an object, it's time to try and retrieve the data from the object. Within the
+        array this was done using the variable name of the array and then square brackets with the indices number
+        inside. An example would look like arrayVariableName [3] (can replace 3 with any indices) doing this would give
+        me the output of the indices position within that specified array.
+      </p>
+      <p>
+        Though with an object, using one of the ones I have declared within the object-literals.js file. Lets say I use
+        playerOne as the example I want to pull from, I would like to try and get the value from the key lootedItems but
+        how would I do this?
+      </p>
+      <h3>Option One</h3>
+      <p>
+        One option would be to do exactly the same thing as an array by using the objectVariableName and then use the
+        square brackets to get one of the key placements to give an output. I'm going to test this myself quickly and
+        see how it works. I've tested this and it's weird because I would have expected at least something like the
+        output of the key name or the value for the key to be in the console. The only thing I seem to be getting is
+        "undefined".
+      </p>
+      <p>
+        Something that Colt mentions is that instead of using the square brackets some people may think that using the
+        curly brackets would make more sense, basically meaning objectVariableName {1} instead of [1], though to me the
+        square brackets make more sense because it's the same way to do it for arrays. This just makes sense to me the
+        way it actually works. But when talking about objects the only time to use the curly braces is when declaring
+        the object/creating it.
+      </p>
+      <p>
+        I just learned to why this didn't work, it's because instead of using the indices of the output I'm wanting, I
+        need to use the key name within the brackets so something like ["firstName"] would work. Basically arrays use
+        indices, object use key name. When using the key name within the square brackets, there's a reason to why it
+        needs to be surround by the quotation marks though it's not actually a String. I'll learn about this a little
+        later.
+      </p>
+      <p>
+        When inputting something other than one of the key names for the output within the square brackets for a object.
+        If there is no match for the square brackets input and the object keys then it will return the output of
+        undefined.
+      </p>
+      <h3>Option 2</h3>
+      <p>
+        Another option to do this would be to use the dot syntax instead of the square bracket syntax. Similar to how
+        you can do something like prompt("Input your name here").toUpperCase, the .toUpperCase is the part I'm talking
+        about. Well you can do this with the variable name of the object too. Just like objectVariableName.keyName, or a
+        better way to see this would be with an example within the object-literals.js file. Better example being
+        "playerTwo.blocksMined". This is honestly pretty cool.
+      </p>
+      <p>
+        I also mentioned something about these objects making more sense to me compared to objects in languages such as
+        Java and they told me that is probably the worse thing to say, meaning I need to learn Java objects properly and
+        which is what I tend to do when I build some website projects.
+      </p>
+      <p>
+        When trying to do (playerTwo."keyName"), this breaks the script file due to JS looking for an operator name
+        after the period but can't find one so it breaks. There needs to be no quotation mark surround the key name
+        after the object variable name. For colt testing this it says unexpected String, though for me it says "missing
+        name after . operator". Also the same concept of using ("Any String Goes Here".length)
+      </p>
+      <p>
+        Even though this second option may seem easier, there is a distinction between the two options. To begin to
+        understand this I need to go back to the creation of the object itself. I'll create a new object within the
+        connected JS file to this HTML document. It has the name of "objectTest"
       </p>
     </section>
     <footer>
