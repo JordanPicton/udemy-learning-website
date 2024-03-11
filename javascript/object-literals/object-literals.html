@@ -186,7 +186,20 @@
       </p>
       <p>
         What this means is that when I normally see a Number and String in console the number looks like (323923) and a
-        String would look like ("Hi I am String").
+        String would look like ("Hi I am String"). Even though the number doesn't look like a String when looking at the
+        object via the console (if I was to just do console.log(objectName)). Doing this would just look normal as if it
+        wasn't a String.
+      </p>
+      <p>
+        I now understand to why the square brackets don't work regarding the object. It's due to it looking for an index
+        value that is used with an array. When there is a number for the key name, this would break as this is the way
+        to look for an index value of the array but this isn't the same data structure. Hence the breaking of the
+        script (meaning objectTest[2] would not work for the example within )
+      </p>
+      <p>
+        To actually use this method, I would have to do the following (objectTest["2"]), with this you can see it's a
+        String because of the quotation marks. But this is the correct way to do this, without those qutoation marks it
+        will not give me the actual ouput it will give me the output of undefined.
       </p>
     </section>
     <footer>
