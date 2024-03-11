@@ -40,5 +40,5 @@ const objectTest = {
 console.log(objectTest);
 
 // Showing off that the key names that are numbers are actually Strings.
-console.log(objectTest[2]); // This won't work due to it thinking I'm searching for indicies of an array.
+console.log(objectTest[2]); // This won't work due to it thinking I'm searching for indices of an array.
 console.log(objectTest["2"]); // This is the correct way to do it.
