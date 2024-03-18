@@ -201,6 +201,18 @@
         String because of the quotation marks. But this is the correct way to do this, without those quotation marks it
         will not give me the actual output it will give me the output of undefined.
       </p>
+      <p>
+        So apparently something like objectTest[2] would work because JavaScript takes the time to actually convert the
+        text between the brackets into a String as well, and then uses this to compare the converted String and the key
+        name String. Even using something like true or null for the key name actually works when it comes to creating
+        the object key names.
+      </p>
+      <h3>The Actual Difference</h3>
+      <p>
+        The previous part of this was just informing me that even though things like true and null can be used as key
+        names, they get converted to makes it seem like they're still a boolean and a null statement when they're
+        actually not.
+      </p>
     </section>
     <footer>
     </footer>
