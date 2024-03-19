@@ -48,3 +48,15 @@ const sillyObject = {
   true: "this is allowed", //  These both get converted to Strings rather than being used like an actual true or null value.
   null: "so is this for some reason"
 };
+
+// Actual Difference between methods
+var birthyear = 1999;
+
+const anotherTestObject = {
+  1999: "good",
+  2000: "bad",
+  2001: "bad",
+  2002: "good"
+};
+
+console.log(anotherTestObject[birthyear]);

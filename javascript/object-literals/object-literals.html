@@ -213,6 +213,30 @@
         names, they get converted to makes it seem like they're still a boolean and a null statement when they're
         actually not.
       </p>
+      <p>
+        The actual difference between the two methods being objectTest.2 and objectTest["2"]. Without the quotation
+        marks in the second example, it will be looking for a variable with that name instead for a key name. So when
+        using the period method like the one above, it always gives the full whole output of that key name. Though if I
+        was to use the square bracket method then I would be able to use an expression with this.
+      </p>
+      <p>
+        Apparently something like having playerTwo["player" + "Name"] would work, though you wouldn't really want to do
+        something like this, instead it would be better if it was looking for a variable. This may seem silly but if it
+        was pulling a variable and there was a bunch of different keys within the object and somewhere else was giving
+        an output of a part of the key name then this could be useful. A good example would be first and last Name. Read
+        as [first]Name and [last]Name.
+      </p>
+      <p>
+        It actually seems a little more complicated than I thought. Using an example within the linked file, it becomes
+        more clear. Basically, when using the period method, this is static as it's using the key names to receive an
+        output. Where as the square bracket method is more dynamic, meaning within the square brackets could be given a
+        variable which then has a value, and can look through the object if the value is similar to a key name and if so
+        then there would be output, or at least in the case of the example given. Though I'm not sure what else this
+        could really be used for.
+      </p>
+      <p>
+        Basically square brackets allow for variable, where as the dot notation does not.
+      </p>
     </section>
     <footer>
     </footer>
